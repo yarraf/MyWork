@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Ratp.Hidalgo.Web.ViewModel.ProgrammationDocumentPGECategorieVm>
+@{
+    ViewBag.Title = "GetDocumentsPgeWithCategories";
+}
+
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Programmations</a></li>
+        <li><a href="#">Nouvelle Programmation <strong>@(Request.QueryString["AnPro"].ToString())</strong></a></li>
+        <li class="active"><a href="#">Catégorie de priorité</a></li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="panel panel-success">
+        <div class="panel-heading">CATEGORIE DE PRIORITE : @(Request.QueryString["Ntv"].ToString())</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>CATEGORIE DE PRIORITE</th>
+                        <th>Ligne</th>
+                        <th>Lieu</th>
+                        <th>Num. d'affaire</th>
+                        <th>m²</th>
+                        <th>Montant prévisionnel (€)</th>
+                        <th>Coût par catégorie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        var i = 0;
+                        foreach (var pge in item.ListePGE)
+                        {
+                            <tr>
+                                <td>@pge.Categorie</td>
+                                <td><img src="@(@pge.Ligne != null ? "/Content/img/"+ @pge.Ligne.Chemin: "")" width="16" /></td>
+                                <td>@(@pge.Lieu != null ? @pge.Lieu.Name : null)</td>
+                                <td>@pge.NumeroAffaire</td>
+                                <td>@pge.Surface</td>
+                                <td>@String.Format("{0:n2}",@pge.Budget) </td>
+                                @if (i == 0)
+                                {
+                                    <td class="celleFusion" rowspan="@(@item.ListePGE.Count())"><strong>@String.Format("{0:n2}", @item.CoutByCategorie)</strong></td>
+                                }
+
+                                @{ i++;}
+                            </tr>
+                                        }
+                                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

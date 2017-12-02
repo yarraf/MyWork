@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Ratp.Hidalgo.Web.ViewModel.ValeurCritereVm>
+
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="glyphicon glyphicon-edit"></span> Seuils de référence</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th class="edit_th">
+                </th>
+                <th class="edit_th">
+                    C1
+                </th>
+                <th class="edit_th">
+                    C2
+                </th>
+                <th class="edit_th">
+                    C3
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr class="edit_tr" id="@item.NatureValeur">
+                    <td width="40px" class="edit_td">
+                        <span class="edit_td"><strong>@item.NatureValeur</strong></span>
+                    </td>
+                    <td width="60px" class="edit_td">
+                        @* <span id="@(item.NatureValeur)c1" class="text">@item.C1</span>*@
+                        @*<input type="text" class="editbox" id="input_@(item.NatureValeur)c1" data-bind="value: @(item.NatureValeur)c1" />*@
+                        <input value="@item.C1" type="text" class="editbox" id="input_@(item.NatureValeur)c1" />
+                    </td>
+                    <td width="60px" class="edit_td">
+                        @*<span id="@(item.NatureValeur)c2" class="text">@item.C2</span>*@
+                        @*<input value="@item.C2" type="text" class="editbox" id="input_@(item.NatureValeur)c2"  data-bind="value: @(item.NatureValeur)c2"  />*@
+                        <input value="@item.C2" type="text" class="editbox" id="input_@(item.NatureValeur)c2" />
+                    </td>
+                    <td width="60px" class="edit_td">
+                        @*<span id="@(item.NatureValeur)c3" class="text">@item.C3</span>*@
+                        @*<input value="@item.C3" type="text" class="editbox" id="input_@(item.NatureValeur)c3"  data-bind="value: @(item.NatureValeur)c3" />*@
+                        <input value="@item.C3" type="text" class="editbox" id="input_@(item.NatureValeur)c3" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.CoefficientPonderationVm
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+@*<div class="containe">*@
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        @* <li><a href="#"><img src="@Url.Content("~/Content/img/accueil2.jpg")" alt="Image" /></a></li>*@
+        <li><a href="#">Calibrage</a></li>
+        <li class="active">Paramètres @Model.NatureCalibrage.ToString()</li>
+    </ol>
+</div>
+<fieldset class="form-group">
+    @* <legend class="text-muted"><span class="glyphicon glyphicon-cog"></span><small> Calibrage Paramètres @Model.NatureCalibrage.ToString()</small></legend>*@
+  @{  if (Model.NatureCalibrage == Ratp.Hidalgo.Data.Contract.Enum.ENatureCalibrage.Maçonnerie)
+      {
+          Html.RenderPartial("_ViewFormMaconnerie");
+      }
+      else
+      {
+          Html.RenderPartial("_ViewFormEnduit");
+      }
+      }
+   
+
+</fieldset>
+
+<div class="row">
+    @*<fieldset class="form-group">*@
+    @*<legend class="text-muted"><span class="glyphicon glyphicon-cog"></span><small> Seuils de références Bh</small></legend>*@
+    <div class="col-md-3">
+        @Html.Action("ValeurMinMaxCritere")
+    </div>
+    <div class="col-md-4">
+        @Html.Action("ValeurSeuilsReferenceCriteres")
+    </div>
+    <div class="col-md-5">
+        @Html.Action("GetStatistiqueSeuil")
+    </div>
+    @*</fieldset>*@
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/customescript")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            //Initialisation des valeurs
+
+            var old_b1c1 = $('#input_b1c1').val();
+            var old_b2c1 = $('#input_b2c1').val();
+            var old_b3c1 = $('#input_b3c1').val();
+            //var input_b1c1 = $('#input_b1c1').val();
+            //var input_b1c1 = $('#input_b1c1').val();
+
+
+            //Initialisation des champs
+            initialiseinputtableaureferencecriteres();
+
+            $('.editbox').change(function () {
+                var url = window.location.pathname;
+                var arr = url.split('/');
+                var url = window.location.pathname;
+                var arr = url.split('/');
+                var type = arr[3];
+
+                if (arr[3] == "") {
+                    type = 0;
+                }
+
+                var id = $(this).attr('id');
+                var datajson = $(this).val();
+
+
+                if (isverified(id)) {
+                    var st = "old_" + id.substring(6, 10);
+                    if (parseFloat(datajson) != parseFloat($('#' + st).text())) {
+                        $.ajax({
+                            url: "/api/ApiCalibrage",
+                            type: "POST",
+                            contentType: "application/json",
+                            datatype: "json",
+                            data: JSON.stringify({ "value": datajson, "index": id, "nature": type })
+                        })
+                      .success(function (data) {
+                          //$('#alertMsg').show();
+                          $(this).removeClass("editbox editbox-haserror");
+                          $(this).addClass("editbox");
+
+                          //update value with javascripts
+                          $('#' + st).text(parseFloat(datajson));
+
+                          //var vm = new viewModel();
+                          //vm.b0c1 = "2";
+                          //ko.applyBindings(vm);
+                      })
+                      .error(function (data) {
+                          alert('error config');
+                      });
+
+                    } // fin de la véfigication d'égalité
+                    //Vérifier si le champ est en cours de validation
+                    if ($(this).hasClass("editbox editbox-haserror")) {
+                        $(this).removeClass("editbox editbox-haserror");
+                        $(this).addClass("editbox");
+                    }
+                }
+                else {
+                    $(this).addClass("editbox-haserror");
+                    var default_value = this.defaultValue;
+                    alert('Veuillez respecter la règle Ci(b4) > Ci(b3) > Ci(b2) > Ci(b1) > Ci(b0))');
+                    $(this).focus();
+                }
+            });
+
+            rendreTodecimal('.editbox');
+            rendreTodecimal('.form-control');
+
+        });
+    </script>
+}
+

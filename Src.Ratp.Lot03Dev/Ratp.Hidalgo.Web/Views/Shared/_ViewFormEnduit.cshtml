@@ -1,0 +1,161 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.CoefficientPonderationVm
+
+@using (Html.BeginForm("ValidInfoCalibrage", "Calibrage", FormMethod.Post, new { id = "form_parametres_ponderation", }))
+{
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Coefficients de pondération des paramètres</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA1)
+                            @Html.TextBoxFor(x => x.CpA1, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA1, null, new { @class = "text-danger", id = "vmf" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA4)
+                            @Html.TextBoxFor(x => x.CpA4, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA4, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA6)<span class="glyphicon glyphicon-question-sign" title="Historique d’opération d’entretien : Réfection d’enduit"></span>
+                            @Html.TextBoxFor(x => x.CpA6, new { @class = "form-control", })
+                            @Html.ValidationMessageFor(x => x.CpA6, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA7)
+                            @Html.TextBoxFor(x => x.CpA7, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA7, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA10)
+                            @Html.TextBoxFor(x => x.CpA10, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA10, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA9)<span class="glyphicon glyphicon-question-sign" title="Agressivité chimique du terrain encaissant"></span>
+                            @Html.TextBoxFor(x => x.CpA9, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA9, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpA11)
+                            @Html.TextBoxFor(x => x.CpA11, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpA11, null, new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpB1)
+                            @Html.TextBoxFor(x => x.CpB1, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpB1, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpB2)
+                            @Html.TextBoxFor(x => x.CpB2, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpB2, null, new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpB3)
+                            @Html.TextBoxFor(x => x.CpB3, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpB3, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.CpB4)
+                            @Html.TextBoxFor(x => x.CpB4, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CpB4, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Coefficients de pondération des critères</div>
+            <div class="panel-body">
+                @Html.ValidationMessage("somme", new { @class = "text-warning" })
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.Cp1)
+                            @Html.TextBoxFor(x => x.Cp1, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Cp1, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.Cp2)
+                            @Html.TextBoxFor(x => x.Cp2, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Cp2, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.Cp3)
+                            @Html.TextBoxFor(x => x.Cp3, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Cp3, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group-sm">
+                            @Html.LabelFor(x => x.Cp4)
+                            @Html.TextBoxFor(x => x.Cp4, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Cp4, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="panel panel-success">
+                <div class="panel-heading">Paramétrages des calculs des programmations</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group-sm">
+                                @Html.LabelFor(x => x.Pt)
+                                @Html.TextBoxFor(x => x.Pt, new { @class = "form-control", })
+                                @Html.ValidationMessageFor(x => x.Pt, null, new { @class = "text-danger", id = "programTheorique" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group-sm">
+                                @Html.LabelFor(x => x.Dv)
+                                @Html.TextBoxFor(x => x.Dv, new { @class = "form-control", })
+                                @Html.ValidationMessageFor(x => x.Dv, null, new { @class = "text-danger", id = "dureevie" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group-sm">
+                                @Html.LabelFor(x => x.V1)
+                                @Html.TextBoxFor(x => x.V1, new { @class = "form-control", })
+                                @Html.ValidationMessageFor(x => x.V1, null, new { @class = "text-danger", id = "vetroSeuil" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-right">
+            <button type="submit" class="btn btn-success">Enregistrer</button>
+        </div>
+}

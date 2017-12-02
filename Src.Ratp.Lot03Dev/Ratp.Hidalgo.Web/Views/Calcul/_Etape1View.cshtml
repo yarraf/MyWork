@@ -1,0 +1,23 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+<br />
+<div class="row">
+    <div class="panel panel-success">
+        <div class="panel-heading">Politique de renovation</div>
+        <div class="panel-body">
+            <div class="list-group">
+                <p><h4>Automatisation de lignes @*<span class="label label-default" data-bind="text: nbrRnm"></span>*@</h4></p>
+                <div class="list-group-item">
+                    @Html.Partial("_AutomatisationLignesView")
+                </div>
+                <p><h4>RNM <span class="label label-default" data-bind="text: nbrRnm"></span></h4></p>
+                @Html.Partial("_FormRnmView")
+                <p><h4>Travaux Externes <span class="label label-default" data-bind="text: nbrTravauxExt"></span></h4></p>
+                @Html.Partial("_FormTravauxExternesView")
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row text-right">
+    <button type="button" class="btn btn-info" id="nextStep" data-bind="click: nextstep">Valider l'étape 1 <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+</div>

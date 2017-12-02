@@ -1,0 +1,54 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+@{
+    ViewBag.Title = "Hierarchisation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Hidalgo</a></li>
+        <li class="active">Nouvelle Programmation <strong><span data-bind="Value: anneeSaisie"></span>@Model.AnneeProgrammation</strong></li>
+    </ol>
+</div>
+
+
+<fieldset class="form-group">
+    @using (Html.BeginForm("saveHierarchisation", "Calcul", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">HIERARCHISATION DES PGE PAR ORDRE DECROISSANT DE PRIORITE : @Model.SelectedNatureTravaux</div>
+            <div class="panel-body">
+                @Html.Partial("_TableauHierarchisationPGEView")
+                
+                    <div class="col-md-9 col-md-offset-2">
+                        <div class="form-group">
+
+                            <div class="col-md-5">@Html.LabelFor(x => x.PrixUnitaireTravaux, new { @class = "" }) @Model.SelectedNatureTravaux</div>
+                            <div class="col-md-4">@Html.TextBoxFor(x => x.PrixUnitaireTravaux, new { data_bind = "text: PrixUnitaireTravaux", @type = "number", @class = "form-control" })</div>
+                            <div class="col-md-3 ">en € / m²</div>
+                            <div class="col-md-5"><span data-bind="value: PrixUnitaireTravaux" class=""></span></div>
+                            <div class="col-md-7">@Html.ValidationMessageFor(x => x.PrixUnitaireTravaux, null, new { @class = "text-danger"})</div>
+                            <div class="col-md-12"></div>
+                            <div class="col-md-5">@Html.LabelFor(x => x.BudgetDisponible, new { @class = "" })</div>
+                            <div class="col-md-4">@Html.TextBoxFor(x => x.BudgetDisponible, new { data_bind = "text: BudgetDisponible", @type = "number", @class = "form-control" })</div>
+                            <div class="col-md-3">en €</div>
+                            <div class="col-md-5"><span data-bind="value: BudgetDisponible" class=""></span></div>
+                            <div class="col-md-7 col-md-offset-5">@Html.ValidationMessageFor(x => x.BudgetDisponible, null, new { @class = "text-danger"})</div>
+
+                            <div class="col-md-12 hidden">@Html.TextBoxFor(x => x.AnneeProgrammation, new { data_bind = "text: anneeSaisie", @class = "" })</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-right">
+            <button id="ValidationHierarchisationPGE" type="submit" class="btn btn-success">Valider</button>
+        </div>
+    }
+</fieldset>
+

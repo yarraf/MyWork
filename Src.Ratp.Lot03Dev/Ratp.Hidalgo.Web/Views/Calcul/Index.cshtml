@@ -1,0 +1,134 @@
+﻿@using System.Configuration;
+@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+@{
+    ViewBag.Title = "Index";
+    String AdressMarion = ConfigurationManager.AppSettings["AdressAppMarion"];
+    String PortMarion = ConfigurationManager.AppSettings["PortAppMarion"];
+    ViewBag.UrlPGE = "http://" + AdressMarion + ":" + PortMarion + "/Documents/PGEConsultation.aspx?Id=";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewBag.idProgrammation = this.Session["currentProgrammation"];
+}
+
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Programmations</a></li>
+        <li class="active">Nouvelle Programmation <strong><span data-bind="text: anneeSaisie"></span></strong></li>
+    </ol>
+</div>
+@*<div class="row">*@
+<div class="alert alert-danger" role="alert" id="divValidationNp" data-bind="visible: npisValide">
+    <button type="button" class="close" data-bind="click: closed"><span aria-hidden="true">&times;</span></button>
+    <p><strong>Error</strong><span data-bind="text: errMsg"></span></p>
+</div>
+
+<div class="alert alert-info" role="alert" id="divInfoMessage">
+    <p><span><strong>Info: </strong><span data-bind="text: infoCalcul"></span></span></p>
+</div>
+
+@*<div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+            <span class="sr-only">20% Complete</span>
+        </div>
+    </div>*@
+
+<div class="row">
+    <ul class="nav nav-tabs" id="mytabs">
+        <li class="active"><a data-toggle="tab" href="#contentstep1"><span data-bind="css: csstabs"></span> Informations Programmation</a></li>
+        <li data-bind="visible: isValideStep"><a data-toggle="tab" href="#contentstep2"><span data-bind="css: csstabs"></span> Etape 2</a></li>
+        <li data-bind="visible: isValideStep2"><a data-toggle="tab" href="#contentstep3"><span data-bind="css: csstabs"> </span> Etape 3</a></li>
+        <li data-bind="visible: isValideStep3"><a data-toggle="tab" href="#contentstep4"><span data-bind="css: csstabs"> </span> Etape 4</a></li>
+        <li data-bind="visible: isValideStep4"><a data-toggle="tab" href="#contentstep5"><span data-bind="css: csstabs"> </span> Etape 5</a></li>
+    </ul>
+</div>
+<fieldset class="form-group">
+    @using (Html.BeginForm("SaveNouvelleProgrammation", "Calcul", FormMethod.Post, new { id = "form_nouvelleProgrammation", }))
+    {
+        @Html.ValidationSummary(true)
+        <div class="tab tab-content">
+            <div class="tab-pane fade in active" id="contentstep1">
+                @Html.Partial("_Etape1View")
+            </div>
+            <div class="tab-pane fade" id="contentstep2">
+                @Html.Partial("_Etape2View")
+            </div>
+            <div class="tab-pane fade" id="contentstep3">
+                @Html.Partial("_Etape3View")
+            </div>
+            <div class="tab-pane fade" id="contentstep4">
+                @Html.Partial("_Etape4View")
+            </div>
+            <div class="tab-pane fade" id="contentstep5">
+                @Html.Partial("_Etape5View")
+            </div>
+            <div class="tab-pane fade" id="contentstep5">
+                <h3>Etape 6</h3>
+            </div>
+        </div>
+    }
+
+</fieldset>
+@*</div>*@
+<!-- Modal -->
+<div class="modal fade-" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header alert-success">
+                @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                <h4 class="modal-title">Nouvelle Programmation</h4>
+                <div class="alert alert-danger dis alert-dismissible" role="alert" id="errMsgAnneeProgrammation" data-bind="visible: isValideAnneeSaisie">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p><strong>Error!</strong><span> Veuillez saisir une année valide!</span></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Année Programmation</p>
+                <input class="form-control" id="txtAnneeSaisie" data-bind="value: anneeSaisie" maxlength="4" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal" data-bind="visible: isVisible, click: validNewProgrammation">ENREGISTRER</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/customescript")
+    @Scripts.Render("~/bundles/datepickerjs")
+    @Styles.Render("~/Content/datepickercss")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#myModal').modal({ backdrop: 'static', keyboard: false, show: true });
+            $('#myModal').on('hide.bs.modal', function (e) {
+                var data = $('#txtAnneeSaisie').val();
+            });
+
+
+            $('#checkbox_1').attr('disabled', 'disabled');
+            $('#checkbox_14').attr('disabled', 'disabled');
+
+            //$(function () {
+            //    $("#datepicker").datepicker({
+            //        changeMonth: true,
+            //        changeYear: true,
+            //        showButtonPanel: true,
+            //        dateFormat: 'MM yy',
+            //        onClose: function (dateText, inst) {
+            //            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+            //        }
+            //    });
+            //    $("#datepicker").datepicker("option", "showAnim", "drop");
+            //    $("#datepicker").datepicker("option", "dateFormat", "mm/yy");
+            //    $("#datepicker").datepicker({ changeYear: true });
+            //});
+
+            InitialiseElements();
+           
+        });
+    </script>
+}

@@ -1,0 +1,62 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.SelectedLigne)
+                        <select data-bind="options: lignes, optionsText: 'Name' ,value: selectedligne,optionsCaption: selectedDefaultLigne,  attr:{ id: 'listeofLignes', class: 'form-control'}"></select>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.SelectedLieu)
+                        @*@Html.DropDownListFor(x => x.SelectedLieu, Model.Lieux, new { @class = "form-control", id = "listeofLieux" })*@
+                        <select data-bind="options: lieux, optionsText: 'Name',value: selectedlieu,optionsCaption: selectedDefaultLieu, attr:{ id: 'listeofLieux', class: 'form-control'}"></select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.SelectedAnnee)
+                        @*@Html.DropDownListFor(x => x.SelectedAnnee, Model.Annees, new { @class = "form-control", id = "listeofLignes" })*@
+                        <select data-bind="options: listeAnnees, value: selectedAnnee,optionsCaption: selectedDefalutAnnee, attr:{ id: 'listeofAnnee', class: 'form-control'} "></select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-info" data-bind="click: saveRnm, enable: selectedligne() != undefined && selectedlieu() != undefined && selectedAnnee() != undefined"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        @*<div class="scrollbar force-overflow" id="style-1">*@
+        <table class="table table-fixed table-hover" data-bind="visible: listeRnm().length > 0">
+            <thead>
+                <tr>
+                    <th width="100px">
+                        @*<span class="glyphicon glyphicon-sort"></span>*@
+                        Lignes &nbsp;&nbsp;<a href="#" data-bind="click: getLignesOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscLignes"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescLignes"></span></a>
+                    </th>
+                    <th width="690px">Lieux &nbsp;&nbsp;<a href="#" data-bind="click: getLieuxOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscLieux"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescLieux"></span></a></th>
+                    <th width="98px">Année &nbsp;&nbsp;<a href="#" data-bind="click: getAnneesOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscAnnee"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescAnnee"></span></a></th>
+                    <th width="10px"></th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: listeRnm">
+                <tr>
+                    <td width="100px"><img data-bind="attr:{src: '/Content/img/'+ ligne().Chemin, alt: ligne().Name}" width="16" /></td>
+                    <td width="690px" data-bind="text: lieu().Name"></td>
+                    <td width="98px" data-bind="text: annee"></td>
+                    <td width="10px"><a href="#" data-bind="click: $root.removeRnm.bind($root)"><span class="glyphicon glyphicon-remove-circle"></span></a></td>
+                </tr>
+            </tbody>
+        </table>
+        @*</div>*@
+    </div>
+</div>

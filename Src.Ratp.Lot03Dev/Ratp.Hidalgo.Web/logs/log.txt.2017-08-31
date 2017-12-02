@@ -1,0 +1,77 @@
+ERROR 2017-08-31 15:58:34,242  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-31 15:58:44,099  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-31 15:59:43,352  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-08-31 15:59:44,378  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-08-31 15:59:44,379  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-08-31 15:59:44,380  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-08-31 15:59:44,427  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-08-31 15:59:44,426  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-08-31 15:59:44,428  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-08-31 15:59:44,427  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-08-31 15:59:45,670  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-08-31 15:59:46,662  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-08-31 15:59:46,676  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-08-31 15:59:47,672  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-08-31 15:59:47,887  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-08-31 15:59:47,893  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-08-31 15:59:49,165  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-08-31 15:59:50,854  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-08-31 15:59:52,722  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-08-31 15:59:54,994  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-08-31 15:59:55,149  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-08-31 16:00:00,831  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-08-31 16:00:00,935  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-08-31 16:00:01,258  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-08-31 16:00:01,259  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-08-31 16:00:01,264  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-08-31 16:00:01,288  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-08-31 16:00:01,289  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-08-31 16:00:01,289  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-08-31 16:00:08,097  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-08-31 16:00:08,110  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-08-31 16:00:08,116  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-08-31 16:00:09,251  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-08-31 16:00:09,860  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-08-31 16:00:10,192  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-08-31 16:00:10,198  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-08-31 16:00:10,307  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+ERROR 2017-08-31 16:02:28,207  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-08-31 16:02:38,653  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-31 16:02:45,714  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-31 16:03:27,155  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-08-31 16:03:28,107  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-08-31 16:03:28,107  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-08-31 16:03:28,108  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-08-31 16:03:28,109  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-08-31 16:03:28,108  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-08-31 16:03:28,109  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-08-31 16:03:28,108  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-08-31 16:03:28,959  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-08-31 16:03:29,902  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-08-31 16:03:30,423  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-08-31 16:03:30,957  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-08-31 16:03:31,938  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-08-31 16:03:31,966  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-08-31 16:03:33,988  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-08-31 16:03:36,489  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-08-31 16:03:38,296  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-08-31 16:03:40,090  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-08-31 16:03:40,381  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-08-31 16:03:42,914  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-08-31 16:03:44,046  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-08-31 16:03:44,642  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-08-31 16:03:44,643  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-08-31 16:03:44,649  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-08-31 16:03:44,674  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-08-31 16:03:44,675  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-08-31 16:03:44,675  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-08-31 16:03:51,564  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-08-31 16:03:51,580  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-08-31 16:03:51,588  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-08-31 16:03:52,702  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-08-31 16:03:53,309  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-08-31 16:03:53,620  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-08-31 16:03:53,626  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-08-31 16:03:53,721  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-08-31 16:09:15,793  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-08-31 16:09:15,806  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 312

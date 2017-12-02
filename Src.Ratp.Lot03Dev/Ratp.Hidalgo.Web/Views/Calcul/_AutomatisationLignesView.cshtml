@@ -1,0 +1,15 @@
+﻿
+<div class="row" id="divlignesAuto" data-bind="foreach: lignes">
+    <!-- ko if: Name.length < 21 -->
+    <div class="col-md-2">
+        <input type="checkbox" data-bind="checked: Checked, attr:{ id: 'checkbox_'+ Id, disabled: Activee}" /> <span data-bind="text: Name"></span>
+    </div>
+    <!-- /ko -->
+</div>
+<div class="row" id="divlignesAuto" data-bind="foreach: lignes">
+    <!-- ko if: Name.length > 21 -->
+    <div class="col-md-4">
+        <input type="checkbox" data-bind="checked: Checked, $root.getLigneCheckedCount, attr:{ id: 'checkbox_'+ Id, disabled: Activee}" /> <span data-bind="text: Name"></span>
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,1864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RatpHidalgoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Causes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Descriptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdVisiteType" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="64" />
+    <Property Name="PkDebut" Type="varchar" MaxLength="64" />
+    <Property Name="PkFin" Type="varchar" MaxLength="64" />
+    <Property Name="DescriptionComp" Type="varchar(max)" />
+    <Property Name="CoordonneesEnv" Type="varchar(max)" />
+    <Property Name="CoordonneesConc" Type="varchar(max)" />
+    <Property Name="ConsignesSecurite" Type="varchar(max)" />
+    <Property Name="Convention" Type="bit" />
+    <Property Name="DateConstruction" Type="varchar" MaxLength="10" />
+    <Property Name="DescModifications" Type="varchar(max)" />
+    <Property Name="VisiblePavois" Type="bit" />
+    <Property Name="DateModification" Type="varchar(max)" />
+    <Property Name="NiveauNappe" Type="varchar(max)" />
+    <Property Name="Commentaire" Type="varchar(max)" />
+    <Property Name="DonneesComplementaires" Type="varchar(max)" />
+    <Property Name="Position" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="DesordreNotesTypes">
+    <Key>
+      <PropertyRef Name="IdDesordre" />
+      <PropertyRef Name="IdNoteType" />
+    </Key>
+    <Property Name="IdDesordre" Type="int" Nullable="false" />
+    <Property Name="IdNoteType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Desordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStatut" Type="int" Nullable="false" />
+    <Property Name="IdLocalisation" Type="int" />
+    <Property Name="IdFamilleDesordreType" Type="int" Nullable="false" />
+    <Property Name="IdAncienneFamilleType" Type="int" />
+    <Property Name="IdObservationTravaux" Type="int" />
+    <Property Name="IdDesordreCommun" Type="int" />
+    <Property Name="DateSaisie" Type="datetime" />
+    <Property Name="NotePrecedente" Type="int" />
+    <Property Name="Note" Type="int" />
+    <Property Name="CaractCommentaire" Type="nvarchar(max)" />
+    <Property Name="EnvCommentaire" Type="nvarchar(max)" />
+    <Property Name="AncienneCaractFamille" Type="varchar(max)" />
+    <Property Name="NouveauDesordre" Type="bit" Nullable="false" />
+    <Property Name="Actif" Type="bit" Nullable="false" />
+    <Property Name="ConstatCommentaire" Type="varchar(max)" />
+    <Property Name="Situation" Type="int" Nullable="false" />
+    <Property Name="NumeroAffichage" Type="int" />
+    <Property Name="IdIdCapture" Type="nvarchar(max)" />
+    <Property Name="DatePvsr" Type="datetime" />
+    <Property Name="IdFrequenceSurveillance" Type="int" />
+  </EntityType>
+  <EntityType Name="DesordresCauses">
+    <Key>
+      <PropertyRef Name="IdDesordre" />
+      <PropertyRef Name="IdCauses" />
+    </Key>
+    <Property Name="IdDesordre" Type="int" Nullable="false" />
+    <Property Name="IdCauses" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesordresDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDesordre" Type="int" Nullable="false" />
+    <Property Name="IdDocument" Type="int" Nullable="false" />
+    <Property Name="IdNatureTravaux" Type="int" />
+    <Property Name="IdTypeSurveillance" Type="int" />
+    <Property Name="Sdm" Type="float" />
+    <Property Name="AnneeIndicative" Type="datetime" />
+    <Property Name="DelaiDemande" Type="varchar(max)" />
+    <Property Name="ContrainteExploitation" Type="varchar(max)" />
+    <Property Name="Commentaire" Type="varchar(max)" />
+    <Property Name="SrrExtDatePreconisation" Type="datetime" />
+    <Property Name="SrrExtNaturePreconisation" Type="varchar(max)" />
+    <Property Name="SrrExtRemarque" Type="varchar" MaxLength="1024" />
+    <Property Name="NumDe" Type="int" />
+    <Property Name="NbDe" Type="int" />
+    <Property Name="NumSrr" Type="int" />
+    <Property Name="NbSrr" Type="int" />
+    <Property Name="PgeBilanAnnee" Type="int" />
+    <Property Name="PgeBilanEvaluation" Type="int" />
+    <Property Name="PgeBilanIdentification" Type="int" />
+    <Property Name="PgeBilanMaj" Type="datetime" />
+    <Property Name="PgeIdTitreIII" Type="int" />
+    <Property Name="PgeTitreM" Type="varchar" MaxLength="1024" />
+    <Property Name="PgeTitreMaj" Type="datetime" />
+    <Property Name="PgeRattache" Type="int" />
+    <Property Name="IdPvsrFrequence" Type="int" />
+  </EntityType>
+  <EntityType Name="DesordresInfos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDesordre" Type="int" Nullable="false" />
+    <Property Name="IdTypeInformation" Type="int" Nullable="false" />
+    <Property Name="Valeur" Type="varchar" MaxLength="64" />
+    <Property Name="estAncienneValeur" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDocumentType" Type="int" Nullable="false" />
+    <Property Name="IdDocumentParent" Type="int" />
+    <Property Name="IdProcesVerbal" Type="int" />
+    <Property Name="IdChef" Type="int" />
+    <Property Name="IdDemandeur" Type="int" />
+    <Property Name="NumeroAffaire" Type="varchar" MaxLength="128" />
+    <Property Name="Descriptions" Type="varchar(max)" />
+    <Property Name="DescPiecesJointes" Type="varchar(max)" />
+    <Property Name="RemarquesGenerales" Type="varchar(max)" />
+    <Property Name="DateCreation" Type="datetime" />
+    <Property Name="AnneeProgrammation" Type="datetime" />
+    <Property Name="ObservationsPrestation" Type="varchar(max)" />
+    <Property Name="CommentairePrestation" Type="varchar(max)" />
+    <Property Name="IdProcesVerbalAncien" Type="int" />
+    <Property Name="TypeCondition" Type="varchar(max)" />
+    <Property Name="DestinataireDE" Type="varchar" MaxLength="200" />
+    <Property Name="IdDesitinataireDE" Type="int" />
+    <Property Name="DateConsultationDE" Type="datetime" />
+    <Property Name="ValidationRE" Type="int" />
+  </EntityType>
+  <EntityType Name="DocumentsLies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDesordreDocument" Type="int" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="int" Nullable="false" />
+    <Property Name="IdStatutDocument" Type="int" Nullable="false" />
+    <Property Name="RaisonAnnulation" Type="varchar" MaxLength="512" />
+    <Property Name="DateStatut" Type="datetime" Nullable="false" />
+    <Property Name="Relance" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FamillesDesordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="FamillesDesordresTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFamilleDesordre" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="FamillesLignes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GpeOuvragesComposition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGroupeOuvrage" Type="int" Nullable="false" />
+    <Property Name="IdOuvrage" Type="int" Nullable="false" />
+    <Property Name="Inspection" Type="bit" />
+    <Property Name="CauseNonInspection" Type="nvarchar(max)" />
+    <Property Name="CommentaireOp" Type="nvarchar(max)" />
+    <Property Name="Controle" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupesOuvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="int" />
+    <Property Name="IdLigne" Type="int" />
+    <Property Name="IdSecteur" Type="int" />
+    <Property Name="Libelle" Type="varchar" MaxLength="256" />
+    <Property Name="IdTypeProcesVerbal" Type="int" />
+    <Property Name="IdLieu" Type="int" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="int" />
+  </EntityType>
+  <EntityType Name="Lieux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdLigneProprietaire" Type="int" Nullable="false" />
+    <Property Name="IdLigneGestionnaire" Type="int" Nullable="false" />
+    <Property Name="IdLieuType" Type="int" Nullable="false" />
+    <Property Name="CodePatrimonial" Type="varchar" MaxLength="64" />
+    <Property Name="SurveillanceTopo" Type="bit" />
+    <Property Name="RecoOA11" Type="bit" Nullable="false" />
+    <Property Name="RecoAcces" Type="bit" Nullable="false" />
+    <Property Name="RecoAutres" Type="varchar(max)" />
+    <Property Name="IdDescription" Type="int" Nullable="false" />
+    <Property Name="Actif" Type="bit" />
+    <Property Name="SurfCarrelage" Type="float" />
+    <Property Name="Ordre" Type="int" />
+  </EntityType>
+  <EntityType Name="LieuxTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="64" />
+    <Property Name="TypeType" Type="varchar" MaxLength="1" />
+    <Property Name="TypeTypeCodeMire" Type="varchar" MaxLength="25" />
+    <Property Name="TypePa" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="TypeCodeSsfa" Type="varchar" MaxLength="10" />
+    <Property Name="TypeOrdreAffichage" Type="numeric" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="Lignes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFamilleLigne" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Commentaire" Type="varchar(max)" />
+    <Property Name="StationDepart" Type="varchar" MaxLength="1024" />
+    <Property Name="StationArrivee" Type="varchar" MaxLength="1024" />
+    <Property Name="CheminIcone" Type="varchar(max)" />
+    <Property Name="Actif" Type="bit" Nullable="false" />
+    <Property Name="OrdreAffichage" Type="int" />
+  </EntityType>
+  <EntityType Name="Localisations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="int" />
+    <Property Name="IdOuvragePrincipal" Type="int" />
+    <Property Name="IdZoneOP" Type="int" />
+    <Property Name="IdOuvrageSecondaire" Type="int" />
+    <Property Name="IdZoneOS" Type="int" />
+    <Property Name="IdElementConstitutif" Type="int" />
+    <Property Name="IdInfosFixes" Type="int" />
+    <Property Name="DateSaisie" Type="datetime" Nullable="false" />
+    <Property Name="Position" Type="nvarchar(max)" />
+    <Property Name="Commentaire" Type="nvarchar(max)" />
+    <Property Name="DateModification" Type="datetime" />
+    <Property Name="Atlas" Type="bit" />
+    <Property Name="IdLocalisationApresMigration" Type="int" />
+  </EntityType>
+  <EntityType Name="NaturesTravaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="Flag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ouvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTypeOuvrage" Type="int" Nullable="false" />
+    <Property Name="IdDescription" Type="int" Nullable="false" />
+    <Property Name="IdOpParent" Type="int" />
+    <Property Name="IdLieuProprietaire" Type="int" Nullable="false" />
+    <Property Name="IdLieuGestionnaire" Type="int" />
+    <Property Name="CodeMire" Type="varchar" MaxLength="128" />
+    <Property Name="DateCreation" Type="datetime" />
+    <Property Name="Position" Type="varchar(max)" />
+    <Property Name="Longueur" Type="real" />
+    <Property Name="CycleInspection" Type="int" />
+    <Property Name="SoumisSrr" Type="bit" Nullable="false" />
+    <Property Name="SoumisNq" Type="bit" Nullable="false" />
+    <Property Name="DateHistorique" Type="datetime" />
+    <Property Name="IdTypeModification" Type="int" />
+    <Property Name="Actif" Type="bit" />
+  </EntityType>
+  <EntityType Name="Planification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="int" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="int" />
+    <Property Name="IdTypeDocument" Type="int" Nullable="false" />
+    <Property Name="IdUtilisateur" Type="int" />
+    <Property Name="IdPlanificationType" Type="int" />
+    <Property Name="Commentaires" Type="varchar" MaxLength="1024" />
+    <Property Name="Raison" Type="varchar" MaxLength="1024" />
+    <Property Name="Contraintes" Type="varchar" MaxLength="1024" />
+    <Property Name="IdSurveillant" Type="int" />
+    <Property Name="NbJours" Type="int" />
+    <Property Name="NbNuits" Type="int" />
+    <Property Name="NbSurv" Type="int" />
+    <Property Name="AnneeInspVis" Type="datetime" />
+    <Property Name="AnneeNivSurv" Type="varchar" MaxLength="50" />
+    <Property Name="Actif" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlanificationComposition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="int" Nullable="false" />
+    <Property Name="IdOuvrage" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanificationGroupeOuvrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSecteur" Type="int" />
+    <Property Name="IdLigne" Type="int" />
+    <Property Name="IdLieu" Type="int" />
+    <Property Name="IdGroupe" Type="int" Nullable="false" />
+    <Property Name="IdTypeProcesVerbal" Type="int" />
+    <Property Name="IdDocumentType" Type="int" />
+    <Property Name="Titre" Type="varchar" MaxLength="256" />
+    <Property Name="CycleInspection" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanificationsTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="64" />
+    <Property Name="Abreviation" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDocumentType" Type="int" Nullable="false" />
+    <Property Name="IdTypeProvesVerbal" Type="int" />
+    <Property Name="NumeroAffaire" Type="varchar" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Note" Type="int" />
+    <Property Name="Commentaire" Type="nvarchar(max)" />
+    <Property Name="DatePlanification" Type="datetime" />
+    <Property Name="DateOuverture" Type="datetime" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="DatePremiereImpression" Type="datetime" />
+    <Property Name="IdPvAnterieur" Type="int" />
+    <Property Name="Archive" Type="bit" Nullable="false" />
+    <Property Name="EtatSaisie" Type="int" />
+    <Property Name="CommentaireAccueil" Type="nvarchar(max)" />
+    <Property Name="ConformiteVitrail" Type="bit" />
+    <Property Name="CommentaireVitrail" Type="varchar" MaxLength="3000" />
+    <Property Name="IdFrequenceSurveillance" Type="int" />
+    <Property Name="DatePvsr" Type="datetime" />
+    <Property Name="IdRedacteurPVSR" Type="int" />
+    <Property Name="DateProchaineCreationPvsr" Type="datetime" />
+    <Property Name="FlagCreationService" Type="int" />
+    <Property Name="AncienneNotePV" Type="int" />
+  </EntityType>
+  <EntityType Name="ReferencesTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Secteurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="200" />
+    <Property Name="IdVisiteType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SeuilHidalgo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="StatutsDesordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StatutsDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypesInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategorieInfo" Type="tinyint" />
+    <Property Name="Unite" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TypesOuvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="64" />
+    <Property Name="TypeType" Type="varchar" MaxLength="1" />
+    <Property Name="TypeTypeCodeMire" Type="varchar" MaxLength="25" />
+    <Property Name="TypePa" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="TypeCodeSsfa" Type="varchar" MaxLength="10" />
+    <Property Name="TypeOrdreAffichage" Type="numeric" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="TypesProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="Abreviation" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Categorie" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TypesSurveillances">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="Matricule" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="16" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="16" />
+    <Property Name="Initiales" Type="nchar" MaxLength="6" />
+    <Property Name="Portable" Type="nvarchar" MaxLength="16" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="128" />
+    <Property Name="IdFonction" Type="int" />
+    <Property Name="Actif" Type="bit" Nullable="false" />
+    <Property Name="CorrespondantTechnique" Type="int" />
+    <Property Name="SpecialisationCorrespondant" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Validations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ValidationsDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdValidation" Type="int" Nullable="false" />
+    <Property Name="IdDocument" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="IdUtilisateur" Type="int" Nullable="false" />
+    <Property Name="Suivi" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ValidationsProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdValidation" Type="int" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="IdUtilisateur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CoefficientPonderationParametresCriteresCalibrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="200" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="ValeurMaconnerie" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ValeurEnduit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsActif" Type="bit" />
+  </EntityType>
+  <EntityType Name="Criteres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="600" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'MarionV3.hidalgo.DataAnnexe' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="DataAnnexe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdLigne" Type="nvarchar" MaxLength="50" />
+    <Property Name="LibelleLignes" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdLieux" Type="nvarchar" MaxLength="50" />
+    <Property Name="LibelleLieux" Type="nvarchar" MaxLength="255" />
+    <Property Name="F5" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tunnels" Type="nvarchar" MaxLength="255" />
+    <Property Name="TypeStructIndiqueMaconnerie" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdOuvrage" Type="nvarchar" MaxLength="50" />
+    <Property Name="TABLEAU DES VISITEURS DE NUIT" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pk_OA_Debut" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pk_OA _fin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Long_OP_a_controler" Type="nvarchar" MaxLength="50" />
+    <Property Name="Surface_developpe" Type="nvarchar" MaxLength="50" />
+    <Property Name="Long_OA" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code_Pat" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nature_lieu" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateConstruction_Annee" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateConstruction_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="HistoriqueConfortementMac_Annee" Type="nvarchar" MaxLength="50" />
+    <Property Name="HistoriqueConfortementMac_Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="HistoriqueRefectionEnduit_Anne" Type="nvarchar" MaxLength="50" />
+    <Property Name="HistoriqueRefectionEnduit_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="LargeurOuvrage_NombreVoies" Type="nvarchar" MaxLength="50" />
+    <Property Name="LargeurOuvrage_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine" Type="nvarchar" MaxLength="255" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_TeneursSulfate" Type="nvarchar" MaxLength="255" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="SolubiliteTerrain_Natureterrain" Type="nvarchar" MaxLength="255" />
+    <Property Name="SolubiliteTerrain_PresenceEauNappePhreatique" Type="nvarchar" MaxLength="255" />
+    <Property Name="SolubiliteTerrain_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="PourrissementBoisBlindage_Cas" Type="nvarchar" MaxLength="50" />
+    <Property Name="PourrissementBoisBlindage_Note" Type="nvarchar" MaxLength="255" />
+    <Property Name="Frequentation_Cas" Type="nvarchar" MaxLength="255" />
+    <Property Name="Frequentation_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="Correspondance_Cas" Type="nvarchar" MaxLength="255" />
+    <Property Name="Correspondance_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="PerimetreL2L6_Cas" Type="nvarchar" MaxLength="255" />
+    <Property Name="PerimetreL2L6_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageRATP_Cas" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImageRATP_Note" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DocumentPgeTravauxAnnees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDocumentProgrammation" Type="int" Nullable="false" />
+    <Property Name="Annee" Type="int" />
+    <Property Name="Budget" Type="decimal" Precision="17" Scale="2" />
+    <Property Name="Commentaire" Type="nvarchar(max)" />
+    <Property Name="Actif" Type="bit" />
+  </EntityType>
+  <EntityType Name="NatureTravaux">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NatureTravauxExternes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ParametresHidalgo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="200" />
+    <Property Name="IdCritere" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametresProgrammation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdProgrammation" Type="int" Nullable="false" />
+    <Property Name="IdParametre" Type="int" />
+    <Property Name="IdCritere" Type="int" />
+    <Property Name="Valeur_New" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Valeur_Old" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ProgrammationDetails">
+    <Key>
+      <PropertyRef Name="IdProgrammationDetail" />
+    </Key>
+    <Property Name="IdProgrammationDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="IdProgrammation" Type="int" Nullable="false" />
+    <Property Name="IdLigne" Type="int" />
+    <Property Name="IdLieu" Type="int" />
+    <Property Name="IdNatureTravauxExternes" Type="int" />
+    <Property Name="IdCategorie" Type="int" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="UserCreation" Type="int" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" />
+    <Property Name="UserModification" Type="int" />
+  </EntityType>
+  <EntityType Name="ProgrammationDocumentPGE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProgrammation" Type="int" Nullable="false" />
+    <Property Name="IdDocument" Type="int" />
+    <Property Name="NumeroAffaire" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="NumRang" Type="int" Nullable="false" />
+    <Property Name="NumMedian" Type="int" Nullable="false" />
+    <Property Name="IsExAequo" Type="bit" />
+    <Property Name="IsValideEx" Type="bit" />
+    <Property Name="Surface" Type="float" />
+    <Property Name="Commentaire" Type="nvarchar(max)" />
+    <Property Name="Annee" Type="int" />
+    <Property Name="Budget" Type="decimal" Precision="17" Scale="2" />
+    <Property Name="IsTravauxPlusieursAnnee" Type="bit" />
+    <Property Name="Categorie" Type="int" />
+  </EntityType>
+  <EntityType Name="Programmations">
+    <Key>
+      <PropertyRef Name="IdProgrammation" />
+    </Key>
+    <Property Name="IdProgrammation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdNatureTravaux" Type="int" Nullable="false" />
+    <Property Name="IdTypeOuvrage" Type="int" Nullable="false" />
+    <Property Name="AnneeProgrammation" Type="int" Nullable="false" />
+    <Property Name="PrixUnitaire" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="BudgetDisponible" Type="decimal" Precision="17" Scale="2" />
+    <Property Name="DateCreation" Type="datetime" Nullable="false" />
+    <Property Name="UserCreation" Type="int" Nullable="false" />
+    <Property Name="DateModification" Type="datetime" />
+    <Property Name="UserModification" Type="int" />
+  </EntityType>
+  <EntityType Name="ProgrammationValeurParametresDocument">
+    <Key>
+      <PropertyRef Name="IDParametreHidalgo" />
+      <PropertyRef Name="IDDocumentPge" />
+    </Key>
+    <Property Name="IDParametreHidalgo" Type="int" Nullable="false" />
+    <Property Name="IDDocumentPge" Type="int" Nullable="false" />
+    <Property Name="IDCritere" Type="int" />
+    <Property Name="Note" Type="float" />
+  </EntityType>
+  <EntityType Name="TypeOuvrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Programma__IdPro__7889D298">
+    <End Role="Programmations" Type="Self.Programmations" Multiplicity="1" />
+    <End Role="ProgrammationDocumentPGE" Type="Self.ProgrammationDocumentPGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordreNotesTypes_Desordres">
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="1" />
+    <End Role="DesordreNotesTypes" Type="Self.DesordreNotesTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordreNotesTypes">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desordres_FamillesDesordresTypes">
+    <End Role="FamillesDesordresTypes" Type="Self.FamillesDesordresTypes" Multiplicity="1" />
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordresTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdFamilleDesordreType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desordres_FamillesDesordresTypes1">
+    <End Role="FamillesDesordresTypes" Type="Self.FamillesDesordresTypes" Multiplicity="1" />
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordresTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdFamilleDesordreType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desordres_Localisations">
+    <End Role="Localisations" Type="Self.Localisations" Multiplicity="0..1" />
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdLocalisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desordres_StatutsDesordres">
+    <End Role="StatutsDesordres" Type="Self.StatutsDesordres" Multiplicity="1" />
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatutsDesordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdStatut" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresCauses_Causes">
+    <End Role="Causes" Type="Self.Causes" Multiplicity="1" />
+    <End Role="DesordresCauses" Type="Self.DesordresCauses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Causes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresCauses">
+        <PropertyRef Name="IdCauses" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresCauses_Desordres">
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="1" />
+    <End Role="DesordresCauses" Type="Self.DesordresCauses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresCauses">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_Desordres">
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="1" />
+    <End Role="DesordresDocuments" Type="Self.DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_Documents">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="1" />
+    <End Role="DesordresDocuments" Type="Self.DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_NaturesTravaux">
+    <End Role="NaturesTravaux" Type="Self.NaturesTravaux" Multiplicity="0..1" />
+    <End Role="DesordresDocuments" Type="Self.DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NaturesTravaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdNatureTravaux" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_TypesSurveillances">
+    <End Role="TypesSurveillances" Type="Self.TypesSurveillances" Multiplicity="0..1" />
+    <End Role="DesordresDocuments" Type="Self.DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesSurveillances">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdTypeSurveillance" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresInfos_Desordres">
+    <End Role="Desordres" Type="Self.Desordres" Multiplicity="1" />
+    <End Role="DesordresInfos" Type="Self.DesordresInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresInfos">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresInfos_FamillesTypesInformations">
+    <End Role="TypesInformations" Type="Self.TypesInformations" Multiplicity="1" />
+    <End Role="DesordresInfos" Type="Self.DesordresInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesInformations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresInfos">
+        <PropertyRef Name="IdTypeInformation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Documents">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="0..1" />
+    <End Role="Documents1" Type="Self.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents1">
+        <PropertyRef Name="IdDocumentParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Responsable">
+    <End Role="Utilisateurs" Type="Self.Utilisateurs" Multiplicity="0..1" />
+    <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="IdChef" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Utilisateurs">
+    <End Role="Utilisateurs" Type="Self.Utilisateurs" Multiplicity="0..1" />
+    <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="IdDemandeur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsLies_DesordresDocuments">
+    <End Role="DesordresDocuments" Type="Self.DesordresDocuments" Multiplicity="1" />
+    <End Role="DocumentsLies" Type="Self.DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DesordresDocuments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdDesordreDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsLies_ProcesVerbal">
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="1" />
+    <End Role="DocumentsLies" Type="Self.DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsLies_Statuts">
+    <End Role="StatutsDocuments" Type="Self.StatutsDocuments" Multiplicity="1" />
+    <End Role="DocumentsLies" Type="Self.DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatutsDocuments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdStatutDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamillesDesordresTypes_FamillesDesordres">
+    <End Role="FamillesDesordres" Type="Self.FamillesDesordres" Multiplicity="1" />
+    <End Role="FamillesDesordresTypes" Type="Self.FamillesDesordresTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FamillesDesordresTypes">
+        <PropertyRef Name="IdFamilleDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GpeOuvragesComposition_GroupesOuvrages">
+    <End Role="GroupesOuvrages" Type="Self.GroupesOuvrages" Multiplicity="1" />
+    <End Role="GpeOuvragesComposition" Type="Self.GpeOuvragesComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupesOuvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GpeOuvragesComposition">
+        <PropertyRef Name="IdGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GpeOuvragesComposition_Ouvrages">
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="1" />
+    <End Role="GpeOuvragesComposition" Type="Self.GpeOuvragesComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GpeOuvragesComposition">
+        <PropertyRef Name="IdOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupesOuvrages_ProcesVerbaux">
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="0..1" />
+    <End Role="GroupesOuvrages" Type="Self.GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupesOuvrages_Secteurs">
+    <End Role="Secteurs" Type="Self.Secteurs" Multiplicity="0..1" />
+    <End Role="GroupesOuvrages" Type="Self.GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secteurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdSecteur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupesOuvrages_TypesProcesVerbaux">
+    <End Role="TypesProcesVerbaux" Type="Self.TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Role="GroupesOuvrages" Type="Self.GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdTypeProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_Descriptions">
+    <End Role="Descriptions" Type="Self.Descriptions" Multiplicity="1" />
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descriptions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdDescription" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_LieuxTypes">
+    <End Role="LieuxTypes" Type="Self.LieuxTypes" Multiplicity="1" />
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LieuxTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLieuType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_Lignes1">
+    <End Role="Lignes" Type="Self.Lignes" Multiplicity="1" />
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLigneProprietaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_Lignes2">
+    <End Role="Lignes" Type="Self.Lignes" Multiplicity="1" />
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLigneGestionnaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lignes_FamillesLignes">
+    <End Role="FamillesLignes" Type="Self.FamillesLignes" Multiplicity="0..1" />
+    <End Role="Lignes" Type="Self.Lignes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesLignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lignes">
+        <PropertyRef Name="IdFamilleLigne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_Localisations">
+    <End Role="Localisations" Type="Self.Localisations" Multiplicity="0..1" />
+    <End Role="Localisations1" Type="Self.Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations1">
+        <PropertyRef Name="IdLocalisationApresMigration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_Ouvrages">
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="0..1" />
+    <End Role="Localisations" Type="Self.Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdOuvragePrincipal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_OuvragesSecondaires">
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="0..1" />
+    <End Role="Localisations" Type="Self.Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdOuvrageSecondaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_ProcesVerbaux">
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="0..1" />
+    <End Role="Localisations" Type="Self.Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Descriptions">
+    <End Role="Descriptions" Type="Self.Descriptions" Multiplicity="1" />
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descriptions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdDescription" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Lieux">
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="1" />
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdLieuProprietaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Lieux1">
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="0..1" />
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdLieuGestionnaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Ouvrages">
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="0..1" />
+    <End Role="Ouvrages1" Type="Self.Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages1">
+        <PropertyRef Name="IdOpParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_TypesOuvrages">
+    <End Role="TypesOuvrages" Type="Self.TypesOuvrages" Multiplicity="1" />
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesOuvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdTypeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParametresHidalgo_Criteres">
+    <End Role="Criteres" Type="Self.Criteres" Multiplicity="1" />
+    <End Role="ParametresHidalgo" Type="Self.ParametresHidalgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Criteres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParametresHidalgo">
+        <PropertyRef Name="IdCritere" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParametresProgrammation_ParametresHidalgo">
+    <End Role="ParametresHidalgo" Type="Self.ParametresHidalgo" Multiplicity="0..1" />
+    <End Role="ParametresProgrammation" Type="Self.ParametresProgrammation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParametresHidalgo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParametresProgrammation">
+        <PropertyRef Name="IdParametre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParametresProgrammation_Programmations">
+    <End Role="Programmations" Type="Self.Programmations" Multiplicity="1" />
+    <End Role="ParametresProgrammation" Type="Self.ParametresProgrammation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ParametresProgrammation">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_PlanificationGroupeOuvrage">
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="1" />
+    <End Role="Planification" Type="Self.Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdPlanificationGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_PlanificationsTypes">
+    <End Role="PlanificationsTypes" Type="Self.PlanificationsTypes" Multiplicity="0..1" />
+    <End Role="Planification" Type="Self.Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationsTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdPlanificationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_Surveillant">
+    <End Role="Utilisateurs" Type="Self.Utilisateurs" Multiplicity="0..1" />
+    <End Role="Planification" Type="Self.Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdSurveillant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_Utilisateur">
+    <End Role="Utilisateurs" Type="Self.Utilisateurs" Multiplicity="0..1" />
+    <End Role="Planification" Type="Self.Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdUtilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationComposition_Ouvrages">
+    <End Role="Ouvrages" Type="Self.Ouvrages" Multiplicity="0..1" />
+    <End Role="PlanificationComposition" Type="Self.PlanificationComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationComposition">
+        <PropertyRef Name="IdOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationComposition_PlanificationGroupeOuvrage">
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="1" />
+    <End Role="PlanificationComposition" Type="Self.PlanificationComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationComposition">
+        <PropertyRef Name="IdPlanificationGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Lieux">
+    <End Role="Lieux" Type="Self.Lieux" Multiplicity="0..1" />
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Lignes">
+    <End Role="Lignes" Type="Self.Lignes" Multiplicity="0..1" />
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdLigne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Secteurs">
+    <End Role="Secteurs" Type="Self.Secteurs" Multiplicity="0..1" />
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secteurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdSecteur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_TypesProcesVerbaux">
+    <End Role="TypesProcesVerbaux" Type="Self.TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Role="PlanificationGroupeOuvrage" Type="Self.PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdTypeProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbaux_ProcesVerbaux">
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="0..1" />
+    <End Role="ProcesVerbaux1" Type="Self.ProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProcesVerbaux1">
+        <PropertyRef Name="IdPvAnterieur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbaux_TypesProcesVerbaux">
+    <End Role="TypesProcesVerbaux" Type="Self.TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProcesVerbaux">
+        <PropertyRef Name="IdTypeProvesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbauxValidation_ProcesVerbaux">
+    <End Role="ProcesVerbaux" Type="Self.ProcesVerbaux" Multiplicity="1" />
+    <End Role="ValidationsProcesVerbaux" Type="Self.ValidationsProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsProcesVerbaux">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbauxValidation_Validation">
+    <End Role="Validations" Type="Self.Validations" Multiplicity="1" />
+    <End Role="ValidationsProcesVerbaux" Type="Self.ValidationsProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Validations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsProcesVerbaux">
+        <PropertyRef Name="IdValidation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDetails_Categorie">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="0..1" />
+    <End Role="ProgrammationDetails" Type="Self.ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdCategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDetails_NatureTravauxExternes">
+    <End Role="NatureTravauxExternes" Type="Self.NatureTravauxExternes" Multiplicity="0..1" />
+    <End Role="ProgrammationDetails" Type="Self.ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NatureTravauxExternes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdNatureTravauxExternes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDetails_Programmations">
+    <End Role="Programmations" Type="Self.Programmations" Multiplicity="1" />
+    <End Role="ProgrammationDetails" Type="Self.ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDocumentPGE_Document">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="0..1" />
+    <End Role="ProgrammationDocumentPGE" Type="Self.ProgrammationDocumentPGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDocumentPge_TravauxAnnees">
+    <End Role="ProgrammationDocumentPGE" Type="Self.ProgrammationDocumentPGE" Multiplicity="1" />
+    <End Role="DocumentPgeTravauxAnnees" Type="Self.DocumentPgeTravauxAnnees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentPgeTravauxAnnees">
+        <PropertyRef Name="IdDocumentProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Programmations_NatureTravaux">
+    <End Role="NatureTravaux" Type="Self.NatureTravaux" Multiplicity="1" />
+    <End Role="Programmations" Type="Self.Programmations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NatureTravaux">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Programmations">
+        <PropertyRef Name="IdNatureTravaux" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Programmations_TypeOuvrage">
+    <End Role="TypeOuvrage" Type="Self.TypeOuvrage" Multiplicity="1" />
+    <End Role="Programmations" Type="Self.Programmations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOuvrage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Programmations">
+        <PropertyRef Name="IdTypeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationValeurParametresDocument_ParametreHidalgo">
+    <End Role="ParametresHidalgo" Type="Self.ParametresHidalgo" Multiplicity="1" />
+    <End Role="ProgrammationValeurParametresDocument" Type="Self.ProgrammationValeurParametresDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParametresHidalgo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationValeurParametresDocument">
+        <PropertyRef Name="IDParametreHidalgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE">
+    <End Role="ProgrammationDocumentPGE" Type="Self.ProgrammationDocumentPGE" Multiplicity="1" />
+    <End Role="ProgrammationValeurParametresDocument" Type="Self.ProgrammationValeurParametresDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationValeurParametresDocument">
+        <PropertyRef Name="IDDocumentPge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ValidationsDocuments_Documents">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="1" />
+    <End Role="ValidationsDocuments" Type="Self.ValidationsDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsDocuments">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ValidationsDocuments_Validations">
+    <End Role="Validations" Type="Self.Validations" Multiplicity="1" />
+    <End Role="ValidationsDocuments" Type="Self.ValidationsDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Validations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsDocuments">
+        <PropertyRef Name="IdValidation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RatpHidalgoModelStoreContainer">
+    <EntitySet Name="Causes" EntityType="Self.Causes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Descriptions" EntityType="Self.Descriptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesordreNotesTypes" EntityType="Self.DesordreNotesTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Desordres" EntityType="Self.Desordres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesordresCauses" EntityType="Self.DesordresCauses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesordresDocuments" EntityType="Self.DesordresDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DesordresInfos" EntityType="Self.DesordresInfos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documents" EntityType="Self.Documents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentsLies" EntityType="Self.DocumentsLies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FamillesDesordres" EntityType="Self.FamillesDesordres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FamillesDesordresTypes" EntityType="Self.FamillesDesordresTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FamillesLignes" EntityType="Self.FamillesLignes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GpeOuvragesComposition" EntityType="Self.GpeOuvragesComposition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupesOuvrages" EntityType="Self.GroupesOuvrages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lieux" EntityType="Self.Lieux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LieuxTypes" EntityType="Self.LieuxTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lignes" EntityType="Self.Lignes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localisations" EntityType="Self.Localisations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NaturesTravaux" EntityType="Self.NaturesTravaux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ouvrages" EntityType="Self.Ouvrages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Planification" EntityType="Self.Planification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanificationComposition" EntityType="Self.PlanificationComposition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanificationGroupeOuvrage" EntityType="Self.PlanificationGroupeOuvrage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanificationsTypes" EntityType="Self.PlanificationsTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcesVerbaux" EntityType="Self.ProcesVerbaux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReferencesTypes" EntityType="Self.ReferencesTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Secteurs" EntityType="Self.Secteurs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SeuilHidalgo" EntityType="Self.SeuilHidalgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatutsDesordres" EntityType="Self.StatutsDesordres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatutsDocuments" EntityType="Self.StatutsDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesInformations" EntityType="Self.TypesInformations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesOuvrages" EntityType="Self.TypesOuvrages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesProcesVerbaux" EntityType="Self.TypesProcesVerbaux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesSurveillances" EntityType="Self.TypesSurveillances" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilisateurs" EntityType="Self.Utilisateurs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Validations" EntityType="Self.Validations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ValidationsDocuments" EntityType="Self.ValidationsDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ValidationsProcesVerbaux" EntityType="Self.ValidationsProcesVerbaux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="CoefficientPonderationParametresCriteresCalibrage" EntityType="Self.CoefficientPonderationParametresCriteresCalibrage" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="Criteres" EntityType="Self.Criteres" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="DocumentPgeTravauxAnnees" EntityType="Self.DocumentPgeTravauxAnnees" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="NatureTravaux" EntityType="Self.NatureTravaux" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="NatureTravauxExternes" EntityType="Self.NatureTravauxExternes" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="ParametresHidalgo" EntityType="Self.ParametresHidalgo" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="ParametresProgrammation" EntityType="Self.ParametresProgrammation" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="ProgrammationDetails" EntityType="Self.ProgrammationDetails" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="ProgrammationDocumentPGE" EntityType="Self.ProgrammationDocumentPGE" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="Programmations" EntityType="Self.Programmations" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="ProgrammationValeurParametresDocument" EntityType="Self.ProgrammationValeurParametresDocument" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="TypeOuvrage" EntityType="Self.TypeOuvrage" Schema="hidalgo" store:Type="Tables" />
+    <EntitySet Name="DataAnnexe" EntityType="Self.DataAnnexe" store:Type="Tables" store:Schema="hidalgo">
+      <DefiningQuery>SELECT 
+    [DataAnnexe].[ID] AS [ID], 
+    [DataAnnexe].[IdLigne] AS [IdLigne], 
+    [DataAnnexe].[LibelleLignes] AS [LibelleLignes], 
+    [DataAnnexe].[IdLieux] AS [IdLieux], 
+    [DataAnnexe].[LibelleLieux] AS [LibelleLieux], 
+    [DataAnnexe].[F5] AS [F5], 
+    [DataAnnexe].[Tunnels] AS [Tunnels], 
+    [DataAnnexe].[TypeStructIndiqueMaconnerie] AS [TypeStructIndiqueMaconnerie], 
+    [DataAnnexe].[IdOuvrage] AS [IdOuvrage], 
+    [DataAnnexe].[TABLEAU DES VISITEURS DE NUIT] AS [TABLEAU DES VISITEURS DE NUIT], 
+    [DataAnnexe].[F10] AS [F10], 
+    [DataAnnexe].[Pk_OA_Debut] AS [Pk_OA_Debut], 
+    [DataAnnexe].[Pk_OA _fin] AS [Pk_OA _fin], 
+    [DataAnnexe].[Long_OP_a_controler] AS [Long_OP_a_controler], 
+    [DataAnnexe].[Surface_developpe] AS [Surface_developpe], 
+    [DataAnnexe].[Long_OA] AS [Long_OA], 
+    [DataAnnexe].[Code_Pat] AS [Code_Pat], 
+    [DataAnnexe].[Nature_lieu] AS [Nature_lieu], 
+    [DataAnnexe].[DateConstruction_Annee] AS [DateConstruction_Annee], 
+    [DataAnnexe].[DateConstruction_Note] AS [DateConstruction_Note], 
+    [DataAnnexe].[HistoriqueConfortementMac_Annee] AS [HistoriqueConfortementMac_Annee], 
+    [DataAnnexe].[HistoriqueConfortementMac_Note] AS [HistoriqueConfortementMac_Note], 
+    [DataAnnexe].[HistoriqueRefectionEnduit_Anne] AS [HistoriqueRefectionEnduit_Anne], 
+    [DataAnnexe].[HistoriqueRefectionEnduit_Note] AS [HistoriqueRefectionEnduit_Note], 
+    [DataAnnexe].[LargeurOuvrage_NombreVoies] AS [LargeurOuvrage_NombreVoies], 
+    [DataAnnexe].[LargeurOuvrage_Note] AS [LargeurOuvrage_Note], 
+    [DataAnnexe].[AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine] AS [AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine], 
+    [DataAnnexe].[AgressiviteChimiqueTerrainEncaissant_TeneursSulfate] AS [AgressiviteChimiqueTerrainEncaissant_TeneursSulfate], 
+    [DataAnnexe].[AgressiviteChimiqueTerrainEncaissant_Note] AS [AgressiviteChimiqueTerrainEncaissant_Note], 
+    [DataAnnexe].[SolubiliteTerrain_Natureterrain] AS [SolubiliteTerrain_Natureterrain], 
+    [DataAnnexe].[SolubiliteTerrain_PresenceEauNappePhreatique] AS [SolubiliteTerrain_PresenceEauNappePhreatique], 
+    [DataAnnexe].[SolubiliteTerrain_Note] AS [SolubiliteTerrain_Note], 
+    [DataAnnexe].[PourrissementBoisBlindage_Cas] AS [PourrissementBoisBlindage_Cas], 
+    [DataAnnexe].[PourrissementBoisBlindage_Note] AS [PourrissementBoisBlindage_Note], 
+    [DataAnnexe].[Frequentation_Cas] AS [Frequentation_Cas], 
+    [DataAnnexe].[Frequentation_Note] AS [Frequentation_Note], 
+    [DataAnnexe].[Correspondance_Cas] AS [Correspondance_Cas], 
+    [DataAnnexe].[Correspondance_Note] AS [Correspondance_Note], 
+    [DataAnnexe].[PerimetreL2L6_Cas] AS [PerimetreL2L6_Cas], 
+    [DataAnnexe].[PerimetreL2L6_Note] AS [PerimetreL2L6_Note], 
+    [DataAnnexe].[ImageRATP_Cas] AS [ImageRATP_Cas], 
+    [DataAnnexe].[ImageRATP_Note] AS [ImageRATP_Note]
+    FROM [hidalgo].[DataAnnexe] AS [DataAnnexe]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Programma__IdPro__7889D298" Association="Self.FK__Programma__IdPro__7889D298">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordreNotesTypes_Desordres" Association="Self.FK_DesordreNotesTypes_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordreNotesTypes" EntitySet="DesordreNotesTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desordres_FamillesDesordresTypes" Association="Self.FK_Desordres_FamillesDesordresTypes">
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desordres_FamillesDesordresTypes1" Association="Self.FK_Desordres_FamillesDesordresTypes1">
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desordres_Localisations" Association="Self.FK_Desordres_Localisations">
+      <End Role="Localisations" EntitySet="Localisations" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desordres_StatutsDesordres" Association="Self.FK_Desordres_StatutsDesordres">
+      <End Role="StatutsDesordres" EntitySet="StatutsDesordres" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresCauses_Causes" Association="Self.FK_DesordresCauses_Causes">
+      <End Role="Causes" EntitySet="Causes" />
+      <End Role="DesordresCauses" EntitySet="DesordresCauses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresCauses_Desordres" Association="Self.FK_DesordresCauses_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordresCauses" EntitySet="DesordresCauses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_Desordres" Association="Self.FK_DesordresDocuments_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_Documents" Association="Self.FK_DesordresDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_NaturesTravaux" Association="Self.FK_DesordresDocuments_NaturesTravaux">
+      <End Role="NaturesTravaux" EntitySet="NaturesTravaux" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_TypesSurveillances" Association="Self.FK_DesordresDocuments_TypesSurveillances">
+      <End Role="TypesSurveillances" EntitySet="TypesSurveillances" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresInfos_Desordres" Association="Self.FK_DesordresInfos_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordresInfos" EntitySet="DesordresInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresInfos_FamillesTypesInformations" Association="Self.FK_DesordresInfos_FamillesTypesInformations">
+      <End Role="TypesInformations" EntitySet="TypesInformations" />
+      <End Role="DesordresInfos" EntitySet="DesordresInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Documents" Association="Self.FK_Documents_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="Documents1" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Responsable" Association="Self.FK_Documents_Responsable">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Utilisateurs" Association="Self.FK_Documents_Utilisateurs">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsLies_DesordresDocuments" Association="Self.FK_DocumentsLies_DesordresDocuments">
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsLies_ProcesVerbal" Association="Self.FK_DocumentsLies_ProcesVerbal">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsLies_Statuts" Association="Self.FK_DocumentsLies_Statuts">
+      <End Role="StatutsDocuments" EntitySet="StatutsDocuments" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamillesDesordresTypes_FamillesDesordres" Association="Self.FK_FamillesDesordresTypes_FamillesDesordres">
+      <End Role="FamillesDesordres" EntitySet="FamillesDesordres" />
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GpeOuvragesComposition_GroupesOuvrages" Association="Self.FK_GpeOuvragesComposition_GroupesOuvrages">
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+      <End Role="GpeOuvragesComposition" EntitySet="GpeOuvragesComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GpeOuvragesComposition_Ouvrages" Association="Self.FK_GpeOuvragesComposition_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="GpeOuvragesComposition" EntitySet="GpeOuvragesComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupesOuvrages_ProcesVerbaux" Association="Self.FK_GroupesOuvrages_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupesOuvrages_Secteurs" Association="Self.FK_GroupesOuvrages_Secteurs">
+      <End Role="Secteurs" EntitySet="Secteurs" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupesOuvrages_TypesProcesVerbaux" Association="Self.FK_GroupesOuvrages_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_Descriptions" Association="Self.FK_Lieux_Descriptions">
+      <End Role="Descriptions" EntitySet="Descriptions" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_LieuxTypes" Association="Self.FK_Lieux_LieuxTypes">
+      <End Role="LieuxTypes" EntitySet="LieuxTypes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_Lignes1" Association="Self.FK_Lieux_Lignes1">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_Lignes2" Association="Self.FK_Lieux_Lignes2">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lignes_FamillesLignes" Association="Self.FK_Lignes_FamillesLignes">
+      <End Role="FamillesLignes" EntitySet="FamillesLignes" />
+      <End Role="Lignes" EntitySet="Lignes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_Localisations" Association="Self.FK_Localisations_Localisations">
+      <End Role="Localisations" EntitySet="Localisations" />
+      <End Role="Localisations1" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_Ouvrages" Association="Self.FK_Localisations_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_OuvragesSecondaires" Association="Self.FK_Localisations_OuvragesSecondaires">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_ProcesVerbaux" Association="Self.FK_Localisations_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Descriptions" Association="Self.FK_Ouvrages_Descriptions">
+      <End Role="Descriptions" EntitySet="Descriptions" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Lieux" Association="Self.FK_Ouvrages_Lieux">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Lieux1" Association="Self.FK_Ouvrages_Lieux1">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Ouvrages" Association="Self.FK_Ouvrages_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Ouvrages1" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_TypesOuvrages" Association="Self.FK_Ouvrages_TypesOuvrages">
+      <End Role="TypesOuvrages" EntitySet="TypesOuvrages" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParametresHidalgo_Criteres" Association="Self.FK_ParametresHidalgo_Criteres">
+      <End Role="Criteres" EntitySet="Criteres" />
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParametresProgrammation_ParametresHidalgo" Association="Self.FK_ParametresProgrammation_ParametresHidalgo">
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+      <End Role="ParametresProgrammation" EntitySet="ParametresProgrammation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParametresProgrammation_Programmations" Association="Self.FK_ParametresProgrammation_Programmations">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ParametresProgrammation" EntitySet="ParametresProgrammation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_PlanificationGroupeOuvrage" Association="Self.FK_Planification_PlanificationGroupeOuvrage">
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_PlanificationsTypes" Association="Self.FK_Planification_PlanificationsTypes">
+      <End Role="PlanificationsTypes" EntitySet="PlanificationsTypes" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_Surveillant" Association="Self.FK_Planification_Surveillant">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_Utilisateur" Association="Self.FK_Planification_Utilisateur">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationComposition_Ouvrages" Association="Self.FK_PlanificationComposition_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="PlanificationComposition" EntitySet="PlanificationComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationComposition_PlanificationGroupeOuvrage" Association="Self.FK_PlanificationComposition_PlanificationGroupeOuvrage">
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+      <End Role="PlanificationComposition" EntitySet="PlanificationComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Lieux" Association="Self.FK_PlanificationGroupeOuvrage_Lieux">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Lignes" Association="Self.FK_PlanificationGroupeOuvrage_Lignes">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Secteurs" Association="Self.FK_PlanificationGroupeOuvrage_Secteurs">
+      <End Role="Secteurs" EntitySet="Secteurs" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_TypesProcesVerbaux" Association="Self.FK_PlanificationGroupeOuvrage_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbaux_ProcesVerbaux" Association="Self.FK_ProcesVerbaux_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="ProcesVerbaux1" EntitySet="ProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbaux_TypesProcesVerbaux" Association="Self.FK_ProcesVerbaux_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbauxValidation_ProcesVerbaux" Association="Self.FK_ProcesVerbauxValidation_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="ValidationsProcesVerbaux" EntitySet="ValidationsProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbauxValidation_Validation" Association="Self.FK_ProcesVerbauxValidation_Validation">
+      <End Role="Validations" EntitySet="Validations" />
+      <End Role="ValidationsProcesVerbaux" EntitySet="ValidationsProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDetails_Categorie" Association="Self.FK_ProgrammationDetails_Categorie">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDetails_NatureTravauxExternes" Association="Self.FK_ProgrammationDetails_NatureTravauxExternes">
+      <End Role="NatureTravauxExternes" EntitySet="NatureTravauxExternes" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDetails_Programmations" Association="Self.FK_ProgrammationDetails_Programmations">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDocumentPGE_Document" Association="Self.FK_ProgrammationDocumentPGE_Document">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDocumentPge_TravauxAnnees" Association="Self.FK_ProgrammationDocumentPge_TravauxAnnees">
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+      <End Role="DocumentPgeTravauxAnnees" EntitySet="DocumentPgeTravauxAnnees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Programmations_NatureTravaux" Association="Self.FK_Programmations_NatureTravaux">
+      <End Role="NatureTravaux" EntitySet="NatureTravaux" />
+      <End Role="Programmations" EntitySet="Programmations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Programmations_TypeOuvrage" Association="Self.FK_Programmations_TypeOuvrage">
+      <End Role="TypeOuvrage" EntitySet="TypeOuvrage" />
+      <End Role="Programmations" EntitySet="Programmations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationValeurParametresDocument_ParametreHidalgo" Association="Self.FK_ProgrammationValeurParametresDocument_ParametreHidalgo">
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+      <End Role="ProgrammationValeurParametresDocument" EntitySet="ProgrammationValeurParametresDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE" Association="Self.FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE">
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+      <End Role="ProgrammationValeurParametresDocument" EntitySet="ProgrammationValeurParametresDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ValidationsDocuments_Documents" Association="Self.FK_ValidationsDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="ValidationsDocuments" EntitySet="ValidationsDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ValidationsDocuments_Validations" Association="Self.FK_ValidationsDocuments_Validations">
+      <End Role="Validations" EntitySet="Validations" />
+      <End Role="ValidationsDocuments" EntitySet="ValidationsDocuments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

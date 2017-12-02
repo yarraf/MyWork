@@ -1,0 +1,73 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+@{
+    ViewBag.Title = "Categorie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Programmations</a></li>
+        <li class="active"><strong>Categorie</strong></li>
+    </ol>
+</div>
+
+<fieldset class="form-group">
+
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">PROGRAMMATION PROPOSEE PAR LE MODULE HIDALGO : <span data-bind="text : NatureTravaux"></span></div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="row panel-success">
+                        <div class="form-group">
+                            <table id="TableauPropose" class="table table-bordered table-hover" data-bind="visible: listePGE().length > 0">
+                                <thead>
+                                    <tr>
+                                        <th class="col-md-1">CATEGORIE DE PRIORITE</th>
+                                        <th class="col-md-1">Ligne</th>
+                                        <th class="col-md-1">Lieux</th>
+                                        <th class="col-md-2">Num. d'affaire</th>
+                                        <th class="col-md-1">m²</th>
+                                        <th class="col-md-2">Montant prévisionnel (€)</th>
+                                        <th class="col-md-1">Coût par catégorie</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabPGEProposee" class="text-center" data-bind="foreach: listeBudgetAnnee">
+                                    <!--knockout Containerless Binding-->
+                                    <!-- ko foreach: listeDesPGESurLAnnee -->
+                                    <tr data-bind="attr: {'numpge': NumeroAffaire}">
+                                        <!--important to user class hiddenTop to hide top border-->
+                                        <td class="col-md-1" data-bind="text: Categorie"></td>
+                                        <td class="col-md-1" data-bind="if: Ligne"><img data-bind="attr:{src: '/Content/img/'+Ligne.Chemin, alt: Ligne.Name}" width="16" /></td>
+                                        <td class="col-md-1" data-bind="if: Lieu"><span data-bind="text: Lieu.Name"></span></td>
+                                        <td class="col-md-2"><span data-bind="text: NumeroAffaire"></span></td>
+                                        <td class="col-md-1" data-bind="text: Surface"></td>
+                                        <td class="col-md-2" data-bind="text: Budget"></td>
+                                        <!-- ko if: $index() == 0 -->
+                                        <td class="big-col" data-bind="text: $parent.Cout, attr: { rowspan: $parent.NbrPge }"></td>
+                                        <!-- /ko -->
+                                    </tr>
+                                    <!-- /ko -->
+                                </tbody>
+                            </table>
+                            <p class="alert-warning text-center col-md-8 col-md-offset-2" data-bind="visible: listePGE().length < 1">Pas de PGE recupérée</p>
+                            <div class="text-center" data-bind="visible:listePGE().length == 0"><p><img src="~/Content/img/load_hori.gif" width="40" height="40" /></p><p>Chargement PGE...</p></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+
+
+@section Scripts
+{
+<script type="text/javascript">
+    initCategorie();
+</script>
+}

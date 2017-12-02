@@ -1,0 +1,30 @@
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Core.Common.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\log4net.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.Data.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Core.Common.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.Data.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\log4net.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.csprojResolveAssemblyReference.cache
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.Properties.Resource1.resources
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.csproj.GenerateResource.Cache
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Core.Common.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\log4net.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.Contract.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.Data.Contract.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Core.Common.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.App.Contract.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\Ratp.Hidalgo.Data.Contract.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\bin\Debug\log4net.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.csprojResolveAssemblyReference.cache
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.Properties.Resource1.resources
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.csproj.GenerateResource.Cache
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.App\obj\Debug\Ratp.Hidalgo.App.pdb

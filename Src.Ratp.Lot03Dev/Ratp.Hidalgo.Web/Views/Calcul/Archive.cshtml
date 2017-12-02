@@ -1,0 +1,122 @@
+﻿@using System.Configuration;
+@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+@{
+    ViewBag.Title = "Modification";
+    ViewBag.UrlPGE = "lien/PGE/numero";
+    string CheminExcel = ConfigurationManager.AppSettings["CheminDossierExcel"];
+    ViewBag.LienVersDossierProgrammation = CheminExcel;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Programmations</a></li>
+        <li class="active"><strong>Archive</strong></li>
+    </ol>
+</div>
+
+<div class="alert alert-info" role="alert" id="divInfoMessage">
+    <p><span><strong>Info: </strong><span data-bind="text: infoCalcul"></span></span></p>
+</div>
+
+
+<fieldset class="form-group">
+
+    <br />
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Archivage</div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+
+                            <table id="tableauArchivge" class="table table-bordered table-hover table-fixed">
+                                <thead>
+                                    <tr>
+                                        <td class="col-md-3">Type d'ouvrage</td>
+                                        <td class="col-md-3">Nature de Travaux</td>
+                                        <td class="col-md-2">Année de la programmation</td>
+                                        <td class="col-md-3">Date et heure de l'enregistrement</td>
+                                        <td class="col-md-1"></td>
+                                    </tr>
+                                </thead>
+
+                                <tbody data-bind="foreach: listProgramme">
+                                    <tr>
+                                        <td class="col-md-3"> Tunnel + Couloir </td>
+                                        <td class="col-md-3" data-bind="text: NatureTravaux"></td>
+                                        <td class="col-md-2"><a data-bind="attr: {href: '@ViewBag.LienVersDossierProgrammation/programation_'+Id}"><span data-bind="text: Anneeprogrammation, click: $parent.OuvrirExcel"></span></a></td>
+                                        <td class="col-md-3" data-bind="text: DateModification"></td>
+                                        <td class="col-md-1"><button class="btn btn-danger btn-xs glyphicon glyphicon-remove"  data-toggle="modal" data-target="#confirm-delete" data-bind="click: $parent.confirmeToDelete, disable: $parent.isloading"></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Confirmation de suppression
+                                        </div>
+                                        <div class="modal-body">
+                                            Voulez-vous supprimer la programmation ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                            <a class="btn btn-danger btn-ok" data-dismiss="modal" data-bind="click: suppressionProgrammation">Supprimmer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row text-center">
+        <div data-bind="visible: listProgramme().length < 0" class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+        <div class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+    </div>
+
+
+</fieldset>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/customescript")
+    @Scripts.Render("~/bundles/datepickerjs")
+    @Styles.Render("~/Content/datepickercss")
+    <script type="text/javascript">
+
+            InitialiseElementsArchivage();
+    </script>
+}
+
+
+<style>
+    #tableauArchivge tr {
+        height: 30px;
+    }
+
+    #tableauArchivge td {
+        height: 100%;
+    }
+
+    #tableauArchivge tbody{
+        max-height: 500px;
+
+    }
+
+</style>
+
+
+

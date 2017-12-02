@@ -1,0 +1,224 @@
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\ApplicationInsights.config
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\csc.exe
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\vbc.exe
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\VBCSCompiler.exe
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.dll.config
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Antlr3.Runtime.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Core.Common.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.SqlServer.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\log4net.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Web.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.ApplicationInsights.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Newtonsoft.Json.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Owin.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Data.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Model.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Net.Http.Formatting.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Helpers.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.WebHost.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Mvc.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Optimization.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Razor.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Deployment.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Razor.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Unity.Mvc5.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\WebGrease.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Core.Common.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Data.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Model.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.SqlServer.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\log4net.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Web.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.ApplicationInsights.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Net.Http.Formatting.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.WebHost.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Helpers.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Mvc.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Optimization.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Razor.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Deployment.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Razor.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Antlr3.Runtime.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Newtonsoft.Json.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.csprojResolveAssemblyReference.cache
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.Properties.Resource1.resources
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.csproj.GenerateResource.Cache
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\ApplicationInsights.config
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\csc.exe
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\vbc.exe
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\VBCSCompiler.exe
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.dll.config
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Web.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Antlr3.Runtime.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Core.Common.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.SqlServer.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\log4net.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Web.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.ApplicationInsights.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Newtonsoft.Json.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Owin.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.Contract.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Data.Contract.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Model.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Net.Http.Formatting.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Helpers.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.WebHost.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Mvc.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Optimization.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Razor.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Deployment.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Razor.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Unity.Mvc5.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\WebGrease.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Core.Common.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.Contract.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.App.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Data.Contract.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Ratp.Hidalgo.Model.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\EntityFramework.SqlServer.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\log4net.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.Web.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.ApplicationInsights.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Net.Http.Formatting.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Http.WebHost.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Helpers.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Mvc.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Optimization.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.Razor.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Deployment.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\System.Web.WebPages.Razor.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Antlr3.Runtime.pdb
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Newtonsoft.Json.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.csprojResolveAssemblyReference.cache
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.Properties.Resource1.resources
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.csproj.GenerateResource.Cache
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.dll
+D:\WORK\WRK CDS PANTIN\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Web\obj\Debug\Ratp.Hidalgo.Web.pdb

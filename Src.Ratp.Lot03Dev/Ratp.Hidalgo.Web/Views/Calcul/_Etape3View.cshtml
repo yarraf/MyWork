@@ -1,0 +1,95 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+<br />
+<div class="panel panel-success">
+    <div class="panel-heading">HIERARCHISATION DES PGE PAR ORDRE DECROISSANT DE PRIORITE : <strong><span data-bind="text : NatureTravaux"></span></strong></div>
+    <div class="panel-body">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <div class="col-md-12">
+                    @*<div class="scrollbar force-overflowlistepge" id="style-1">*@
+                        <table id="HierarchisationTableau" class="table table-bordered table-hover table-fixed" data-bind="visible: listePGE().length > 0">
+                            <thead>
+                                <tr>
+                                    <th width="100px">Num. d'ordre</th>
+                                    <th width="150px">Ligne</th>
+                                    <th width="487px">Lieu</th>
+                                    <th width="300px">Num. d'affaire</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" data-bind="foreach: listePGE">
+                                <tr>
+                                    <td width="100px" data-bind="text: Rang"></td>
+                                    <td width="150px"><div data-bind="with:Ligne"><img data-bind="attr:{src: '/Content/img/'+ Chemin, alt: Name}" width="16" /></div></td>
+                                    <td width="487px"><div data-bind="with:Lieu"><span data-bind="text: Name"></span></div></td>
+                                    <td width="300px"><a data-bind="attr:{href: '@ViewBag.UrlPGE'+IdDocument ,TARGET: '_blank'}"><span data-bind="text: NumeroAffaire"></span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center" data-bind="visible:listePGE().length == 0"><p><img src="~/Content/img/load_hori.gif" width="40" height="40" /></p><p class="text-center">Chargement PGE...</p></div>
+                    @*</div>*@
+                </div>
+                <br />
+                <br />
+                <div class="col-md-10 col-md-offset-2" data-bind="visible:listePGE().length>0">
+                    <br />
+                    <br />
+                    <div class="form-group">
+
+                        <div class="col-md-5">@Html.LabelFor(x => x.PrixUnitaireTravaux, new { @class = "" }) <strong><span data-bind="text : NatureTravaux"></span></strong></div>
+                        <div class="col-md-4">
+                            <input type="number" id="txtPrixUnitaireTravaux" data-bind="value: prixUnitaireTravaux" class="form-control" />
+                        </div>
+                        <div class="col-md-3 ">
+                            <span>en € / m²</span>
+                        </div>
+                        <div class="col-md-5">@Html.LabelFor(x => x.BudgetDisponible, new { @class = "" })</div>
+                        <div class="col-md-4">
+                            <input type="number" id="txtBudgetDisponible" data-bind="value: budgetDisponible" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <span>en €</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row text-center">
+    <button id="ValidationHierarchisationPGE" type="button" class="btn btn-lg btn-success" data-bind="click: saveEtape3, enable: validFormStep3">Valider</button>
+    <div class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+</div>
+
+
+<style>
+    /*Reecriture sur le bootstrap qui est limité a 120px*/
+    #HierarchisationTableau tbody {
+        height: 575px;
+        max-height: 575px;
+    }
+
+    #HierarchisationTableau tr {
+        height: 25px;
+    }
+
+    #HierarchisationTableau td {
+        overflow: hidden;
+        height: 100%;
+    }
+</style>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/customescript")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            //rendreTodecimal('.editbox');
+            //rendreTodecimal('.editbox');
+
+        });
+    </script>
+}

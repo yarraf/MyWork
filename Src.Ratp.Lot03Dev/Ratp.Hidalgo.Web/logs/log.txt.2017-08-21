@@ -1,0 +1,37 @@
+ERROR 2017-08-21 13:25:42,176  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-08-21 13:29:44,301  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 13:30:25,836  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 13:43:35,975  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 13:46:45,949  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 13:46:50,806  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 14:00:11,334  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 14:01:29,868  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 17:13:58,904  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:14:13,195  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+ERROR 2017-08-21 17:15:55,595  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:16:07,234  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 17:21:23,702  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:23:01,024  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:23:29,586  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:24:29,918  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:28:48,713  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:37:38,300  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+ERROR 2017-08-21 17:38:21,381  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:38:56,245  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:40:08,758  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:40:37,298  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 17:44:07,489  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-08-21 17:44:24,109  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:44:28,581  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:44:55,420  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+ERROR 2017-08-21 17:47:55,959  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-08-21 17:48:06,484  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:48:48,388  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:53:08,446  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:53:48,012  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:55:06,478  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:55:29,158  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:56:15,597  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:56:36,379  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81
+INFO  2017-08-21 17:57:45,701  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-08-21 17:58:06,595  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 81

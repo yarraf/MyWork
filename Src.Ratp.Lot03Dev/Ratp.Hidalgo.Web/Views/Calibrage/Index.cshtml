@@ -1,0 +1,128 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.CoefficientPonderationVm
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Interface Calibrage</h2>
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">Coefficients de pondération des paramètres</div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA1)
+                            @Html.TextBoxFor(x => x.CpA1, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA4)
+                            @Html.TextBoxFor(x => x.CpA4, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA9)
+                            @Html.TextBoxFor(x => x.CpA9, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpB1)
+                            @Html.TextBoxFor(x => x.CpB1, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpB3)
+                            @Html.TextBoxFor(x => x.CpB3, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA5)
+                            @Html.TextBoxFor(x => x.CpA5, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA10)
+                            @Html.TextBoxFor(x => x.CpA10, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpB2)
+                            @Html.TextBoxFor(x => x.CpB2, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpB4)
+                            @Html.TextBoxFor(x => x.CpB4, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA7)
+                            @Html.TextBoxFor(x => x.CpA7, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.CpA11)
+                            @Html.TextBoxFor(x => x.CpA11, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">Coefficients de pondération des critères</div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Cp1)
+                            @Html.TextBoxFor(x => x.Cp1, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Cp3)
+                            @Html.TextBoxFor(x => x.Cp3, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Cp2)
+                            @Html.TextBoxFor(x => x.Cp2, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Cp4)
+                            @Html.TextBoxFor(x => x.Cp4, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">Paramétrages des calculs des programmations</div>
+                <div class="panel-body">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.V1)
+                            @Html.TextBoxFor(x => x.V1, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Dv)
+                            @Html.TextBoxFor(x => x.Dv, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Pt)
+                            @Html.TextBoxFor(x => x.Pt, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-default">Enregistrer</button>
+            </div>
+    }
+</div>

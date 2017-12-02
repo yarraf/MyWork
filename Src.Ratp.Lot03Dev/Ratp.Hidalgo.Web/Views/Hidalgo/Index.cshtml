@@ -1,0 +1,24 @@
+﻿@{
+//ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <a class="navbar-brand" href="#"><img src="~/Content/img/RATP_logo2.png" alt="RATP" /></a>
+    </div>
+
+    <div class="col-md-8">
+        <h1 style="margin-top:30px;">MARION - HIDALGO</h1>
+        <p class="lead">Votre outil d'aide à la décision et la programmation des travaux de maintenance</p>
+    </div>
+</div>
+<div class="row centerer">
+    <div class="wrap">
+        @Html.ActionLink("Nouvelle Programmation", "Index", "Calcul", null, new { @class = "btn-11" })
+        @Html.ActionLink("Consultation et Suivi des travaux", "ConsultationSuiviTravaux", "Calcul",null, new { @class = "btn-11" })
+    </div>
+    <div class="wrap">
+        @Html.ActionLink("Modifier le dernier programme enregistre", "ModificationProgrammation", "Calcul",null, new { @class = "btn-11" })
+        @Html.ActionLink("Archivage", "Archive", "Calcul",null, new { @class = "btn-11" })
+    </div>
+</div>

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB782431-2675-4C03-B258-C481C37929E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ratp.Hidalgo.Data.Contract</RootNamespace>
+    <AssemblyName>Ratp.Hidalgo.Data.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Categorie.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Causes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CoefficientPonderationParametresCriteresCalibrage.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Criteres.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DataAnnexe.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Descriptions.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DesordreNotesTypes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Desordres.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DesordresDocuments.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DesordresInfos.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DocumentPgeTravauxAnnees.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Documents.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DocumentsLies.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FamillesDesordres.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FamillesDesordresTypes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FamillesLignes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GpeOuvragesComposition.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GroupesOuvrages.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HidalgoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Lieux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LieuxTypes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Lignes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Localisations.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NaturesTravaux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NatureTravaux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NatureTravauxExternes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Ouvrages.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ParametresHidalgo.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ParametresProgrammation.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Planification.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PlanificationComposition.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PlanificationGroupeOuvrage.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PlanificationsTypes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProcesVerbaux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProgrammationDetails.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProgrammationDocumentPGE.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Programmations.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProgrammationValeurParametresDocument.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ReferencesTypes.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Secteurs.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SeuilHidalgo.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_GetAllDocumentPgeWithNoteMax_Result.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\StatutsDesordres.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\StatutsDocuments.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypeOuvrage.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypesInformations.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypesOuvrages.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypesProcesVerbaux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypesSurveillances.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Utilisateurs.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Validations.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ValidationsDocuments.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ValidationsProcesVerbaux.cs">
+      <DependentUpon>HidalgoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VDocumentPge.cs" />
+    <Compile Include="Enum\ECategoriePge.cs" />
+    <Compile Include="Enum\ECategorieProgrammationDetail.cs" />
+    <Compile Include="Enum\EFamilleDesordre.cs" />
+    <Compile Include="Enum\ENatureCalibrage.cs" />
+    <Compile Include="Enum\EStatutsDocument.cs" />
+    <Compile Include="Enum\EParametreHidalgo.cs" />
+    <Compile Include="Repositories\ICalibrageRepositorie.cs" />
+    <Compile Include="Repositories\ICriterePerformanceRepositorie.cs" />
+    <Compile Include="Repositories\IHidalgoRepository.cs" />
+    <Compile Include="IHidalgoUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ILigneRepositorie.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Entities\HidalgoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HidalgoModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

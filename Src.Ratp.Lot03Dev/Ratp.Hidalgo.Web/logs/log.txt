@@ -1,0 +1,422 @@
+ERROR 2017-11-15 09:56:13,681  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-15 09:56:21,239  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-15 09:56:45,806  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Maçonnerie
+INFO  2017-11-15 09:56:47,362  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 09:56:47,362  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 09:56:47,364  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 09:56:47,387  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 09:56:47,388  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 09:56:47,387  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 09:56:47,388  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 09:56:47,425  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 09:56:49,038  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 09:56:50,594  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 09:56:51,372  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 09:56:51,510  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 09:56:52,213  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 09:56:53,022  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 09:56:53,404  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 09:56:56,015  rms HidalgoApp             nerationMaconnerie - Calcul critère C1:   Historique de régénérations de maçonnerie (p1.05)  
+INFO  2017-11-15 09:56:56,811  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 09:56:57,335  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 09:56:58,522  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 09:56:59,235  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 09:56:59,402  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 09:56:59,405  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 09:56:59,422  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 09:56:59,453  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 09:56:59,454  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 09:56:59,455  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 09:56:59,491  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 09:56:59,493  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 09:56:59,535  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 09:56:59,542  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 09:56:59,964  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 09:57:00,509  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 09:57:00,725  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 09:57:00,728  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 09:57:00,731  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 09:57:00,855  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 09:57:09,212  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 09:57:09,228  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 6
+ERROR 2017-11-15 09:58:11,408  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-15 09:58:11,761  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 6 à l'emplacement : C:\Marion\testExcel
+ERROR 2017-11-15 10:01:17,572  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-15 10:01:19,221  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-15 10:01:55,694  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Maçonnerie
+INFO  2017-11-15 10:01:57,216  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 10:01:57,217  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 10:01:57,218  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 10:01:57,219  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 10:01:57,220  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 10:01:57,219  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 10:01:57,223  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 10:01:58,127  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 10:01:59,546  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 10:02:00,177  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 10:02:01,700  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 10:02:02,584  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 10:02:03,078  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 10:02:03,628  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 10:02:03,958  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 10:02:04,639  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 10:02:04,645  rms HidalgoApp             nerationMaconnerie - Calcul critère C1:   Historique de régénérations de maçonnerie (p1.05)  
+INFO  2017-11-15 10:02:04,745  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 10:02:09,638  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 10:02:10,104  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 10:02:10,396  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 10:02:10,398  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 10:02:10,404  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 10:02:10,438  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 10:02:10,439  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 10:02:10,440  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 10:02:10,448  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 10:02:10,451  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 10:02:10,490  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 10:02:10,496  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 10:02:10,942  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 10:02:11,540  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 10:02:11,753  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 10:02:11,757  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 10:02:11,761  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 10:02:11,873  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 10:02:20,524  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 10:02:20,538  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 7
+ERROR 2017-11-15 10:03:57,568  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-15 10:04:01,084  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 7 à l'emplacement : C:\Marion\testExcel
+ERROR 2017-11-15 10:07:53,767  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-15 10:08:10,795  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-15 10:08:49,601  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-11-15 10:08:50,740  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 10:08:50,741  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 10:08:50,742  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 10:08:50,742  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 10:08:50,743  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 10:08:50,742  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 10:08:50,748  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 10:08:51,926  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 10:08:52,050  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 10:08:52,902  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 10:08:53,046  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 10:08:53,073  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 10:08:53,252  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 10:08:53,919  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 10:08:54,301  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 10:08:54,653  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 10:08:54,681  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 10:08:54,936  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 10:08:54,939  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-11-15 10:08:55,410  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 10:08:56,002  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 10:08:56,003  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 10:08:56,009  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 10:08:56,031  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 10:08:56,032  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 10:08:56,032  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 10:08:56,151  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 10:08:56,153  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 10:08:56,171  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 10:08:56,176  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 10:08:56,226  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 10:08:56,269  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 10:08:56,294  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 10:08:56,299  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 10:08:56,302  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 10:08:56,405  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 10:08:59,407  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 10:08:59,420  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 8
+ERROR 2017-11-15 10:09:12,109  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-15 10:09:12,166  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 8 à l'emplacement : C:\Marion\testExcel
+ERROR 2017-11-15 11:31:04,543  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 11:31:04,543  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 11:31:10,838  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-15 11:31:20,445  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-15 11:31:44,784  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-11-15 11:31:46,355  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:31:46,356  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:31:46,357  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 11:31:46,357  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 11:31:46,357  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 11:31:46,358  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 11:31:46,362  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 11:31:48,360  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 11:31:49,183  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 11:31:49,492  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 11:31:49,499  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 11:31:49,509  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 11:31:50,114  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 11:31:50,857  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 11:31:51,772  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 11:31:51,801  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 11:31:51,918  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 11:31:52,528  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 11:31:52,530  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-11-15 11:31:57,480  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 11:31:57,757  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 11:31:57,758  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 11:31:57,764  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 11:31:57,784  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 11:31:57,785  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 11:31:57,786  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 11:31:57,932  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 11:31:57,933  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 11:31:57,950  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:31:57,955  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 11:31:58,005  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:31:58,047  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 11:31:58,071  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 11:31:58,075  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 11:31:58,078  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 11:31:58,233  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 11:32:02,792  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 11:32:02,808  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 9
+ERROR 2017-11-15 11:32:31,697  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-15 11:32:33,322  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 9 à l'emplacement : C:\Marion\testExcel
+INFO  2017-11-15 11:33:27,643  rms CalculServiceApp       pdateProgrammation - Update de la programmation: 9
+INFO  2017-11-15 11:33:27,684  rms CalculServiceApp       pdateProgrammation - Fin de l'update de la programmation: 9
+INFO  2017-11-15 11:34:14,432  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-11-15 11:34:15,011  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:34:15,012  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 11:34:15,011  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:34:15,011  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 11:34:15,016  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 11:34:15,015  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 11:34:15,023  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 11:34:15,023  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 11:34:15,022  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 11:34:15,041  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 11:34:16,143  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 11:34:16,315  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 11:34:17,490  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 11:34:17,688  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 11:34:18,596  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 11:34:18,664  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-11-15 11:34:18,773  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 11:34:20,684  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 11:34:22,402  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 11:34:22,768  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 11:34:22,812  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 11:34:22,813  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 11:34:22,814  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 11:34:22,822  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 11:34:22,823  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 11:34:22,824  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 11:34:22,945  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 11:34:22,946  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 11:34:22,955  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:34:22,956  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 11:34:23,001  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:34:23,040  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 11:34:23,060  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 11:34:23,062  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 11:34:23,063  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 11:34:23,097  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 11:34:27,394  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 11:34:27,406  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 10
+ERROR 2017-11-15 11:37:56,314  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-15 11:38:12,672  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-15 11:38:31,098  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Enduit
+INFO  2017-11-15 11:38:32,310  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:38:32,310  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-15 11:38:32,311  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-15 11:38:32,312  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-15 11:38:32,314  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-15 11:38:32,312  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-15 11:38:32,325  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-15 11:38:33,322  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-15 11:38:33,925  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-15 11:38:34,098  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-15 11:38:34,564  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-15 11:38:34,953  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-15 11:38:35,222  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-15 11:38:35,588  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-15 11:38:36,274  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-15 11:38:36,439  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-15 11:38:36,685  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-15 11:38:36,687  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-15 11:38:37,120  rms HidalgoApp             RegenerationEnduit - Calcul critère C1:   Historique de régénérations de enduit (p1.06)  
+INFO  2017-11-15 11:38:37,122  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-15 11:38:37,988  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-15 11:38:37,989  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-15 11:38:37,994  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-15 11:38:38,015  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-15 11:38:38,016  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-15 11:38:38,016  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-15 11:38:38,152  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-15 11:38:38,153  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-15 11:38:38,171  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:38:38,175  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-15 11:38:38,222  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-15 11:38:38,268  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-15 11:38:38,291  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-15 11:38:38,294  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-15 11:38:38,298  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-15 11:38:38,429  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2018
+INFO  2017-11-15 11:38:42,029  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-15 11:38:42,046  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 11
+ERROR 2017-11-15 11:39:18,699  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-15 11:39:18,989  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 11 à l'emplacement : C:\Marion\testExcel
+INFO  2017-11-15 11:39:47,174  rms CalculServiceApp       pdateProgrammation - Update de la programmation: 11
+INFO  2017-11-15 11:39:47,235  rms CalculServiceApp       pdateProgrammation - Fin de l'update de la programmation: 11
+INFO  2017-11-15 11:39:56,120  rms CalculServiceApp       mmationDocumentPge - Début d'eregistrement des PGE pour la programmation
+INFO  2017-11-15 11:39:56,121  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 465
+INFO  2017-11-15 11:39:56,171  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 465
+INFO  2017-11-15 11:39:56,171  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 466
+INFO  2017-11-15 11:39:56,197  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 466
+INFO  2017-11-15 11:39:56,197  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 467
+INFO  2017-11-15 11:39:56,216  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 467
+INFO  2017-11-15 11:39:56,216  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 468
+INFO  2017-11-15 11:39:56,234  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 468
+INFO  2017-11-15 11:39:56,234  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 469
+INFO  2017-11-15 11:39:56,256  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 469
+INFO  2017-11-15 11:39:56,256  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 470
+INFO  2017-11-15 11:39:56,275  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 470
+INFO  2017-11-15 11:39:56,275  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 471
+INFO  2017-11-15 11:39:56,290  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 471
+INFO  2017-11-15 11:39:56,290  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 472
+INFO  2017-11-15 11:39:56,305  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 472
+INFO  2017-11-15 11:39:56,306  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 473
+INFO  2017-11-15 11:39:56,326  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 473
+INFO  2017-11-15 11:39:56,327  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 474
+INFO  2017-11-15 11:39:56,343  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 474
+INFO  2017-11-15 11:39:56,344  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 475
+INFO  2017-11-15 11:39:56,363  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 475
+INFO  2017-11-15 11:39:56,363  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 476
+INFO  2017-11-15 11:39:56,378  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 476
+INFO  2017-11-15 11:39:56,378  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 477
+INFO  2017-11-15 11:39:56,391  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 477
+INFO  2017-11-15 11:39:56,392  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 478
+INFO  2017-11-15 11:39:56,406  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 478
+INFO  2017-11-15 11:39:56,407  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 479
+INFO  2017-11-15 11:39:56,425  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 479
+INFO  2017-11-15 11:39:56,426  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 480
+INFO  2017-11-15 11:39:56,440  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 480
+INFO  2017-11-15 11:39:56,441  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 481
+INFO  2017-11-15 11:39:56,457  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 481
+INFO  2017-11-15 11:39:56,458  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 482
+INFO  2017-11-15 11:39:56,472  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 482
+INFO  2017-11-15 11:39:56,472  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 483
+INFO  2017-11-15 11:39:56,490  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 483
+INFO  2017-11-15 11:39:56,491  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 484
+INFO  2017-11-15 11:39:56,509  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 484
+INFO  2017-11-15 11:39:56,509  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 485
+INFO  2017-11-15 11:39:56,529  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 485
+INFO  2017-11-15 11:39:56,529  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 486
+INFO  2017-11-15 11:39:56,551  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 486
+INFO  2017-11-15 11:39:56,552  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 487
+INFO  2017-11-15 11:39:56,574  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 487
+INFO  2017-11-15 11:39:56,575  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 488
+INFO  2017-11-15 11:39:56,592  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 488
+INFO  2017-11-15 11:39:56,593  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 489
+INFO  2017-11-15 11:39:56,608  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 489
+INFO  2017-11-15 11:39:56,609  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 490
+INFO  2017-11-15 11:39:56,626  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 490
+INFO  2017-11-15 11:39:56,627  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 491
+INFO  2017-11-15 11:39:56,643  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 491
+INFO  2017-11-15 11:39:56,644  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 492
+INFO  2017-11-15 11:39:56,658  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 492
+INFO  2017-11-15 11:39:56,659  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 493
+INFO  2017-11-15 11:39:56,676  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 493
+INFO  2017-11-15 11:39:56,677  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 494
+INFO  2017-11-15 11:39:56,694  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 494
+INFO  2017-11-15 11:39:56,694  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 495
+INFO  2017-11-15 11:39:56,710  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 495
+INFO  2017-11-15 11:39:56,711  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 496
+INFO  2017-11-15 11:39:56,725  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 496
+INFO  2017-11-15 11:39:56,726  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 497
+INFO  2017-11-15 11:39:56,741  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 497
+INFO  2017-11-15 11:39:56,741  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 498
+INFO  2017-11-15 11:39:56,761  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 498
+INFO  2017-11-15 11:39:56,762  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 499
+INFO  2017-11-15 11:39:56,783  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 499
+INFO  2017-11-15 11:39:56,783  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 500
+INFO  2017-11-15 11:39:56,802  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 500
+INFO  2017-11-15 11:39:56,802  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 501
+INFO  2017-11-15 11:39:56,818  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 501
+INFO  2017-11-15 11:39:56,819  rms CalculServiceApp       mmationDocumentPge - Enregistrement est terminé
+INFO  2017-11-15 11:40:00,311  rms CalculServiceApp       mmationDocumentPge - Début d'eregistrement des PGE pour la programmation
+INFO  2017-11-15 11:40:00,312  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 465
+INFO  2017-11-15 11:40:00,323  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 465
+INFO  2017-11-15 11:40:00,324  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 466
+INFO  2017-11-15 11:40:00,331  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 466
+INFO  2017-11-15 11:40:00,332  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 467
+INFO  2017-11-15 11:40:00,339  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 467
+INFO  2017-11-15 11:40:00,340  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 468
+INFO  2017-11-15 11:40:00,348  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 468
+INFO  2017-11-15 11:40:00,348  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 469
+INFO  2017-11-15 11:40:00,357  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 469
+INFO  2017-11-15 11:40:00,358  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 470
+INFO  2017-11-15 11:40:00,366  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 470
+INFO  2017-11-15 11:40:00,366  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 471
+INFO  2017-11-15 11:40:00,376  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 471
+INFO  2017-11-15 11:40:00,377  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 472
+INFO  2017-11-15 11:40:00,384  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 472
+INFO  2017-11-15 11:40:00,385  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 473
+INFO  2017-11-15 11:40:00,394  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 473
+INFO  2017-11-15 11:40:00,395  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 474
+INFO  2017-11-15 11:40:00,403  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 474
+INFO  2017-11-15 11:40:00,404  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 475
+INFO  2017-11-15 11:40:00,414  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 475
+INFO  2017-11-15 11:40:00,414  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 476
+INFO  2017-11-15 11:40:00,423  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 476
+INFO  2017-11-15 11:40:00,423  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 477
+INFO  2017-11-15 11:40:00,431  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 477
+INFO  2017-11-15 11:40:00,432  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 478
+INFO  2017-11-15 11:40:00,443  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 478
+INFO  2017-11-15 11:40:00,444  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 479
+INFO  2017-11-15 11:40:00,454  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 479
+INFO  2017-11-15 11:40:00,455  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 480
+INFO  2017-11-15 11:40:00,468  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 480
+INFO  2017-11-15 11:40:00,469  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 481
+INFO  2017-11-15 11:40:00,479  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 481
+INFO  2017-11-15 11:40:00,479  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 482
+INFO  2017-11-15 11:40:00,487  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 482
+INFO  2017-11-15 11:40:00,488  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 483
+INFO  2017-11-15 11:40:00,496  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 483
+INFO  2017-11-15 11:40:00,496  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 484
+INFO  2017-11-15 11:40:00,506  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 484
+INFO  2017-11-15 11:40:00,508  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 485
+INFO  2017-11-15 11:40:00,516  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 485
+INFO  2017-11-15 11:40:00,517  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 486
+INFO  2017-11-15 11:40:00,525  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 486
+INFO  2017-11-15 11:40:00,525  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 487
+INFO  2017-11-15 11:40:00,534  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 487
+INFO  2017-11-15 11:40:00,534  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 488
+INFO  2017-11-15 11:40:00,543  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 488
+INFO  2017-11-15 11:40:00,544  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 489
+INFO  2017-11-15 11:40:00,554  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 489
+INFO  2017-11-15 11:40:00,555  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 490
+INFO  2017-11-15 11:40:00,565  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 490
+INFO  2017-11-15 11:40:00,566  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 491
+INFO  2017-11-15 11:40:00,573  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 491
+INFO  2017-11-15 11:40:00,574  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 492
+INFO  2017-11-15 11:40:00,582  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 492
+INFO  2017-11-15 11:40:00,583  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 493
+INFO  2017-11-15 11:40:00,590  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 493
+INFO  2017-11-15 11:40:00,591  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 494
+INFO  2017-11-15 11:40:00,601  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 494
+INFO  2017-11-15 11:40:00,602  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 495
+INFO  2017-11-15 11:40:00,610  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 495
+INFO  2017-11-15 11:40:00,611  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 496
+INFO  2017-11-15 11:40:00,619  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 496
+INFO  2017-11-15 11:40:00,619  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 497
+INFO  2017-11-15 11:40:00,629  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 497
+INFO  2017-11-15 11:40:00,629  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 498
+INFO  2017-11-15 11:40:00,636  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 498
+INFO  2017-11-15 11:40:00,637  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 499
+INFO  2017-11-15 11:40:00,647  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 499
+INFO  2017-11-15 11:40:00,648  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 500
+INFO  2017-11-15 11:40:00,657  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 500
+INFO  2017-11-15 11:40:00,658  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 501
+INFO  2017-11-15 11:40:00,666  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 501
+INFO  2017-11-15 11:40:00,667  rms CalculServiceApp       mmationDocumentPge - Enregistrement est terminé
+INFO  2017-11-15 11:40:06,539  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 11
+ERROR 2017-11-15 23:13:13,928  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:19:11,241  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:22:28,297  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:23:07,663  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:23:09,590  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:23:12,704  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:23:55,727  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:24:14,327  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+ERROR 2017-11-15 23:24:31,181  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.

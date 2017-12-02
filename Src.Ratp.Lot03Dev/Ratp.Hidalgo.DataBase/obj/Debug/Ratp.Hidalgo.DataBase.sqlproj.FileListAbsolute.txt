@@ -1,0 +1,5 @@
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.DataBase\bin\Debug\Ratp.Hidalgo.DataBase.dacpac
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.DataBase\bin\Debug\Ratp.Hidalgo.DataBase.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.DataBase\bin\Debug\Ratp.Hidalgo.DataBase.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.DataBase\obj\Debug\Ratp.Hidalgo.DataBase.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.DataBase\obj\Debug\Ratp.Hidalgo.DataBase.pdb

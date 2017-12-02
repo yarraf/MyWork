@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Ratp.Hidalgo.Web.ViewModel.ValeurCritereVm>
+
+@{
+    var color = "red";
+}
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="glyphicon glyphicon-align-justify"></span> Seuils de référence par critère</div>
+    <div class="panel-body">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="background-color: @(item.Color)" id="old_@(item.NatureValeur)c1">
+                        @*<span data-bind="text: @(item.NatureValeur)c1">@item.C1</span>*@
+                        <span id="badge_@(item.NatureValeur)c1">@item.C1</span>
+                    </td>
+                    <td style="background-color:@(item.Color)" id="old_@(item.NatureValeur)c2">
+                        @*<span data-bind="text: @(item.NatureValeur)c2">@item.C2</span>*@
+                        <span id="badge_@(item.NatureValeur)c2">@item.C2</span>
+                    </td>
+                    <td style="background-color:@(item.Color)" id="old_@(item.NatureValeur)c3">
+                        @*<span data-bind="text: @(item.NatureValeur)c3">@item.C3</span>*@
+                        <span id="badge_@(item.NatureValeur)c3">@item.C3</span>
+
+                    </td>
+                    <td>
+                        <span><strong>@item.NatureValeur</strong></span>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th>C1</th>
+                <th>C2</th>
+                <th>C3</th>
+                <th></th>
+            </tr>
+        </table>
+        <div class="col-xs-6">
+            <ul>
+                <li class="text-info"><div class="circle circle-red">&nbsp;&nbsp;</div>Court terme (1-4 ans)</li>
+                <li class="text-info"><div class="circle circle-yellow">&nbsp;&nbsp;</div>Long terme (+8ans)</li>
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <ul>
+                <li  class="text-info"><div class="circle circle-orange">&nbsp;&nbsp;</div>Moyen terme (4-8 ans)</li>
+                <li  class="text-info"><div class="circle circle-green">&nbsp;&nbsp;</div>Surveillance</li>
+            </ul>
+        </div>
+    </div>
+</div>

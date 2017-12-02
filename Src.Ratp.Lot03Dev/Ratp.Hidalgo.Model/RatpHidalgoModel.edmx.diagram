@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="895dbea783104f388bd4cc6886ce9925" Name="Marion" ZoomLevel="93">
+        <EntityTypeShape EntityType="RatpHidalgoModel.Causes" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Descriptions" Width="1.5" PointX="10.375" PointY="13.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Desordres" Width="1.5" PointX="12.375" PointY="13.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Documents" Width="1.5" PointX="14.375" PointY="0.75" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Documents_Documents" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DesordresDocuments" Width="1.5" PointX="16.625" PointY="6.5" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DocumentsLies" Width="1.5" PointX="18.875" PointY="8.625" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.NaturesTravaux" Width="1.5" PointX="14.375" PointY="20" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresDocuments_Desordres" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresDocuments_Documents" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresDocuments_NaturesTravaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DocumentsLies_DesordresDocuments" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.FamillesDesordres" Width="1.5" PointX="7.875" PointY="10.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.FamillesDesordresTypes" Width="1.5" PointX="10.125" PointY="10.5" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes1" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_FamillesDesordresTypes_FamillesDesordres" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.GroupesOuvrages" Width="2.375" PointX="0.5" PointY="2.875" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Lieux" Width="1.5" PointX="12.625" PointY="24.25" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Lieux_Descriptions" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.FamillesLignes" Width="1.5" PointX="8.125" PointY="25.5" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Lignes" Width="1.5" PointX="10.375" PointY="24.5" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Lignes_FamillesLignes" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Lieux_Lignes1" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Lieux_Lignes2" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Localisations" Width="1.5" PointX="6.375" PointY="1" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Desordres_Localisations" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Localisations_Localisations" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Ouvrages" Width="1.5" PointX="16.875" PointY="18.5" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Ouvrages_Descriptions" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Ouvrages_Lieux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Ouvrages_Lieux1" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Localisations_Ouvrages" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Localisations_OuvragesSecondaires" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Ouvrages_Ouvrages" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.GpeOuvragesComposition" Width="1.5" PointX="19.125" PointY="13.625" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.PlanificationComposition" Width="1.5" PointX="19.125" PointY="20.375" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.PlanificationGroupeOuvrage" Width="1.5" PointX="14.625" PointY="25.75" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_GpeOuvragesComposition_GroupesOuvrages" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_GpeOuvragesComposition_Ouvrages" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lieux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lignes" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationComposition_Ouvrages" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationComposition_PlanificationGroupeOuvrage" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Planification" Width="2.25" PointX="17.25" PointY="26.125" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.PlanificationsTypes" Width="1.5" PointX="14.875" PointY="30.75" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Planification_PlanificationGroupeOuvrage" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Planification_PlanificationsTypes" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ProcesVerbaux" Width="1.5" PointX="4.75" PointY="7.125" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DocumentsLies_ProcesVerbal" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_GroupesOuvrages_ProcesVerbaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Localisations_ProcesVerbaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProcesVerbaux_ProcesVerbaux" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ReferencesTypes" Width="1.5" PointX="6.375" PointY="6.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Secteurs" Width="1.5" PointX="0.75" PointY="16.625" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_GroupesOuvrages_Secteurs" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Secteurs" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.StatutsDesordres" Width="1.5" PointX="10.125" PointY="8" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.StatutsDocuments" Width="1.5" PointX="8.375" PointY="0.875" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Desordres_StatutsDesordres" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DocumentsLies_Statuts" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DesordreNotesTypes" Width="1.5" PointX="14.625" PointY="17.375" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DesordresInfos" Width="1.5" PointX="21.625" PointY="15.875" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.LieuxTypes" Width="1.5" PointX="10.375" PointY="29.375" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.TypesInformations" Width="1.5" PointX="19.625" PointY="24.125" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.TypesOuvrages" Width="1.5" PointX="14.625" PointY="34.25" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordreNotesTypes_Desordres" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresInfos_Desordres" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresInfos_FamillesTypesInformations" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Lieux_LieuxTypes" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Ouvrages_TypesOuvrages" />
+        <AssociationConnector Association="RatpHidalgoModel.DesordresCauses" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.TypesProcesVerbaux" Width="1.5" PointX="0.75" PointY="15.25" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.TypesSurveillances" Width="1.5" PointX="10.625" PointY="3.875" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_DesordresDocuments_TypesSurveillances" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_GroupesOuvrages_TypesProcesVerbaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_TypesProcesVerbaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProcesVerbaux_TypesProcesVerbaux" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Utilisateurs" Width="1.5" PointX="8.125" PointY="14.375" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Documents_Responsable" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Documents_Utilisateurs" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Planification_Surveillant" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Planification_Utilisateur" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Validations" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ValidationsDocuments" Width="1.5" PointX="16.625" PointY="3.25" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ValidationsProcesVerbaux" Width="1.5" PointX="3" PointY="6.5" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ValidationsDocuments_Documents" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProcesVerbauxValidation_ProcesVerbaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProcesVerbauxValidation_Validation" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ValidationsDocuments_Validations" />
+        <AssociationConnector Association="RatpHidalgoModel.ProcesVerbauxPlanification" />
+        <AssociationConnector Association="RatpHidalgoModel.Fk_GroupeOuvrage_Lieux" />
+      </Diagram>
+      <Diagram DiagramId="0a4b78da38514689b6163e090b27bb32" Name="Hidalgo" ZoomLevel="83" >
+        <EntityTypeShape EntityType="RatpHidalgoModel.NatureTravaux" Width="1.5" PointX="1.125" PointY="1.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.NatureTravauxExternes" Width="1.5" PointX="3.375" PointY="10.875" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ParametresHidalgo" Width="2" PointX="6.375" PointY="0.5" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ParametresProgrammation" Width="1.5" PointX="8.625" PointY="4.25" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.TypeOuvrage" Width="1.5" PointX="1.125" PointY="4.75" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ParametresProgrammation_ParametresHidalgo" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Programmations" Width="1.5" PointX="3.375" PointY="3.375" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_Programmations_NatureTravaux" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ParametresProgrammation_Programmations" ManuallyRouted="true" >
+          <ConnectorPoint PointX="4.875" PointY="5.3738374990197748" />
+          <ConnectorPoint PointX="7.4012393724180985" PointY="5.548164077387634" />
+          <ConnectorPoint PointX="7.5675106275819015" PointY="5.5596378511361175" />
+          <ConnectorPoint PointX="8.625" PointY="5.632611341283873" />
+        </AssociationConnector>
+        <AssociationConnector Association="RatpHidalgoModel.FK_Programmations_TypeOuvrage" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ProgrammationDetails" Width="1.5" PointX="5.625" PointY="5.125" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationDetails_NatureTravauxExternes" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationDetails_Programmations" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ProgrammationDocumentPGE" Width="2.5" PointX="5.625" PointY="13" />
+        <AssociationConnector Association="RatpHidalgoModel.FK__Programma__IdPro__218BE82B" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DocumentPgeTravauxAnnees" Width="2.75" PointX="9.5" PointY="13.375" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationDocumentPge_TravauxAnnees" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.ProgrammationValeurParametresDocument" Width="1.5" PointX="11.125" PointY="5.625" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ParametreHidalgo" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Categorie" Width="1.5" PointX="9.375" PointY="0.875" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.CoefficientPonderationParametresCriteresCalibrage" Width="1.5" PointX="5.375" PointY="9.75" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ProgrammationDetails_Categorie" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.DataAnnexe" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.Criteres" Width="1.5" PointX="4.125" PointY="0.875" />
+        <AssociationConnector Association="RatpHidalgoModel.FK_ParametresHidalgo_Criteres" />
+        <EntityTypeShape EntityType="RatpHidalgoModel.SeuilHidalgo" Width="1.5" PointX="8.375" PointY="7.75" />
+      </Diagram>
+      <Diagram DiagramId="951bc5e465b24c63a1c22711bbfff6e3" Name="View" >
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

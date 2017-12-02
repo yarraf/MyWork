@@ -1,0 +1,271 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+<br />
+<div class="row">
+    <div class="panel panel-success">
+        <div class="panel-heading">PROGRAMMATION PROPOSEE PAR LE MODULE HIDALGO : <span data-bind="text : NatureTravaux"></span></div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="row panel-success">
+                    <div class="form-group">
+                        <table id="TableauPropose" class="table table-bordered table-hover table-fixed" data-bind="visible: listePGE().length > 0">
+                            <thead>
+                                <tr>
+                                    <th class="big-col" style="border: none;">Année-Budget</th>
+                                    <th class="little-col" data-bind="visible: !ValidExAEQUO()">Exaequo</th>
+                                    <th class="little-col">Num. d'ordre</th>
+                                    <th class="" width="60px">Ligne</th>
+                                    <th class="big-col">Lieu</th>
+                                    <th class="big-col">Num. d'affaire</th>
+                                    <th class="little-col">m²</th>
+                                    <th class="medium-col">Montant prévisionnel (€)</th>
+                                    <th class="medium-col">Coûts Cumulés (€)</th>
+                                    <th class="big-col">Commentaires</th>
+                                    <th class="" width="60px"><div data-bind="enable: ValidExAEQUO()"><span class="btn btn-info glyphicon glyphicon-eye-open" title="Consulter" style="width: 30px" data-bind="click: ConsulterPGE"></span></div></th>
+                                    <th class="" width="60px"><div data-bind="enable: ValidExAEQUO()"><span class="btn btn-info glyphicon glyphicon-calendar" title="Travaux sur plusieurs Années" style="width: 30px" data-toggle="modal" data-target="#ModalTravauxSurPlusieursAnnees"></span></div></th>
+                                    <th class="little-col" data-bind="visible: ValidExAEQUO()"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabPGEProposee" class="text-center" data-bind="foreach: listeBudgetAnnee">
+                                <!--knockout Containerless Binding-->
+                                <!-- ko foreach: listeDesPGESurLAnnee -->
+                                <tr data-bind="attr: {'numpge': NumeroAffaire}, style: {'backgroundColor': IsEx ? 'yellow' : 'none'}">
+                                    <!-- ko if: $index() == 0 -->
+                                    <td class="big-col" data-bind="text: $parent.InfoAnnee, attr: { rowspan: $parent.NbrPge }" style="background-color : floralwhite !important;"></td>
+                                    <!-- /ko -->
+                                    <!--important to user class hiddenTop to hide top border-->
+                                    <td class="triangleExAEQUO little-col" data-bind="visible: !$root.ValidExAEQUO()"><div data-bind="visible: $root.CanUp($data)"><span class="triangle-up" data-bind="click: $root.MovePGEUp"></span></div><div data-bind="visible: $root.CanDown($data)"><span class="triangle-down" data-bind="click: $root.MovePGEDown"></span></div></td>
+                                    <td class="ordre little-col" data-bind="text: Rang"></td>
+                                    <td width="60px" class=""><div data-bind="with: Ligne"><img data-bind="attr:{src: '/Content/img/'+ Chemin, alt: Name}" width="16" /></div></td>
+                                    <td class="big-col"><div data-bind="with: Lieu"><span data-bind="text: Name"></span></div></td>
+                                    <td class="big-col"><a data-bind="attr: {href: '@ViewBag.UrlPGE'+IdDocument ,TARGET: '_blank'}"><span data-bind="text: NumeroAffaire"></span></a></td>
+                                    <td class="little-col surface"><span data-bind="text: Surface"></span></td>
+                                    @*<td class="medium-col montant"><div data-bind="if: Budget == null"><span data-bind="text: $root.CalculMontant(Surface)"></span></div><div data-bind="if: Budget != null"><span data-bind="text: Budget"></span></div></td>*@
+                                    <td class="medium-col montant"><span data-bind="text: Budget"></span></td>
+                                    <td class="medium-col"><span class="cumul"></span></td>
+                                    <td class="big-col comment"><div data-bind="with: Commentaire"><span data-bind="text: Commentaire"></span></div></td>
+                                    <td width="60px" class="text-center"><input class="consulter" type="checkbox" name="consulter" data-bind="attr: {'numpge': NumeroAffaire}"></td>
+                                    <td width="60px"class="text-center"><input class="travauxPlusieurAnnee" type="radio" name="travaux" value="false" data-bind="attr: {'numpge': NumeroAffaire}"></td>
+                                    <td class="little-col UpDown" data-bind="visible: $root.ValidExAEQUO()"><span class="btn btn-info glyphicon glyphicon-plus-sign AvancerPGE" data-bind="click: $root.MovePGEUp"></span><span class="btn btn-info glyphicon glyphicon-minus-sign ReculerPGE" data-bind="click: $root.MovePGEDown"></span> </td>
+                                </tr>
+                                <!-- /ko -->
+                            </tbody>
+                        </table>
+                        <p class="alert-warning text-center col-md-8 col-md-offset-2" data-bind="visible: listePGE().length < 1">Pas de PGE recupérée</p>
+                        <div class="text-center" data-bind="visible:listePGE().length == 0"><p><img src="~/Content/img/load_hori.gif" width="40" height="40" /></p><p>Chargement PGE...</p></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            @*Fenetre Modal Travaux sur Plusieurs Annees*@
+            <div class="modal fade" id="ModalTravauxSurPlusieursAnnees">
+                <div class="modal-dialog modal-xl" role="document" style="width: 700px;">
+                    <div class="modal-content">
+                        <div class="modal-header alert-success">
+                            <h5 class="modal-title">Travaux sur plusieurs années</h5>
+                            <div class="alert alert-danger dis alert-dismissible" role="alert" id="errMsgPlusieursAnnees">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered table-hover">
+                                <tr class="text-center">
+                                    <th class="col-sm-2">Ligne</th>
+                                    <th class="col-sm-2">Lieu</th>
+                                    <th class="col-sm-2">Num. d'affaire</th>
+                                    <th class="col-sm-2">m²</th>
+                                    <th class="col-sm-4">Montant prévisionnel (€)</th>
+                                </tr>
+                                <tr data-bind="with:objTSPA()">
+                                    <td class="col-sm-2"><div data-bind="with:Ligne()"><img data-bind="attr:{src: '/Content/img/'+ Chemin, alt: Name}" width="16" /></div></td>
+                                    <td class="col-sm-2"><div data-bind="with:Lieu()"><span data-bind="text : Name"></span></div></td>
+                                    <td class="col-sm-2"><a data-bind="attr: {href: '@ViewBag.UrlPGE'+Id() ,TARGET: '_blank'}"><span data-bind="text: NumeroAffaire"></span></a></td>
+                                    <td class="col-sm-2"><span data-bind="text : M"></span></td>
+                                    <td class="col-sm-4"><span data-bind="text : Previsionnel"></span></td>
+                                </tr>
+                            </table>
+                            <br /><br />
+                            <div class="col-sm-5" style="padding : 0;">
+                                <br />
+                                <div class="col-sm-12">Nombre d'années restantes = <input id="anneeRestant" class="input-sm" style="width: 43px;" data-bind="value : anneesRestant" /></div>
+                                <br /><br />
+
+                                <!--boucle par annees restante-->
+                                <table>
+                                    <!-- Todo: Generate table body -->
+                                    <tbody data-bind="foreach: Tpa_BudgetAnnee">
+                                        <tr>
+                                            <td><p>Budget annee <span data-bind="text: AnneeBudget"></span> = <input data-bind="value: Budget" style="width: 80px;" />(€)</p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr />
+                                <p>Budget restant      = <span data-bind="text: DifferenceBudget"></span> (€)</p>
+                            </div>
+
+                            <div class="col-sm-offset-1 col-sm-6" style="padding : 0;" data-bind="with:objTSPA()">
+                                <table class="table table-bordered table-hover">
+                                    <tr class="col-sm-12">
+                                        <td class="col-sm-6">Budget consommé (€)</td>
+                                        <td class="col-sm-4"><span data-bind="text : Consomme"></span></td>
+                                        <td class="col-sm-2"><span data-bind="text : PourcentageConsomme()"></span> %</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-6">Reste à consommer</td>
+                                        <td colspan="2" class="col-sm-6"><span data-bind="text : ResteConsomme"></span></td>
+                                    </tr>
+                                </table>
+
+                                <br />
+
+                                <span data-bind="text : Annee"></span><br />
+                                <div>
+                                    <label for="comment">Commentaires:</label>
+                                    <textarea class="form-control" rows="5" cols="8" id="comment" style="resize:none;" @*readonly="readonly" data-toggle="modal" data-target="#CommentaireEditTSPA" *@ data-bind="text : Commentaire"></textarea>
+
+                                    @*<!--Fenetre Modal Commentaire-->
+                                        <div class="modal fade" id="CommentaireEditTSPA">
+                                            <div class="modal-dialog modal-lg" role="document" style="width: 200px;">
+                                                <div class="modal-content">
+                                                    <div class="modal-header alert-success">
+                                                        <h5 class="modal-title">Commentaires</h5>
+                                                        <div class="alert alert-danger dis alert-dismissible" role="alert" id="errMsgPlusieursAnnees">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <textarea class="form-control" rows="6" cols="10" id="comment" style="resize:none;" data-bind="text : Commentaire"></textarea>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-lg btn-success">Enregistrer</button>
+                                                        <button type="button" class="btn btn-lg" data-dismiss="modal">Annuler</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>*@
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bind="enable: formIsValid, click: SaveTSPA">Enregistrer</button>
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Fin de Fenetre Modal*@
+
+        </div>
+    </div>
+</div>
+<br />
+<div class="row text-right col-md-12">
+    <button id="SaveProgrammation" type="submit" class="btn btn-success col-md-3 col-lg-offset-2" data-bind="click: EnregistreProgrammation,enable: ValidExAEQUO">Enregistrer la programmation</button>
+    <button id="SaveExAequo" class="btn btn-default col-md-3 col-lg-offset-2" data-bind="click: ValideEXAEQUO,disable: ValidExAEQUO">Valider les EX AEQUO</button>
+    <div class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+</div>
+
+
+<style>
+    #TableauPropose th {
+        text-align: center;
+        overflow-x: auto;
+        padding-left: 7px;
+    }
+
+    #TableauPropose thead tr {
+        max-width: 150px;
+      }
+
+    #TableauPropose tbody {
+        height: 1020px;
+        max-height : 1020px;
+        overflow-y: auto;
+        overflow-x: inherit;
+    }
+
+    #TableauPropose td, #TableauPropose th  {
+       white-space : normal;  
+       border-bottom : 0px; 
+    }
+
+    #TableauPropose span {
+        font-size: 10px;
+    }
+
+    .little-col {
+        width: 80px;
+    }
+
+    .medium-col {
+        width: 100px;
+    }
+
+    .big-col {
+        width: 120px;
+    }
+
+    .hideColumn {
+        visibility: hidden;
+    }
+
+    .noBorder {
+        border: 0 !important;
+    }
+
+    .UpDown span {
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        display: block;
+        margin: 1px;
+    }
+
+    .triangleExAEQUO span {
+        display: block;
+        margin: 5px;
+    }
+
+    .triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 10px solid red;
+    }
+
+    .triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid black;
+    }
+
+    #ModalTravauxSurPlusieursAnnees .modal-body {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .FondExAequo {
+        background-color: yellow;
+    }
+
+    .FirstYears {
+        border-color: red;
+    }
+
+    .OtherYears {
+        border-color: blue;
+    }
+</style>
+

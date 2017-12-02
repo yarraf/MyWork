@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RatpHidalgoModelStoreContainer" CdmEntityContainer="RatpHidalgoEntities">
+    <EntitySetMapping Name="NatureTravauxSet">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.NatureTravaux">
+        <MappingFragment StoreEntitySet="NatureTravaux">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NatureTravauxExternes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.NatureTravauxExternes">
+        <MappingFragment StoreEntitySet="NatureTravauxExternes">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametresHidalgo">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ParametresHidalgo">
+        <MappingFragment StoreEntitySet="ParametresHidalgo">
+          <ScalarProperty Name="IdCritere" ColumnName="IdCritere" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametresProgrammation">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ParametresProgrammation">
+        <MappingFragment StoreEntitySet="ParametresProgrammation">
+          <ScalarProperty Name="Valeur_Old" ColumnName="Valeur_Old" />
+          <ScalarProperty Name="Valeur_New" ColumnName="Valeur_New" />
+          <ScalarProperty Name="IdCritere" ColumnName="IdCritere" />
+          <ScalarProperty Name="IdParametre" ColumnName="IdParametre" />
+          <ScalarProperty Name="IdProgrammation" ColumnName="IdProgrammation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOuvrageSet">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.TypeOuvrage">
+        <MappingFragment StoreEntitySet="TypeOuvrage">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programmations">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Programmations">
+        <MappingFragment StoreEntitySet="Programmations">
+          <ScalarProperty Name="BudgetDisponible" ColumnName="BudgetDisponible" />
+          <ScalarProperty Name="PrixUnitaire" ColumnName="PrixUnitaire" />
+          <ScalarProperty Name="UserModification" ColumnName="UserModification" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="UserCreation" ColumnName="UserCreation" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="AnneeProgrammation" ColumnName="AnneeProgrammation" />
+          <ScalarProperty Name="IdTypeOuvrage" ColumnName="IdTypeOuvrage" />
+          <ScalarProperty Name="IdNatureTravaux" ColumnName="IdNatureTravaux" />
+          <ScalarProperty Name="IdProgrammation" ColumnName="IdProgrammation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgrammationDetails">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ProgrammationDetails">
+        <MappingFragment StoreEntitySet="ProgrammationDetails">
+          <ScalarProperty Name="UserModification" ColumnName="UserModification" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="UserCreation" ColumnName="UserCreation" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="IdCategorie" ColumnName="IdCategorie" />
+          <ScalarProperty Name="IdNatureTravauxExternes" ColumnName="IdNatureTravauxExternes" />
+          <ScalarProperty Name="IdLieu" ColumnName="IdLieu" />
+          <ScalarProperty Name="IdLigne" ColumnName="IdLigne" />
+          <ScalarProperty Name="IdProgrammation" ColumnName="IdProgrammation" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IdProgrammationDetail" ColumnName="IdProgrammationDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgrammationDocumentPGE">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ProgrammationDocumentPGE">
+        <MappingFragment StoreEntitySet="ProgrammationDocumentPGE">
+          <ScalarProperty Name="Categorie" ColumnName="Categorie" />
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IsTravauxPlusieursAnnee" ColumnName="IsTravauxPlusieursAnnee" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="Annee" ColumnName="Annee" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="Surface" ColumnName="Surface" />
+          <ScalarProperty Name="IsValideEx" ColumnName="IsValideEx" />
+          <ScalarProperty Name="IsExAequo" ColumnName="IsExAequo" />
+          <ScalarProperty Name="NumMedian" ColumnName="NumMedian" />
+          <ScalarProperty Name="NumRang" ColumnName="NumRang" />
+          <ScalarProperty Name="NumeroAffaire" ColumnName="NumeroAffaire" />
+          <ScalarProperty Name="IdProgrammation" ColumnName="IdProgrammation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentPgeTravauxAnnees">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DocumentPgeTravauxAnnees">
+        <MappingFragment StoreEntitySet="DocumentPgeTravauxAnnees">
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="Annee" ColumnName="Annee" />
+          <ScalarProperty Name="IdDocumentProgrammation" ColumnName="IdDocumentProgrammation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgrammationValeurParametresDocument">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ProgrammationValeurParametresDocument">
+        <MappingFragment StoreEntitySet="ProgrammationValeurParametresDocument">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IDCritere" ColumnName="IDCritere" />
+          <ScalarProperty Name="IDDocumentPge" ColumnName="IDDocumentPge" />
+          <ScalarProperty Name="IDParametreHidalgo" ColumnName="IDParametreHidalgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Causes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Causes">
+        <MappingFragment StoreEntitySet="Causes">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Descriptions">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Descriptions">
+        <MappingFragment StoreEntitySet="Descriptions">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="DonneesComplementaires" ColumnName="DonneesComplementaires" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="NiveauNappe" ColumnName="NiveauNappe" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="VisiblePavois" ColumnName="VisiblePavois" />
+          <ScalarProperty Name="DescModifications" ColumnName="DescModifications" />
+          <ScalarProperty Name="DateConstruction" ColumnName="DateConstruction" />
+          <ScalarProperty Name="Convention" ColumnName="Convention" />
+          <ScalarProperty Name="ConsignesSecurite" ColumnName="ConsignesSecurite" />
+          <ScalarProperty Name="CoordonneesConc" ColumnName="CoordonneesConc" />
+          <ScalarProperty Name="CoordonneesEnv" ColumnName="CoordonneesEnv" />
+          <ScalarProperty Name="DescriptionComp" ColumnName="DescriptionComp" />
+          <ScalarProperty Name="PkFin" ColumnName="PkFin" />
+          <ScalarProperty Name="PkDebut" ColumnName="PkDebut" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="IdVisiteType" ColumnName="IdVisiteType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desordres">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Desordres">
+        <MappingFragment StoreEntitySet="Desordres">
+          <ScalarProperty Name="IdFrequenceSurveillance" ColumnName="IdFrequenceSurveillance" />
+          <ScalarProperty Name="DatePvsr" ColumnName="DatePvsr" />
+          <ScalarProperty Name="IdIdCapture" ColumnName="IdIdCapture" />
+          <ScalarProperty Name="NumeroAffichage" ColumnName="NumeroAffichage" />
+          <ScalarProperty Name="Situation" ColumnName="Situation" />
+          <ScalarProperty Name="ConstatCommentaire" ColumnName="ConstatCommentaire" />
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="NouveauDesordre" ColumnName="NouveauDesordre" />
+          <ScalarProperty Name="AncienneCaractFamille" ColumnName="AncienneCaractFamille" />
+          <ScalarProperty Name="EnvCommentaire" ColumnName="EnvCommentaire" />
+          <ScalarProperty Name="CaractCommentaire" ColumnName="CaractCommentaire" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="NotePrecedente" ColumnName="NotePrecedente" />
+          <ScalarProperty Name="DateSaisie" ColumnName="DateSaisie" />
+          <ScalarProperty Name="IdDesordreCommun" ColumnName="IdDesordreCommun" />
+          <ScalarProperty Name="IdObservationTravaux" ColumnName="IdObservationTravaux" />
+          <ScalarProperty Name="IdAncienneFamilleType" ColumnName="IdAncienneFamilleType" />
+          <ScalarProperty Name="IdFamilleDesordreType" ColumnName="IdFamilleDesordreType" />
+          <ScalarProperty Name="IdLocalisation" ColumnName="IdLocalisation" />
+          <ScalarProperty Name="IdStatut" ColumnName="IdStatut" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Documents">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="ValidationRE" ColumnName="ValidationRE" />
+          <ScalarProperty Name="DateConsultationDE" ColumnName="DateConsultationDE" />
+          <ScalarProperty Name="IdDesitinataireDE" ColumnName="IdDesitinataireDE" />
+          <ScalarProperty Name="DestinataireDE" ColumnName="DestinataireDE" />
+          <ScalarProperty Name="TypeCondition" ColumnName="TypeCondition" />
+          <ScalarProperty Name="IdProcesVerbalAncien" ColumnName="IdProcesVerbalAncien" />
+          <ScalarProperty Name="CommentairePrestation" ColumnName="CommentairePrestation" />
+          <ScalarProperty Name="ObservationsPrestation" ColumnName="ObservationsPrestation" />
+          <ScalarProperty Name="AnneeProgrammation" ColumnName="AnneeProgrammation" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="RemarquesGenerales" ColumnName="RemarquesGenerales" />
+          <ScalarProperty Name="DescPiecesJointes" ColumnName="DescPiecesJointes" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="NumeroAffaire" ColumnName="NumeroAffaire" />
+          <ScalarProperty Name="IdDemandeur" ColumnName="IdDemandeur" />
+          <ScalarProperty Name="IdChef" ColumnName="IdChef" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="IdDocumentParent" ColumnName="IdDocumentParent" />
+          <ScalarProperty Name="IdDocumentType" ColumnName="IdDocumentType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesordresDocuments">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DesordresDocuments">
+        <MappingFragment StoreEntitySet="DesordresDocuments">
+          <ScalarProperty Name="IdPvsrFrequence" ColumnName="IdPvsrFrequence" />
+          <ScalarProperty Name="PgeRattache" ColumnName="PgeRattache" />
+          <ScalarProperty Name="PgeTitreMaj" ColumnName="PgeTitreMaj" />
+          <ScalarProperty Name="PgeTitreM" ColumnName="PgeTitreM" />
+          <ScalarProperty Name="PgeIdTitreIII" ColumnName="PgeIdTitreIII" />
+          <ScalarProperty Name="PgeBilanMaj" ColumnName="PgeBilanMaj" />
+          <ScalarProperty Name="PgeBilanIdentification" ColumnName="PgeBilanIdentification" />
+          <ScalarProperty Name="PgeBilanEvaluation" ColumnName="PgeBilanEvaluation" />
+          <ScalarProperty Name="PgeBilanAnnee" ColumnName="PgeBilanAnnee" />
+          <ScalarProperty Name="NbSrr" ColumnName="NbSrr" />
+          <ScalarProperty Name="NumSrr" ColumnName="NumSrr" />
+          <ScalarProperty Name="NbDe" ColumnName="NbDe" />
+          <ScalarProperty Name="NumDe" ColumnName="NumDe" />
+          <ScalarProperty Name="SrrExtRemarque" ColumnName="SrrExtRemarque" />
+          <ScalarProperty Name="SrrExtNaturePreconisation" ColumnName="SrrExtNaturePreconisation" />
+          <ScalarProperty Name="SrrExtDatePreconisation" ColumnName="SrrExtDatePreconisation" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="ContrainteExploitation" ColumnName="ContrainteExploitation" />
+          <ScalarProperty Name="DelaiDemande" ColumnName="DelaiDemande" />
+          <ScalarProperty Name="AnneeIndicative" ColumnName="AnneeIndicative" />
+          <ScalarProperty Name="Sdm" ColumnName="Sdm" />
+          <ScalarProperty Name="IdTypeSurveillance" ColumnName="IdTypeSurveillance" />
+          <ScalarProperty Name="IdNatureTravaux" ColumnName="IdNatureTravaux" />
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IdDesordre" ColumnName="IdDesordre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentsLies">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DocumentsLies">
+        <MappingFragment StoreEntitySet="DocumentsLies">
+          <ScalarProperty Name="Relance" ColumnName="Relance" />
+          <ScalarProperty Name="DateStatut" ColumnName="DateStatut" />
+          <ScalarProperty Name="RaisonAnnulation" ColumnName="RaisonAnnulation" />
+          <ScalarProperty Name="IdStatutDocument" ColumnName="IdStatutDocument" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="IdDesordreDocument" ColumnName="IdDesordreDocument" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NaturesTravaux">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.NaturesTravaux">
+        <MappingFragment StoreEntitySet="NaturesTravaux">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamillesDesordres">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.FamillesDesordres">
+        <MappingFragment StoreEntitySet="FamillesDesordres">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamillesDesordresTypes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.FamillesDesordresTypes">
+        <MappingFragment StoreEntitySet="FamillesDesordresTypes">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="IdFamilleDesordre" ColumnName="IdFamilleDesordre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupesOuvrages">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.GroupesOuvrages">
+        <MappingFragment StoreEntitySet="GroupesOuvrages">
+          <ScalarProperty Name="IdPlanificationGroupeOuvrage" ColumnName="IdPlanificationGroupeOuvrage" />
+          <ScalarProperty Name="IdLieu" ColumnName="IdLieu" />
+          <ScalarProperty Name="IdTypeProcesVerbal" ColumnName="IdTypeProcesVerbal" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="IdSecteur" ColumnName="IdSecteur" />
+          <ScalarProperty Name="IdLigne" ColumnName="IdLigne" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lieux">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Lieux">
+        <MappingFragment StoreEntitySet="Lieux">
+          <ScalarProperty Name="Ordre" ColumnName="Ordre" />
+          <ScalarProperty Name="SurfCarrelage" ColumnName="SurfCarrelage" />
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="IdDescription" ColumnName="IdDescription" />
+          <ScalarProperty Name="RecoAutres" ColumnName="RecoAutres" />
+          <ScalarProperty Name="RecoAcces" ColumnName="RecoAcces" />
+          <ScalarProperty Name="RecoOA11" ColumnName="RecoOA11" />
+          <ScalarProperty Name="SurveillanceTopo" ColumnName="SurveillanceTopo" />
+          <ScalarProperty Name="CodePatrimonial" ColumnName="CodePatrimonial" />
+          <ScalarProperty Name="IdLieuType" ColumnName="IdLieuType" />
+          <ScalarProperty Name="IdLigneGestionnaire" ColumnName="IdLigneGestionnaire" />
+          <ScalarProperty Name="IdLigneProprietaire" ColumnName="IdLigneProprietaire" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamillesLignes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.FamillesLignes">
+        <MappingFragment StoreEntitySet="FamillesLignes">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lignes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Lignes">
+        <MappingFragment StoreEntitySet="Lignes">
+          <ScalarProperty Name="OrdreAffichage" ColumnName="OrdreAffichage" />
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="CheminIcone" ColumnName="CheminIcone" />
+          <ScalarProperty Name="StationArrivee" ColumnName="StationArrivee" />
+          <ScalarProperty Name="StationDepart" ColumnName="StationDepart" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IdFamilleLigne" ColumnName="IdFamilleLigne" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localisations">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Localisations">
+        <MappingFragment StoreEntitySet="Localisations">
+          <ScalarProperty Name="IdLocalisationApresMigration" ColumnName="IdLocalisationApresMigration" />
+          <ScalarProperty Name="Atlas" ColumnName="Atlas" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="DateSaisie" ColumnName="DateSaisie" />
+          <ScalarProperty Name="IdInfosFixes" ColumnName="IdInfosFixes" />
+          <ScalarProperty Name="IdElementConstitutif" ColumnName="IdElementConstitutif" />
+          <ScalarProperty Name="IdZoneOS" ColumnName="IdZoneOS" />
+          <ScalarProperty Name="IdOuvrageSecondaire" ColumnName="IdOuvrageSecondaire" />
+          <ScalarProperty Name="IdZoneOP" ColumnName="IdZoneOP" />
+          <ScalarProperty Name="IdOuvragePrincipal" ColumnName="IdOuvragePrincipal" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ouvrages">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Ouvrages">
+        <MappingFragment StoreEntitySet="Ouvrages">
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="IdTypeModification" ColumnName="IdTypeModification" />
+          <ScalarProperty Name="DateHistorique" ColumnName="DateHistorique" />
+          <ScalarProperty Name="SoumisNq" ColumnName="SoumisNq" />
+          <ScalarProperty Name="SoumisSrr" ColumnName="SoumisSrr" />
+          <ScalarProperty Name="CycleInspection" ColumnName="CycleInspection" />
+          <ScalarProperty Name="Longueur" ColumnName="Longueur" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="CodeMire" ColumnName="CodeMire" />
+          <ScalarProperty Name="IdLieuGestionnaire" ColumnName="IdLieuGestionnaire" />
+          <ScalarProperty Name="IdLieuProprietaire" ColumnName="IdLieuProprietaire" />
+          <ScalarProperty Name="IdOpParent" ColumnName="IdOpParent" />
+          <ScalarProperty Name="IdDescription" ColumnName="IdDescription" />
+          <ScalarProperty Name="IdTypeOuvrage" ColumnName="IdTypeOuvrage" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GpeOuvragesComposition">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.GpeOuvragesComposition">
+        <MappingFragment StoreEntitySet="GpeOuvragesComposition">
+          <ScalarProperty Name="Controle" ColumnName="Controle" />
+          <ScalarProperty Name="CommentaireOp" ColumnName="CommentaireOp" />
+          <ScalarProperty Name="CauseNonInspection" ColumnName="CauseNonInspection" />
+          <ScalarProperty Name="Inspection" ColumnName="Inspection" />
+          <ScalarProperty Name="IdOuvrage" ColumnName="IdOuvrage" />
+          <ScalarProperty Name="IdGroupeOuvrage" ColumnName="IdGroupeOuvrage" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanificationComposition">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.PlanificationComposition">
+        <MappingFragment StoreEntitySet="PlanificationComposition">
+          <ScalarProperty Name="IdOuvrage" ColumnName="IdOuvrage" />
+          <ScalarProperty Name="IdPlanificationGroupeOuvrage" ColumnName="IdPlanificationGroupeOuvrage" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanificationGroupeOuvrage">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.PlanificationGroupeOuvrage">
+        <MappingFragment StoreEntitySet="PlanificationGroupeOuvrage">
+          <ScalarProperty Name="CycleInspection" ColumnName="CycleInspection" />
+          <ScalarProperty Name="Titre" ColumnName="Titre" />
+          <ScalarProperty Name="IdDocumentType" ColumnName="IdDocumentType" />
+          <ScalarProperty Name="IdTypeProcesVerbal" ColumnName="IdTypeProcesVerbal" />
+          <ScalarProperty Name="IdGroupe" ColumnName="IdGroupe" />
+          <ScalarProperty Name="IdLieu" ColumnName="IdLieu" />
+          <ScalarProperty Name="IdLigne" ColumnName="IdLigne" />
+          <ScalarProperty Name="IdSecteur" ColumnName="IdSecteur" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Planification">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Planification">
+        <MappingFragment StoreEntitySet="Planification">
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="AnneeNivSurv" ColumnName="AnneeNivSurv" />
+          <ScalarProperty Name="AnneeInspVis" ColumnName="AnneeInspVis" />
+          <ScalarProperty Name="NbSurv" ColumnName="NbSurv" />
+          <ScalarProperty Name="NbNuits" ColumnName="NbNuits" />
+          <ScalarProperty Name="NbJours" ColumnName="NbJours" />
+          <ScalarProperty Name="IdSurveillant" ColumnName="IdSurveillant" />
+          <ScalarProperty Name="Contraintes" ColumnName="Contraintes" />
+          <ScalarProperty Name="Raison" ColumnName="Raison" />
+          <ScalarProperty Name="Commentaires" ColumnName="Commentaires" />
+          <ScalarProperty Name="IdPlanificationType" ColumnName="IdPlanificationType" />
+          <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+          <ScalarProperty Name="IdTypeDocument" ColumnName="IdTypeDocument" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="IdPlanificationGroupeOuvrage" ColumnName="IdPlanificationGroupeOuvrage" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanificationsTypes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.PlanificationsTypes">
+        <MappingFragment StoreEntitySet="PlanificationsTypes">
+          <ScalarProperty Name="Abreviation" ColumnName="Abreviation" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesVerbaux">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ProcesVerbaux">
+        <MappingFragment StoreEntitySet="ProcesVerbaux">
+          <ScalarProperty Name="AncienneNotePV" ColumnName="AncienneNotePV" />
+          <ScalarProperty Name="FlagCreationService" ColumnName="FlagCreationService" />
+          <ScalarProperty Name="DateProchaineCreationPvsr" ColumnName="DateProchaineCreationPvsr" />
+          <ScalarProperty Name="IdRedacteurPVSR" ColumnName="IdRedacteurPVSR" />
+          <ScalarProperty Name="DatePvsr" ColumnName="DatePvsr" />
+          <ScalarProperty Name="IdFrequenceSurveillance" ColumnName="IdFrequenceSurveillance" />
+          <ScalarProperty Name="CommentaireVitrail" ColumnName="CommentaireVitrail" />
+          <ScalarProperty Name="ConformiteVitrail" ColumnName="ConformiteVitrail" />
+          <ScalarProperty Name="CommentaireAccueil" ColumnName="CommentaireAccueil" />
+          <ScalarProperty Name="EtatSaisie" ColumnName="EtatSaisie" />
+          <ScalarProperty Name="Archive" ColumnName="Archive" />
+          <ScalarProperty Name="IdPvAnterieur" ColumnName="IdPvAnterieur" />
+          <ScalarProperty Name="DatePremiereImpression" ColumnName="DatePremiereImpression" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="DateOuverture" ColumnName="DateOuverture" />
+          <ScalarProperty Name="DatePlanification" ColumnName="DatePlanification" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NumeroAffaire" ColumnName="NumeroAffaire" />
+          <ScalarProperty Name="IdTypeProvesVerbal" ColumnName="IdTypeProvesVerbal" />
+          <ScalarProperty Name="IdDocumentType" ColumnName="IdDocumentType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReferencesTypes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ReferencesTypes">
+        <MappingFragment StoreEntitySet="ReferencesTypes">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Secteurs">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Secteurs">
+        <MappingFragment StoreEntitySet="Secteurs">
+          <ScalarProperty Name="IdVisiteType" ColumnName="IdVisiteType" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatutsDesordres">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.StatutsDesordres">
+        <MappingFragment StoreEntitySet="StatutsDesordres">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatutsDocuments">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.StatutsDocuments">
+        <MappingFragment StoreEntitySet="StatutsDocuments">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesordreNotesTypes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DesordreNotesTypes">
+        <MappingFragment StoreEntitySet="DesordreNotesTypes">
+          <ScalarProperty Name="IdNoteType" ColumnName="IdNoteType" />
+          <ScalarProperty Name="IdDesordre" ColumnName="IdDesordre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesordresInfos">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DesordresInfos">
+        <MappingFragment StoreEntitySet="DesordresInfos">
+          <ScalarProperty Name="estAncienneValeur" ColumnName="estAncienneValeur" />
+          <ScalarProperty Name="Valeur" ColumnName="Valeur" />
+          <ScalarProperty Name="IdTypeInformation" ColumnName="IdTypeInformation" />
+          <ScalarProperty Name="IdDesordre" ColumnName="IdDesordre" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LieuxTypes">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.LieuxTypes">
+        <MappingFragment StoreEntitySet="LieuxTypes">
+          <ScalarProperty Name="TypeOrdreAffichage" ColumnName="TypeOrdreAffichage" />
+          <ScalarProperty Name="TypeCodeSsfa" ColumnName="TypeCodeSsfa" />
+          <ScalarProperty Name="TypePa" ColumnName="TypePa" />
+          <ScalarProperty Name="TypeTypeCodeMire" ColumnName="TypeTypeCodeMire" />
+          <ScalarProperty Name="TypeType" ColumnName="TypeType" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypesInformations">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.TypesInformations">
+        <MappingFragment StoreEntitySet="TypesInformations">
+          <ScalarProperty Name="Unite" ColumnName="Unite" />
+          <ScalarProperty Name="CategorieInfo" ColumnName="CategorieInfo" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypesOuvrages">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.TypesOuvrages">
+        <MappingFragment StoreEntitySet="TypesOuvrages">
+          <ScalarProperty Name="TypeOrdreAffichage" ColumnName="TypeOrdreAffichage" />
+          <ScalarProperty Name="TypeCodeSsfa" ColumnName="TypeCodeSsfa" />
+          <ScalarProperty Name="TypePa" ColumnName="TypePa" />
+          <ScalarProperty Name="TypeTypeCodeMire" ColumnName="TypeTypeCodeMire" />
+          <ScalarProperty Name="TypeType" ColumnName="TypeType" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DesordresCauses" TypeName="RatpHidalgoModel.DesordresCauses" StoreEntitySet="DesordresCauses">
+      <EndProperty Name="Desordres">
+        <ScalarProperty Name="Id" ColumnName="IdDesordre" />
+      </EndProperty>
+      <EndProperty Name="Causes">
+        <ScalarProperty Name="Id" ColumnName="IdCauses" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="TypesProcesVerbaux">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.TypesProcesVerbaux">
+        <MappingFragment StoreEntitySet="TypesProcesVerbaux">
+          <ScalarProperty Name="Categorie" ColumnName="Categorie" />
+          <ScalarProperty Name="Abreviation" ColumnName="Abreviation" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypesSurveillances">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.TypesSurveillances">
+        <MappingFragment StoreEntitySet="TypesSurveillances">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilisateurs">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Utilisateurs">
+        <MappingFragment StoreEntitySet="Utilisateurs">
+          <ScalarProperty Name="SpecialisationCorrespondant" ColumnName="SpecialisationCorrespondant" />
+          <ScalarProperty Name="CorrespondantTechnique" ColumnName="CorrespondantTechnique" />
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="IdFonction" ColumnName="IdFonction" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Portable" ColumnName="Portable" />
+          <ScalarProperty Name="Initiales" ColumnName="Initiales" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Matricule" ColumnName="Matricule" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Validations">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Validations">
+        <MappingFragment StoreEntitySet="Validations">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValidationsDocuments">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ValidationsDocuments">
+        <MappingFragment StoreEntitySet="ValidationsDocuments">
+          <ScalarProperty Name="Suivi" ColumnName="Suivi" />
+          <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IdValidation" ColumnName="IdValidation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValidationsProcesVerbaux">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.ValidationsProcesVerbaux">
+        <MappingFragment StoreEntitySet="ValidationsProcesVerbaux">
+          <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IdProcesVerbal" ColumnName="IdProcesVerbal" />
+          <ScalarProperty Name="IdValidation" ColumnName="IdValidation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorie">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Categorie">
+        <MappingFragment StoreEntitySet="Categorie">
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoefficientPonderationParametresCriteresCalibrage">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.CoefficientPonderationParametresCriteresCalibrage">
+        <MappingFragment StoreEntitySet="CoefficientPonderationParametresCriteresCalibrage">
+          <ScalarProperty Name="IsActif" ColumnName="IsActif" />
+          <ScalarProperty Name="ValeurEnduit" ColumnName="ValeurEnduit" />
+          <ScalarProperty Name="ValeurMaconnerie" ColumnName="ValeurMaconnerie" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataAnnexe">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.DataAnnexe">
+        <MappingFragment StoreEntitySet="DataAnnexe">
+          <ScalarProperty Name="ImageRATP_Note" ColumnName="ImageRATP_Note" />
+          <ScalarProperty Name="ImageRATP_Cas" ColumnName="ImageRATP_Cas" />
+          <ScalarProperty Name="PerimetreL2L6_Note" ColumnName="PerimetreL2L6_Note" />
+          <ScalarProperty Name="PerimetreL2L6_Cas" ColumnName="PerimetreL2L6_Cas" />
+          <ScalarProperty Name="Correspondance_Note" ColumnName="Correspondance_Note" />
+          <ScalarProperty Name="Correspondance_Cas" ColumnName="Correspondance_Cas" />
+          <ScalarProperty Name="Frequentation_Note" ColumnName="Frequentation_Note" />
+          <ScalarProperty Name="Frequentation_Cas" ColumnName="Frequentation_Cas" />
+          <ScalarProperty Name="PourrissementBoisBlindage_Note" ColumnName="PourrissementBoisBlindage_Note" />
+          <ScalarProperty Name="PourrissementBoisBlindage_Cas" ColumnName="PourrissementBoisBlindage_Cas" />
+          <ScalarProperty Name="SolubiliteTerrain_Note" ColumnName="SolubiliteTerrain_Note" />
+          <ScalarProperty Name="SolubiliteTerrain_PresenceEauNappePhreatique" ColumnName="SolubiliteTerrain_PresenceEauNappePhreatique" />
+          <ScalarProperty Name="SolubiliteTerrain_Natureterrain" ColumnName="SolubiliteTerrain_Natureterrain" />
+          <ScalarProperty Name="AgressiviteChimiqueTerrainEncaissant_Note" ColumnName="AgressiviteChimiqueTerrainEncaissant_Note" />
+          <ScalarProperty Name="AgressiviteChimiqueTerrainEncaissant_TeneursSulfate" ColumnName="AgressiviteChimiqueTerrainEncaissant_TeneursSulfate" />
+          <ScalarProperty Name="AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine" ColumnName="AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine" />
+          <ScalarProperty Name="LargeurOuvrage_Note" ColumnName="LargeurOuvrage_Note" />
+          <ScalarProperty Name="LargeurOuvrage_NombreVoies" ColumnName="LargeurOuvrage_NombreVoies" />
+          <ScalarProperty Name="HistoriqueRefectionEnduit_Note" ColumnName="HistoriqueRefectionEnduit_Note" />
+          <ScalarProperty Name="HistoriqueRefectionEnduit_Anne" ColumnName="HistoriqueRefectionEnduit_Anne" />
+          <ScalarProperty Name="HistoriqueConfortementMac_Note" ColumnName="HistoriqueConfortementMac_Note" />
+          <ScalarProperty Name="HistoriqueConfortementMac_Annee" ColumnName="HistoriqueConfortementMac_Annee" />
+          <ScalarProperty Name="DateConstruction_Note" ColumnName="DateConstruction_Note" />
+          <ScalarProperty Name="DateConstruction_Annee" ColumnName="DateConstruction_Annee" />
+          <ScalarProperty Name="Nature_lieu" ColumnName="Nature_lieu" />
+          <ScalarProperty Name="Code_Pat" ColumnName="Code_Pat" />
+          <ScalarProperty Name="Long_OA" ColumnName="Long_OA" />
+          <ScalarProperty Name="Surface_developpe" ColumnName="Surface_developpe" />
+          <ScalarProperty Name="Long_OP_a_controler" ColumnName="Long_OP_a_controler" />
+          <ScalarProperty Name="Pk_OA__fin" ColumnName="Pk_OA _fin" />
+          <ScalarProperty Name="Pk_OA_Debut" ColumnName="Pk_OA_Debut" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+          <ScalarProperty Name="TABLEAU_DES_VISITEURS_DE_NUIT" ColumnName="TABLEAU DES VISITEURS DE NUIT" />
+          <ScalarProperty Name="IdOuvrage" ColumnName="IdOuvrage" />
+          <ScalarProperty Name="TypeStructIndiqueMaconnerie" ColumnName="TypeStructIndiqueMaconnerie" />
+          <ScalarProperty Name="Tunnels" ColumnName="Tunnels" />
+          <ScalarProperty Name="F5" ColumnName="F5" />
+          <ScalarProperty Name="LibelleLieux" ColumnName="LibelleLieux" />
+          <ScalarProperty Name="IdLieux" ColumnName="IdLieux" />
+          <ScalarProperty Name="LibelleLignes" ColumnName="LibelleLignes" />
+          <ScalarProperty Name="IdLigne" ColumnName="IdLigne" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Criteres">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.Criteres">
+        <MappingFragment StoreEntitySet="Criteres">
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeuilHidalgo">
+      <EntityTypeMapping TypeName="RatpHidalgoModel.SeuilHidalgo">
+        <MappingFragment StoreEntitySet="SeuilHidalgo">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

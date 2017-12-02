@@ -1,0 +1,130 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{D5481DA9-0551-4BF1-B547-F465453D85A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.Data.Contract", "Ratp.Hidalgo.Data.Contract\Ratp.Hidalgo.Data.Contract.csproj", "{EB782431-2675-4C03-B258-C481C37929E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.Model", "Ratp.Hidalgo.Model\Ratp.Hidalgo.Model.csproj", "{6A461B5A-E025-4B0B-AA11-6E36496F5DCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{A0E7FB3D-6E97-46B1-93BC-C75FEC4B25B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applicatif", "Applicatif", "{517C0118-DAB1-4A52-857D-CEF8B095D0AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.App", "Ratp.Hidalgo.App\Ratp.Hidalgo.App.csproj", "{FD75C94E-78AD-4766-A5F7-D3249762E5B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.App.Contract", "Ratp.Hidalgo.App.Contract\Ratp.Hidalgo.App.Contract.csproj", "{BCF885C6-F1B2-4163-B379-6E9D931CFFAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.App.Tests", "Ratp.Hidalgo.App.Tests\Ratp.Hidalgo.App.Tests.csproj", "{8B8507A4-5D53-4526-AEEB-CD40E04F87F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{45DE5E58-2781-463C-8B84-D0EDA2C1356C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratp.Hidalgo.Web", "Ratp.Hidalgo.Web\Ratp.Hidalgo.Web.csproj", "{2C62CBAF-38CB-499D-995F-B1D3469356C3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Ratp.Hidalgo.DataBase", "Ratp.Hidalgo.DataBase\Ratp.Hidalgo.DataBase.sqlproj", "{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extern", "Extern", "{3EB1E807-DE48-47C6-A1D2-75B539F58D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{36B24970-C8D9-48DA-B657-64F9B344116B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB782431-2675-4C03-B258-C481C37929E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB782431-2675-4C03-B258-C481C37929E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB782431-2675-4C03-B258-C481C37929E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB782431-2675-4C03-B258-C481C37929E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A461B5A-E025-4B0B-AA11-6E36496F5DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A461B5A-E025-4B0B-AA11-6E36496F5DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A461B5A-E025-4B0B-AA11-6E36496F5DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A461B5A-E025-4B0B-AA11-6E36496F5DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD75C94E-78AD-4766-A5F7-D3249762E5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD75C94E-78AD-4766-A5F7-D3249762E5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD75C94E-78AD-4766-A5F7-D3249762E5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD75C94E-78AD-4766-A5F7-D3249762E5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF885C6-F1B2-4163-B379-6E9D931CFFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF885C6-F1B2-4163-B379-6E9D931CFFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF885C6-F1B2-4163-B379-6E9D931CFFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF885C6-F1B2-4163-B379-6E9D931CFFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8507A4-5D53-4526-AEEB-CD40E04F87F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8507A4-5D53-4526-AEEB-CD40E04F87F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8507A4-5D53-4526-AEEB-CD40E04F87F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8507A4-5D53-4526-AEEB-CD40E04F87F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{36B24970-C8D9-48DA-B657-64F9B344116B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B24970-C8D9-48DA-B657-64F9B344116B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B24970-C8D9-48DA-B657-64F9B344116B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B24970-C8D9-48DA-B657-64F9B344116B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB782431-2675-4C03-B258-C481C37929E1} = {A0E7FB3D-6E97-46B1-93BC-C75FEC4B25B6}
+		{6A461B5A-E025-4B0B-AA11-6E36496F5DCB} = {A0E7FB3D-6E97-46B1-93BC-C75FEC4B25B6}
+		{A0E7FB3D-6E97-46B1-93BC-C75FEC4B25B6} = {D5481DA9-0551-4BF1-B547-F465453D85A3}
+		{517C0118-DAB1-4A52-857D-CEF8B095D0AF} = {D5481DA9-0551-4BF1-B547-F465453D85A3}
+		{FD75C94E-78AD-4766-A5F7-D3249762E5B9} = {517C0118-DAB1-4A52-857D-CEF8B095D0AF}
+		{BCF885C6-F1B2-4163-B379-6E9D931CFFAA} = {517C0118-DAB1-4A52-857D-CEF8B095D0AF}
+		{8B8507A4-5D53-4526-AEEB-CD40E04F87F8} = {517C0118-DAB1-4A52-857D-CEF8B095D0AF}
+		{2C62CBAF-38CB-499D-995F-B1D3469356C3} = {45DE5E58-2781-463C-8B84-D0EDA2C1356C}
+		{A5A89368-9681-4CDC-8D23-6DE8D65F8B6B} = {A0E7FB3D-6E97-46B1-93BC-C75FEC4B25B6}
+		{36B24970-C8D9-48DA-B657-64F9B344116B} = {3EB1E807-DE48-47C6-A1D2-75B539F58D61}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs_2015:8080/tfs/cdspantincollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Core.Common\\Core.Common.csproj
+		SccProjectTopLevelParentUniqueName1 = Ratp.Hidalgo.sln
+		SccProjectName1 = Core.Common
+		SccLocalPath1 = Core.Common
+		SccProjectUniqueName2 = Ratp.Hidalgo.App.Contract\\Ratp.Hidalgo.App.Contract.csproj
+		SccProjectTopLevelParentUniqueName2 = Ratp.Hidalgo.sln
+		SccProjectName2 = Ratp.Hidalgo.App.Contract
+		SccLocalPath2 = Ratp.Hidalgo.App.Contract
+		SccProjectUniqueName3 = Ratp.Hidalgo.App.Tests\\Ratp.Hidalgo.App.Tests.csproj
+		SccProjectTopLevelParentUniqueName3 = Ratp.Hidalgo.sln
+		SccProjectName3 = Ratp.Hidalgo.App.Tests
+		SccLocalPath3 = Ratp.Hidalgo.App.Tests
+		SccProjectUniqueName4 = Ratp.Hidalgo.App\\Ratp.Hidalgo.App.csproj
+		SccProjectTopLevelParentUniqueName4 = Ratp.Hidalgo.sln
+		SccProjectName4 = Ratp.Hidalgo.App
+		SccLocalPath4 = Ratp.Hidalgo.App
+		SccProjectUniqueName5 = Ratp.Hidalgo.Data.Contract\\Ratp.Hidalgo.Data.Contract.csproj
+		SccProjectTopLevelParentUniqueName5 = Ratp.Hidalgo.sln
+		SccProjectName5 = Ratp.Hidalgo.Data.Contract
+		SccLocalPath5 = Ratp.Hidalgo.Data.Contract
+		SccProjectUniqueName6 = Ratp.Hidalgo.DataBase\\Ratp.Hidalgo.DataBase.sqlproj
+		SccProjectTopLevelParentUniqueName6 = Ratp.Hidalgo.sln
+		SccProjectName6 = Ratp.Hidalgo.DataBase
+		SccLocalPath6 = Ratp.Hidalgo.DataBase
+		SccProjectUniqueName7 = Ratp.Hidalgo.Model\\Ratp.Hidalgo.Model.csproj
+		SccProjectTopLevelParentUniqueName7 = Ratp.Hidalgo.sln
+		SccProjectName7 = Ratp.Hidalgo.Model
+		SccLocalPath7 = Ratp.Hidalgo.Model
+		SccProjectUniqueName8 = Ratp.Hidalgo.Web\\Ratp.Hidalgo.Web.csproj
+		SccProjectTopLevelParentUniqueName8 = Ratp.Hidalgo.sln
+		SccProjectName8 = Ratp.Hidalgo.Web
+		SccLocalPath8 = Ratp.Hidalgo.Web
+	EndGlobalSection
+EndGlobal

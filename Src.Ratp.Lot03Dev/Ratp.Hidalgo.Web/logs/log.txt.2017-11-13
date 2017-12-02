@@ -1,0 +1,366 @@
+ERROR 2017-11-13 13:43:40,793  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-13 13:44:03,034  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+ERROR 2017-11-13 13:52:49,036  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-13 13:52:51,631  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-13 14:06:44,587  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Maçonnerie
+INFO  2017-11-13 14:06:49,624  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-13 14:06:49,625  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-13 14:06:49,626  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-13 14:06:49,647  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-13 14:06:49,647  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-13 14:06:49,647  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-13 14:06:49,648  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-13 14:06:49,655  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-13 14:06:50,803  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-13 14:06:51,803  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-13 14:06:52,809  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-13 14:06:53,794  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-13 14:06:54,811  rms HidalgoApp             nerationMaconnerie - Calcul critère C1:   Historique de régénérations de maçonnerie (p1.05)  
+INFO  2017-11-13 14:06:55,812  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-13 14:06:56,408  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-13 14:06:57,369  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-13 14:07:03,833  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-13 14:07:04,890  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-13 14:07:06,110  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-13 14:07:06,252  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-13 14:07:09,174  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-13 14:07:09,175  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-13 14:07:09,180  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+ERROR 2017-11-13 14:14:58,608  rms UserFilter              OnActionExecuting - Accès non autorisé, veuillez vérifier les droits de l'utilisateur, ou utilisateur n'existe pas dans la base de données.
+INFO  2017-11-13 14:15:02,596  rms UserFilter              OnActionExecuting - Accès autorisé pour l'utilisateur julien.hucbourg@ratp.fr
+INFO  2017-11-13 14:16:13,535  rms HidalgoApp                   CalculEtape2 - Epate de calcul 1 : classement des PGE dans des catégories de priorité pour la nature travaux: Maçonnerie
+INFO  2017-11-13 14:16:18,386  rms HidalgoApp                CalculCritereC3 - ********** Calcul du critère C2 **********
+INFO  2017-11-13 14:16:18,387  rms HidalgoApp                CalculCritereC2 - ********** Calcul du critère C2 **********
+INFO  2017-11-13 14:16:18,388  rms HidalgoApp                CalculCritereC1 - ********** Calcul du critère C1 **********
+INFO  2017-11-13 14:16:18,389  rms HidalgoApp             umentPge_ImageRatp - Calcul critère C2: Image RATP (p2.04)
+INFO  2017-11-13 14:16:18,390  rms HidalgoApp             olitiqueRenivation - Calcul critère C3: Politique de rénovation de la RATP (p3.01) 
+INFO  2017-11-13 14:16:18,391  rms HidalgoApp             sementBoisBlindage - Calcul critère C1: Pourrissement du bois de blindage (p1.11) 
+INFO  2017-11-13 14:16:18,389  rms HidalgoApp             ge_TravauxExternes - Calcul critère C3:  Travaux Externes (p3.02) 
+INFO  2017-11-13 14:16:19,398  rms HidalgoApp             entPge_Fissuration - Calcul critère C1: Fissuration (p1.01)
+INFO  2017-11-13 14:16:20,895  rms HidalgoApp             ntPge_Infultration - Calcul critère C1: Infiltration (p1.02)
+INFO  2017-11-13 14:16:21,890  rms HidalgoApp             ureMaconnerieBeton - Calcul critère C1: Désordre sur structure maçonnerie / béton (p1.03) 
+INFO  2017-11-13 14:16:22,921  rms HidalgoApp             mentPge_AgeOuvrage - Calcul critère C1:  Age de l’ouvrage (p1.04) 
+INFO  2017-11-13 14:16:23,904  rms HidalgoApp             Pge_LargeurOuvrage - Calcul critère C1:   Largeur de l’ouvrage (p1.07)  
+INFO  2017-11-13 14:16:24,889  rms HidalgoApp             nerationMaconnerie - Calcul critère C1:   Historique de régénérations de maçonnerie (p1.05)  
+INFO  2017-11-13 14:16:25,082  rms HidalgoApp             _SolubiliteTerrain - Calcul critère C1:  Solubilité du terrain : présence de gypse (p1.10) 
+INFO  2017-11-13 14:16:25,889  rms HidalgoApp             tPge_Frequentation - Calcul critère C2: Fréquentation (p2.01) 
+INFO  2017-11-13 14:16:26,890  rms HidalgoApp             eTerrainEncaissant - Calcul critère C1:   Agressivité chimique du terrain encaissant (p1.09) 
+INFO  2017-11-13 14:16:27,780  rms HidalgoApp             Pge_Correspondance - Calcul critère C2: Correspondance (p2.02) 
+INFO  2017-11-13 14:16:27,894  rms HidalgoApp             tPge_PerimetreL2L6 - Calcul critère C2: Périmètre L2 – L6 (p2.03) 
+INFO  2017-11-13 14:16:29,776  rms HidalgoApp                CalculCritereC3 - Calcul critère C3 terminé,vérifiez le fichier :C:\SerializeToXml\CalculC3.xml
+INFO  2017-11-13 14:16:33,875  rms HidalgoApp                CalculCritereC2 - Calcul critère C2 terminé, Vérifiez le fichier :C:\SerializeToXml\CalculC2.xml
+INFO  2017-11-13 14:16:36,446  rms HidalgoApp                CalculCritereC1 - Calcul critère C1 terminé, vérifiez le fichier :C:\SerializeToXml\CalculC1.xml
+INFO  2017-11-13 14:16:36,447  rms HidalgoApp                CalculCritereC4 - ********** Calcul du critère C4 **********
+INFO  2017-11-13 14:16:36,453  rms HidalgoApp             essimisteOptimiste - Calculs (méthode ELECTRE TRI) : Calculs PESSIMISTE & OPTIMISTE
+INFO  2017-11-13 14:16:36,480  rms HidalgoApp             essimisteOptimiste - Le calcul PESSIMISTE & OPTIMISTE est terminé, Vérifier le fichier :C:\SerializeToXml\CategoriePge.xml
+INFO  2017-11-13 14:16:36,481  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX CONNEXES(p4.01) 
+INFO  2017-11-13 14:16:36,481  rms HidalgoApp             ParametresCritere4 - Calcul critère C4: TRAVAUX INTERNES(p4.02) 
+INFO  2017-11-13 14:16:38,568  rms HidalgoApp                CalculCritereC4 - Calcul critère C4 terminé, le fichier des valeurs est dans :C:\SerializeToXml\CalculC4.xml
+INFO  2017-11-13 14:16:38,569  rms HidalgoApp                   CalculEtape2 - Indices de Discordance :
+INFO  2017-11-13 14:16:38,602  rms HidalgoApp                   CalculEtape2 - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-13 14:16:38,608  rms HidalgoApp             llationDescendante - ETAPE 2: DISTIATION DESCENDANTE
+INFO  2017-11-13 14:16:38,975  rms HidalgoApp             illationAscendante - ETAPE 2: DISTIATION DESCENDANTE & ASCENDANTE
+INFO  2017-11-13 14:16:39,403  rms HidalgoApp                GetPeordreFinal - ETAPE 2: PREORDRE FINAL
+INFO  2017-11-13 14:16:39,574  rms HidalgoApp                 PreordreMedian - ETAPE 2: PREORDRE MEDIAN
+INFO  2017-11-13 14:16:39,579  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinal.xml
+INFO  2017-11-13 14:16:39,585  rms HidalgoApp                   CalculEtape2 - Le calcul est terminé, le fichier des valeurs est dans :C:\SerializeToXml\PreordreFinalMedian.xml
+INFO  2017-11-13 14:16:39,889  rms HidalgoApp                   CalculEtape2 - Début d'eregistrement d'une nouvelle programmation de l'année 2019
+INFO  2017-11-13 14:16:50,929  rms HidalgoApp                   CalculEtape2 - Enregistrement est terminé
+INFO  2017-11-13 14:16:50,942  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 1670
+ERROR 2017-11-13 14:17:08,228  rms GestionExcel           eerOuOuvrirFichier - Impossible d'ouvrir ou de créer le fichier Excel.
+ERROR 2017-11-13 14:17:10,368  rms ApiCalibrageController PgeByProgrammation - Impossible d'ouvrir ou de créer le fichier Excel pour la programmation 1670 à l'emplacement : C:\Marion\testExcel
+INFO  2017-11-13 14:25:09,789  rms CalculServiceApp       pdateProgrammation - Update de la programmation: 1670
+INFO  2017-11-13 14:25:09,847  rms CalculServiceApp       pdateProgrammation - Fin de l'update de la programmation: 1670
+INFO  2017-11-13 14:25:17,881  rms CalculServiceApp       mmationDocumentPge - Début d'eregistrement des PGE pour la programmation
+INFO  2017-11-13 14:25:17,883  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56251
+INFO  2017-11-13 14:25:17,942  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56251
+INFO  2017-11-13 14:25:17,943  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56252
+INFO  2017-11-13 14:25:17,962  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56252
+INFO  2017-11-13 14:25:17,963  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56253
+INFO  2017-11-13 14:25:17,979  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56253
+INFO  2017-11-13 14:25:17,980  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56254
+INFO  2017-11-13 14:25:18,009  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56254
+INFO  2017-11-13 14:25:18,010  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56255
+INFO  2017-11-13 14:25:18,030  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56255
+INFO  2017-11-13 14:25:18,031  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56256
+INFO  2017-11-13 14:25:18,043  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56256
+INFO  2017-11-13 14:25:18,044  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56257
+INFO  2017-11-13 14:25:18,064  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56257
+INFO  2017-11-13 14:25:18,065  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56258
+INFO  2017-11-13 14:25:18,084  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56258
+INFO  2017-11-13 14:25:18,085  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56259
+INFO  2017-11-13 14:25:18,098  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56259
+INFO  2017-11-13 14:25:18,099  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56260
+INFO  2017-11-13 14:25:18,113  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56260
+INFO  2017-11-13 14:25:18,114  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56261
+INFO  2017-11-13 14:25:18,423  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56261
+INFO  2017-11-13 14:25:18,424  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56262
+INFO  2017-11-13 14:25:18,440  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56262
+INFO  2017-11-13 14:25:18,441  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56263
+INFO  2017-11-13 14:25:18,592  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56263
+INFO  2017-11-13 14:25:18,593  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56264
+INFO  2017-11-13 14:25:18,613  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56264
+INFO  2017-11-13 14:25:18,614  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56265
+INFO  2017-11-13 14:25:18,629  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56265
+INFO  2017-11-13 14:25:18,630  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56266
+INFO  2017-11-13 14:25:18,650  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56266
+INFO  2017-11-13 14:25:18,651  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56267
+INFO  2017-11-13 14:25:18,667  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56267
+INFO  2017-11-13 14:25:18,667  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56268
+INFO  2017-11-13 14:25:18,688  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56268
+INFO  2017-11-13 14:25:18,688  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56269
+INFO  2017-11-13 14:25:18,710  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56269
+INFO  2017-11-13 14:25:18,710  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56270
+INFO  2017-11-13 14:25:18,734  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56270
+INFO  2017-11-13 14:25:18,734  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56271
+INFO  2017-11-13 14:25:18,767  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56271
+INFO  2017-11-13 14:25:18,768  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56272
+INFO  2017-11-13 14:25:18,791  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56272
+INFO  2017-11-13 14:25:18,792  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56273
+INFO  2017-11-13 14:25:18,816  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56273
+INFO  2017-11-13 14:25:18,817  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56274
+INFO  2017-11-13 14:25:18,840  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56274
+INFO  2017-11-13 14:25:18,840  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56275
+INFO  2017-11-13 14:25:18,860  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56275
+INFO  2017-11-13 14:25:18,861  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56276
+INFO  2017-11-13 14:25:18,885  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56276
+INFO  2017-11-13 14:25:18,886  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56277
+INFO  2017-11-13 14:25:18,915  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56277
+INFO  2017-11-13 14:25:18,917  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56278
+INFO  2017-11-13 14:25:18,949  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56278
+INFO  2017-11-13 14:25:18,951  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56279
+INFO  2017-11-13 14:25:18,975  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56279
+INFO  2017-11-13 14:25:18,976  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56280
+INFO  2017-11-13 14:25:19,002  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56280
+INFO  2017-11-13 14:25:19,003  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56281
+INFO  2017-11-13 14:25:19,029  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56281
+INFO  2017-11-13 14:25:19,031  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56282
+INFO  2017-11-13 14:25:19,056  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56282
+INFO  2017-11-13 14:25:19,057  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56283
+INFO  2017-11-13 14:25:19,079  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56283
+INFO  2017-11-13 14:25:19,081  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56284
+INFO  2017-11-13 14:25:19,103  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56284
+INFO  2017-11-13 14:25:19,103  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56285
+INFO  2017-11-13 14:25:19,122  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56285
+INFO  2017-11-13 14:25:19,122  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56286
+INFO  2017-11-13 14:25:19,138  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56286
+INFO  2017-11-13 14:25:19,139  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56287
+INFO  2017-11-13 14:25:19,161  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56287
+INFO  2017-11-13 14:25:19,162  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56288
+INFO  2017-11-13 14:25:19,180  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56288
+INFO  2017-11-13 14:25:19,180  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56289
+INFO  2017-11-13 14:25:19,200  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56289
+INFO  2017-11-13 14:25:19,200  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56290
+INFO  2017-11-13 14:25:19,218  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56290
+INFO  2017-11-13 14:25:19,218  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56291
+INFO  2017-11-13 14:25:19,255  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56291
+INFO  2017-11-13 14:25:19,255  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56292
+INFO  2017-11-13 14:25:19,274  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56292
+INFO  2017-11-13 14:25:19,274  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56293
+INFO  2017-11-13 14:25:19,296  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56293
+INFO  2017-11-13 14:25:19,296  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56294
+INFO  2017-11-13 14:25:19,315  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56294
+INFO  2017-11-13 14:25:19,316  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56295
+INFO  2017-11-13 14:25:19,334  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56295
+INFO  2017-11-13 14:25:19,335  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56296
+INFO  2017-11-13 14:25:19,354  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56296
+INFO  2017-11-13 14:25:19,355  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56297
+INFO  2017-11-13 14:25:19,372  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56297
+INFO  2017-11-13 14:25:19,373  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56298
+INFO  2017-11-13 14:25:19,389  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56298
+INFO  2017-11-13 14:25:19,389  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56299
+INFO  2017-11-13 14:25:19,407  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56299
+INFO  2017-11-13 14:25:19,408  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56300
+INFO  2017-11-13 14:25:19,425  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56300
+INFO  2017-11-13 14:25:19,425  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56301
+INFO  2017-11-13 14:25:19,442  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56301
+INFO  2017-11-13 14:25:19,443  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56302
+INFO  2017-11-13 14:25:19,458  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56302
+INFO  2017-11-13 14:25:19,459  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56303
+INFO  2017-11-13 14:25:19,476  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56303
+INFO  2017-11-13 14:25:19,477  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56304
+INFO  2017-11-13 14:25:19,495  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56304
+INFO  2017-11-13 14:25:19,495  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56305
+INFO  2017-11-13 14:25:19,512  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56305
+INFO  2017-11-13 14:25:19,513  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56306
+INFO  2017-11-13 14:25:19,536  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56306
+INFO  2017-11-13 14:25:19,537  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56307
+INFO  2017-11-13 14:25:19,561  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56307
+INFO  2017-11-13 14:25:19,561  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56308
+INFO  2017-11-13 14:25:19,592  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56308
+INFO  2017-11-13 14:25:19,592  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56309
+INFO  2017-11-13 14:25:19,619  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56309
+INFO  2017-11-13 14:25:19,620  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56310
+INFO  2017-11-13 14:25:19,643  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56310
+INFO  2017-11-13 14:25:19,644  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56311
+INFO  2017-11-13 14:25:19,665  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56311
+INFO  2017-11-13 14:25:19,665  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56312
+INFO  2017-11-13 14:25:19,684  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56312
+INFO  2017-11-13 14:25:19,685  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56313
+INFO  2017-11-13 14:25:19,704  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56313
+INFO  2017-11-13 14:25:19,704  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56314
+INFO  2017-11-13 14:25:19,721  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56314
+INFO  2017-11-13 14:25:19,721  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56315
+INFO  2017-11-13 14:25:19,742  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56315
+INFO  2017-11-13 14:25:19,742  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56316
+INFO  2017-11-13 14:25:19,768  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56316
+INFO  2017-11-13 14:25:19,768  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56317
+INFO  2017-11-13 14:25:19,795  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56317
+INFO  2017-11-13 14:25:19,795  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56318
+INFO  2017-11-13 14:25:19,822  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56318
+INFO  2017-11-13 14:25:19,823  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56319
+INFO  2017-11-13 14:25:19,846  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56319
+INFO  2017-11-13 14:25:19,848  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56320
+INFO  2017-11-13 14:25:19,873  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56320
+INFO  2017-11-13 14:25:19,874  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56321
+INFO  2017-11-13 14:25:19,893  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56321
+INFO  2017-11-13 14:25:19,894  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56322
+INFO  2017-11-13 14:25:19,912  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56322
+INFO  2017-11-13 14:25:19,913  rms CalculServiceApp       mmationDocumentPge - Enregistrement est terminé
+INFO  2017-11-13 14:25:37,344  rms CalculServiceApp       mmationDocumentPge - Début d'eregistrement des PGE pour la programmation
+INFO  2017-11-13 14:25:37,344  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56251
+INFO  2017-11-13 14:25:37,357  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56251
+INFO  2017-11-13 14:25:37,358  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56252
+INFO  2017-11-13 14:25:37,368  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56252
+INFO  2017-11-13 14:25:37,368  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56253
+INFO  2017-11-13 14:25:37,379  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56253
+INFO  2017-11-13 14:25:37,380  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56254
+INFO  2017-11-13 14:25:37,389  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56254
+INFO  2017-11-13 14:25:37,390  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56255
+INFO  2017-11-13 14:25:37,397  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56255
+INFO  2017-11-13 14:25:37,398  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56256
+INFO  2017-11-13 14:25:37,407  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56256
+INFO  2017-11-13 14:25:37,407  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56257
+INFO  2017-11-13 14:25:37,415  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56257
+INFO  2017-11-13 14:25:37,416  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56258
+INFO  2017-11-13 14:25:37,428  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56258
+INFO  2017-11-13 14:25:37,429  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56259
+INFO  2017-11-13 14:25:37,444  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56259
+INFO  2017-11-13 14:25:37,444  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56260
+INFO  2017-11-13 14:25:37,454  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56260
+INFO  2017-11-13 14:25:37,454  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56261
+INFO  2017-11-13 14:25:37,463  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56261
+INFO  2017-11-13 14:25:37,463  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56262
+INFO  2017-11-13 14:25:37,475  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56262
+INFO  2017-11-13 14:25:37,476  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56263
+INFO  2017-11-13 14:25:37,484  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56263
+INFO  2017-11-13 14:25:37,485  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56264
+INFO  2017-11-13 14:25:37,495  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56264
+INFO  2017-11-13 14:25:37,496  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56265
+INFO  2017-11-13 14:25:37,512  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56265
+INFO  2017-11-13 14:25:37,513  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56266
+INFO  2017-11-13 14:25:37,528  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56266
+INFO  2017-11-13 14:25:37,529  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56267
+INFO  2017-11-13 14:25:37,545  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56267
+INFO  2017-11-13 14:25:37,546  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56268
+INFO  2017-11-13 14:25:37,557  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56268
+INFO  2017-11-13 14:25:37,558  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56269
+INFO  2017-11-13 14:25:37,574  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56269
+INFO  2017-11-13 14:25:37,574  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56270
+INFO  2017-11-13 14:25:37,586  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56270
+INFO  2017-11-13 14:25:37,586  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56271
+INFO  2017-11-13 14:25:37,596  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56271
+INFO  2017-11-13 14:25:37,596  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56272
+INFO  2017-11-13 14:25:37,607  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56272
+INFO  2017-11-13 14:25:37,608  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56273
+INFO  2017-11-13 14:25:37,619  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56273
+INFO  2017-11-13 14:25:37,619  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56274
+INFO  2017-11-13 14:25:37,631  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56274
+INFO  2017-11-13 14:25:37,632  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56275
+INFO  2017-11-13 14:25:37,645  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56275
+INFO  2017-11-13 14:25:37,646  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56276
+INFO  2017-11-13 14:25:37,655  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56276
+INFO  2017-11-13 14:25:37,655  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56277
+INFO  2017-11-13 14:25:37,666  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56277
+INFO  2017-11-13 14:25:37,667  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56278
+INFO  2017-11-13 14:25:37,677  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56278
+INFO  2017-11-13 14:25:37,679  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56279
+INFO  2017-11-13 14:25:37,690  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56279
+INFO  2017-11-13 14:25:37,690  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56280
+INFO  2017-11-13 14:25:37,700  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56280
+INFO  2017-11-13 14:25:37,701  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56281
+INFO  2017-11-13 14:25:37,712  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56281
+INFO  2017-11-13 14:25:37,713  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56282
+INFO  2017-11-13 14:25:37,723  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56282
+INFO  2017-11-13 14:25:37,724  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56283
+INFO  2017-11-13 14:25:37,735  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56283
+INFO  2017-11-13 14:25:37,735  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56284
+INFO  2017-11-13 14:25:37,745  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56284
+INFO  2017-11-13 14:25:37,746  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56285
+INFO  2017-11-13 14:25:37,758  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56285
+INFO  2017-11-13 14:25:37,759  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56286
+INFO  2017-11-13 14:25:37,771  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56286
+INFO  2017-11-13 14:25:37,771  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56287
+INFO  2017-11-13 14:25:37,784  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56287
+INFO  2017-11-13 14:25:37,784  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56288
+INFO  2017-11-13 14:25:37,796  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56288
+INFO  2017-11-13 14:25:37,796  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56289
+INFO  2017-11-13 14:25:37,811  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56289
+INFO  2017-11-13 14:25:37,812  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56290
+INFO  2017-11-13 14:25:37,822  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56290
+INFO  2017-11-13 14:25:37,823  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56291
+INFO  2017-11-13 14:25:37,831  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56291
+INFO  2017-11-13 14:25:37,832  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56292
+INFO  2017-11-13 14:25:37,847  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56292
+INFO  2017-11-13 14:25:37,847  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56293
+INFO  2017-11-13 14:25:37,856  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56293
+INFO  2017-11-13 14:25:37,857  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56294
+INFO  2017-11-13 14:25:37,867  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56294
+INFO  2017-11-13 14:25:37,868  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56295
+INFO  2017-11-13 14:25:37,876  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56295
+INFO  2017-11-13 14:25:37,878  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56296
+INFO  2017-11-13 14:25:37,887  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56296
+INFO  2017-11-13 14:25:37,888  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56297
+INFO  2017-11-13 14:25:37,897  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56297
+INFO  2017-11-13 14:25:37,898  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56298
+INFO  2017-11-13 14:25:37,908  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56298
+INFO  2017-11-13 14:25:37,909  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56299
+INFO  2017-11-13 14:25:37,919  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56299
+INFO  2017-11-13 14:25:37,920  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56300
+INFO  2017-11-13 14:25:37,930  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56300
+INFO  2017-11-13 14:25:37,931  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56301
+INFO  2017-11-13 14:25:37,939  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56301
+INFO  2017-11-13 14:25:37,940  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56302
+INFO  2017-11-13 14:25:37,948  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56302
+INFO  2017-11-13 14:25:37,948  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56303
+INFO  2017-11-13 14:25:37,957  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56303
+INFO  2017-11-13 14:25:37,957  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56304
+INFO  2017-11-13 14:25:37,966  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56304
+INFO  2017-11-13 14:25:37,967  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56305
+INFO  2017-11-13 14:25:37,975  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56305
+INFO  2017-11-13 14:25:37,975  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56306
+INFO  2017-11-13 14:25:37,984  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56306
+INFO  2017-11-13 14:25:37,985  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56307
+INFO  2017-11-13 14:25:37,993  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56307
+INFO  2017-11-13 14:25:37,993  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56308
+INFO  2017-11-13 14:25:38,003  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56308
+INFO  2017-11-13 14:25:38,003  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56309
+INFO  2017-11-13 14:25:38,013  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56309
+INFO  2017-11-13 14:25:38,014  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56310
+INFO  2017-11-13 14:25:38,025  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56310
+INFO  2017-11-13 14:25:38,025  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56311
+INFO  2017-11-13 14:25:38,038  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56311
+INFO  2017-11-13 14:25:38,039  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56312
+INFO  2017-11-13 14:25:38,049  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56312
+INFO  2017-11-13 14:25:38,050  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56313
+INFO  2017-11-13 14:25:38,061  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56313
+INFO  2017-11-13 14:25:38,062  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56314
+INFO  2017-11-13 14:25:38,071  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56314
+INFO  2017-11-13 14:25:38,072  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56315
+INFO  2017-11-13 14:25:38,082  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56315
+INFO  2017-11-13 14:25:38,083  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56316
+INFO  2017-11-13 14:25:38,100  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56316
+INFO  2017-11-13 14:25:38,100  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56317
+INFO  2017-11-13 14:25:38,112  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56317
+INFO  2017-11-13 14:25:38,113  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56318
+INFO  2017-11-13 14:25:38,123  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56318
+INFO  2017-11-13 14:25:38,124  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56319
+INFO  2017-11-13 14:25:38,134  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56319
+INFO  2017-11-13 14:25:38,136  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56320
+INFO  2017-11-13 14:25:38,145  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56320
+INFO  2017-11-13 14:25:38,146  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56321
+INFO  2017-11-13 14:25:38,153  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56321
+INFO  2017-11-13 14:25:38,153  rms CalculServiceApp       mmationDocumentPge - Update de la ProgrammationDocumentPge: 56322
+INFO  2017-11-13 14:25:38,160  rms CalculServiceApp       mmationDocumentPge - Fin de l'update de la ProgrammationDocumentPge: 56322
+INFO  2017-11-13 14:25:38,161  rms CalculServiceApp       mmationDocumentPge - Enregistrement est terminé
+INFO  2017-11-13 14:25:45,825  rms CalculServiceApp       PgeByProgrammation - Récupérer la liste des documents Pge calculé par programmation 1670

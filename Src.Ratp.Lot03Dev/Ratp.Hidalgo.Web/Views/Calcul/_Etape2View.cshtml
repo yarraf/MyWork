@@ -1,0 +1,35 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+<br />
+<div class="row">
+    <div class="panel panel-success">
+        <div class="panel-heading">Nouvelle Programmation: Etape 2</div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-body">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.SelectedTypeOuvrage)
+                                <select data-bind="foreach: listeTypeOuvrages, value: selectedTypeOuvrage" class="form-control">
+                                    <option data-bind="text: Libelle, attr:{disabled: Enabled}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.SelectedNatureTravaux)
+                                <select data-bind="options: listeNatureTravaux, optionsText: 'Nature' ,optionsCaption: selectedDefaultNatureTravaux, value: selectednatureTravaux, attr:{ id: 'listeofNatureTravaux', class: 'form-control'}"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row text-center">
+    <button type="button" class="btn btn-lg btn-success" data-bind="click: saveNP, attr:{disabled: isloading}">Calcul</button>
+    <div class="lazyloading" id="loading" data-bind="visible: isValideStep2()!=true"><img src="~/Content/img/Preloader_2.gif" /></div>
+</div>

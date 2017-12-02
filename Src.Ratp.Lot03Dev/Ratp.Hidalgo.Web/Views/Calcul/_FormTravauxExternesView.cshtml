@@ -1,0 +1,70 @@
+﻿
+@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.SelectedLigne)
+                        <select data-bind="options: lignes, optionsText: 'Name' ,value: selectedlignete,optionsCaption: selectedDefaultLigne, attr:{ id: 'listeofLignesTE', class: 'form-control'}"></select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.SelectedLieu)
+                        @*@Html.DropDownListFor(x => x.SelectedLieu, Model.Lieux, new { @class = "form-control", id = "listeofLieux" })*@
+                        <select data-bind="options: lieuxte, optionsText: 'Name',value: selectedlieute,optionsCaption: selectedDefaultLieu, attr:{ id: 'listeofLieuxTE', class: 'form-control'}"></select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Date</label>
+                        @*@Html.DropDownListFor(x => x.SelectedAnnee, Model.Annees, new { @class = "form-control", id = "listeofLignes" })*@
+                        @*<input class="form-control" type="text" maxlength="7" data-bind="datepicker: selectedDatete, datepickerOptions: { showAnim: 'drop'}" />*@
+                        <input class="form-control" type="text" maxlength="7" id="_dateTravauxExternes" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Nature Travaux Externes</label>
+                        @*@Html.DropDownListFor(x => x.SelectedAnnee, Model.Annees, new { @class = "form-control", id = "listeofLignes" })*@
+                        <select data-bind="options: listenaturetravauxE, optionsText: 'Libelle', value: selectednaturetravaurxternes, attr:{ id: 'listeofnatureTve', class: 'form-control'} "></select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-info" data-bind="click: saveTravauxExternes, enable: selectedlignete() != undefined && selectedlieute() != undefined"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        @*<div class="scrollbar force-overflow" id="style-1">*@
+
+        <table data-bind="visible: listeTE().length > 0" cellspacing="1" id="tbletravauxExternes" class="table table-fixed table-hover">
+            <thead>
+                <tr>
+                    <th width="80">Lignes &nbsp;&nbsp;<a href="#" data-bind="click: getLignesTeOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscLignesTe"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescLignesTe"></span></a></th>
+                    <th width="400">Lieux &nbsp;&nbsp;<a href="#" data-bind="click: getLieuxTeOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscLieuxTe"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescLieuxTe"></span></a></th>
+                    <th width="98">Date &nbsp;&nbsp;<a href="#" data-bind="click: getDateTeOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscDateTe"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescDateTe"></span></a></th>
+                    <th width="313">Nature Travaux Externe &nbsp;&nbsp;<a href="#" data-bind="click: getNatureTxTeOrdre"><span class="glyphicon glyphicon-chevron-up" data-bind="visible: isAscNteTe"></span><span class="glyphicon glyphicon-chevron-down" data-bind="visible: isDescNteTe"></span></a></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: listeTE">
+                <tr>
+                    <td width="80"><img data-bind="attr:{src: '/Content/img/'+ ligne().Chemin, alt: ligne().Name}" width="16" /></td>
+                    <td width="400" data-bind="text: lieu().Name"></td>
+                    <td width="98" data-bind="text: date"></td>
+                    <td width="313" data-bind="text: NatureTravauxExt().Libelle"></td>
+                    <td><a href="#" data-bind="click: $root.removeTravauxExt.bind($root)"><span class="glyphicon glyphicon-remove-circle"></span></a></td>
+                </tr>
+            </tbody>
+        </table>
+        @*</div>*@
+    </div>
+</div>

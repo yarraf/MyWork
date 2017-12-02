@@ -1,0 +1,84 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+@{
+    ViewBag.Title = "Modification";
+    ViewBag.UrlPGE = "lien/PGE/numero";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/Hidalgo/Index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="#">Programmations</a></li>
+        <li class="active"><strong>Modification Programmation</strong></li>
+    </ol>
+</div>
+
+<div class="alert alert-info" role="alert" id="divInfoMessage">
+    <p><span><strong>Info: </strong><span data-bind="text: infoCalcul"></span></span></p>
+</div>
+
+
+<fieldset class="form-group">
+
+    <br />
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Modification du dernier programme enregistré</div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.SelectedTypeOuvrage)
+                                    <select data-bind="foreach: listeTypeOuvrages, value: selectedTypeOuvrage" class="form-control">
+                                        <option data-bind="text: Libelle, attr:{disabled: Enabled}"></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.SelectedNatureTravaux)
+                                    <select data-bind="options: listeNatureTravaux, optionsText: 'Nature' ,value: selectednatureTravaux, attr:{ id: 'listeofNatureTravaux', class: 'form-control'}"></select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.AnneeProgrammation)
+                                    <input maxlength="4" data-bind="value: anneeProgrammation, attr:{ id: 'txtAnneeSaisie', class: 'form-control'}"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row text-center">
+        <button type="button" class="btn btn-lg btn-success" data-bind="click: chargeProgrammation, attr:{disabled: isloading}, enable: anneeProgrammation() > 0">Valider</button>
+        <div class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+    </div>
+
+
+</fieldset>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/customescript")
+    @Scripts.Render("~/bundles/datepickerjs")
+    @Styles.Render("~/Content/datepickercss")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+          
+            InitialiseElementsMP();
+
+        });
+    </script>
+}

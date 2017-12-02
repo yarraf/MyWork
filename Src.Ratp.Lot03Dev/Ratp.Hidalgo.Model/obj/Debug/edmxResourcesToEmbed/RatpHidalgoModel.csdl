@@ -1,0 +1,1959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RatpHidalgoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RatpHidalgoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NatureTravauxSet" EntityType="RatpHidalgoModel.NatureTravaux" />
+    <EntitySet Name="NatureTravauxExternes" EntityType="RatpHidalgoModel.NatureTravauxExternes" />
+    <EntitySet Name="ParametresHidalgo" EntityType="RatpHidalgoModel.ParametresHidalgo" />
+    <EntitySet Name="ParametresProgrammation" EntityType="RatpHidalgoModel.ParametresProgrammation" />
+    <EntitySet Name="TypeOuvrageSet" EntityType="RatpHidalgoModel.TypeOuvrage" />
+    <AssociationSet Name="FK_ParametresProgrammation_ParametresHidalgo" Association="RatpHidalgoModel.FK_ParametresProgrammation_ParametresHidalgo">
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+      <End Role="ParametresProgrammation" EntitySet="ParametresProgrammation" />
+    </AssociationSet>
+    <FunctionImport Name="GetAllDocumentPgeWithNoteMax">
+      <Parameter Name="idFamilleDesordre" Mode="In" Type="Int32" />
+      <Parameter Name="idNatureCalibrage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Programmations" EntityType="RatpHidalgoModel.Programmations" />
+    <AssociationSet Name="FK_Programmations_NatureTravaux" Association="RatpHidalgoModel.FK_Programmations_NatureTravaux">
+      <End Role="NatureTravaux1" EntitySet="NatureTravauxSet" />
+      <End Role="Programmations" EntitySet="Programmations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParametresProgrammation_Programmations" Association="RatpHidalgoModel.FK_ParametresProgrammation_Programmations">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ParametresProgrammation" EntitySet="ParametresProgrammation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Programmations_TypeOuvrage" Association="RatpHidalgoModel.FK_Programmations_TypeOuvrage">
+      <End Role="TypeOuvrage1" EntitySet="TypeOuvrageSet" />
+      <End Role="Programmations" EntitySet="Programmations" />
+    </AssociationSet>
+    <EntitySet Name="ProgrammationDetails" EntityType="RatpHidalgoModel.ProgrammationDetails" />
+    <AssociationSet Name="FK_ProgrammationDetails_NatureTravauxExternes" Association="RatpHidalgoModel.FK_ProgrammationDetails_NatureTravauxExternes">
+      <End Role="NatureTravauxExternes" EntitySet="NatureTravauxExternes" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDetails_Programmations" Association="RatpHidalgoModel.FK_ProgrammationDetails_Programmations">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <EntitySet Name="ProgrammationDocumentPGE" EntityType="RatpHidalgoModel.ProgrammationDocumentPGE" />
+    <AssociationSet Name="FK__Programma__IdPro__218BE82B" Association="RatpHidalgoModel.FK__Programma__IdPro__218BE82B">
+      <End Role="Programmations" EntitySet="Programmations" />
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+    </AssociationSet>
+    <EntitySet Name="DocumentPgeTravauxAnnees" EntityType="RatpHidalgoModel.DocumentPgeTravauxAnnees" />
+    <AssociationSet Name="FK_ProgrammationDocumentPge_TravauxAnnees" Association="RatpHidalgoModel.FK_ProgrammationDocumentPge_TravauxAnnees">
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+      <End Role="DocumentPgeTravauxAnnees" EntitySet="DocumentPgeTravauxAnnees" />
+    </AssociationSet>
+    <EntitySet Name="ProgrammationValeurParametresDocument" EntityType="RatpHidalgoModel.ProgrammationValeurParametresDocument" />
+    <AssociationSet Name="FK_ProgrammationValeurParametresDocument_ParametreHidalgo" Association="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ParametreHidalgo">
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+      <End Role="ProgrammationValeurParametresDocument" EntitySet="ProgrammationValeurParametresDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE" Association="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE">
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+      <End Role="ProgrammationValeurParametresDocument" EntitySet="ProgrammationValeurParametresDocument" />
+    </AssociationSet>
+    <EntitySet Name="Causes" EntityType="RatpHidalgoModel.Causes" />
+    <EntitySet Name="Descriptions" EntityType="RatpHidalgoModel.Descriptions" />
+    <EntitySet Name="Desordres" EntityType="RatpHidalgoModel.Desordres" />
+    <EntitySet Name="Documents" EntityType="RatpHidalgoModel.Documents" />
+    <AssociationSet Name="FK_Documents_Documents" Association="RatpHidalgoModel.FK_Documents_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="Documents1" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProgrammationDocumentPGE_Document" Association="RatpHidalgoModel.FK_ProgrammationDocumentPGE_Document">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="ProgrammationDocumentPGE" EntitySet="ProgrammationDocumentPGE" />
+    </AssociationSet>
+    <EntitySet Name="DesordresDocuments" EntityType="RatpHidalgoModel.DesordresDocuments" />
+    <EntitySet Name="DocumentsLies" EntityType="RatpHidalgoModel.DocumentsLies" />
+    <EntitySet Name="NaturesTravaux" EntityType="RatpHidalgoModel.NaturesTravaux" />
+    <AssociationSet Name="FK_DesordresDocuments_Desordres" Association="RatpHidalgoModel.FK_DesordresDocuments_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_Documents" Association="RatpHidalgoModel.FK_DesordresDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresDocuments_NaturesTravaux" Association="RatpHidalgoModel.FK_DesordresDocuments_NaturesTravaux">
+      <End Role="NaturesTravaux" EntitySet="NaturesTravaux" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsLies_DesordresDocuments" Association="RatpHidalgoModel.FK_DocumentsLies_DesordresDocuments">
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <EntitySet Name="FamillesDesordres" EntityType="RatpHidalgoModel.FamillesDesordres" />
+    <EntitySet Name="FamillesDesordresTypes" EntityType="RatpHidalgoModel.FamillesDesordresTypes" />
+    <AssociationSet Name="FK_Desordres_FamillesDesordresTypes" Association="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes">
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desordres_FamillesDesordresTypes1" Association="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes1">
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FamillesDesordresTypes_FamillesDesordres" Association="RatpHidalgoModel.FK_FamillesDesordresTypes_FamillesDesordres">
+      <End Role="FamillesDesordres" EntitySet="FamillesDesordres" />
+      <End Role="FamillesDesordresTypes" EntitySet="FamillesDesordresTypes" />
+    </AssociationSet>
+    <EntitySet Name="GroupesOuvrages" EntityType="RatpHidalgoModel.GroupesOuvrages" />
+    <EntitySet Name="Lieux" EntityType="RatpHidalgoModel.Lieux" />
+    <AssociationSet Name="FK_Lieux_Descriptions" Association="RatpHidalgoModel.FK_Lieux_Descriptions">
+      <End Role="Descriptions" EntitySet="Descriptions" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <EntitySet Name="FamillesLignes" EntityType="RatpHidalgoModel.FamillesLignes" />
+    <EntitySet Name="Lignes" EntityType="RatpHidalgoModel.Lignes" />
+    <AssociationSet Name="FK_Lignes_FamillesLignes" Association="RatpHidalgoModel.FK_Lignes_FamillesLignes">
+      <End Role="FamillesLignes" EntitySet="FamillesLignes" />
+      <End Role="Lignes" EntitySet="Lignes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_Lignes1" Association="RatpHidalgoModel.FK_Lieux_Lignes1">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_Lignes2" Association="RatpHidalgoModel.FK_Lieux_Lignes2">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <EntitySet Name="Localisations" EntityType="RatpHidalgoModel.Localisations" />
+    <AssociationSet Name="FK_Desordres_Localisations" Association="RatpHidalgoModel.FK_Desordres_Localisations">
+      <End Role="Localisations" EntitySet="Localisations" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_Localisations" Association="RatpHidalgoModel.FK_Localisations_Localisations">
+      <End Role="Localisations" EntitySet="Localisations" />
+      <End Role="Localisations1" EntitySet="Localisations" />
+    </AssociationSet>
+    <EntitySet Name="Ouvrages" EntityType="RatpHidalgoModel.Ouvrages" />
+    <AssociationSet Name="FK_Ouvrages_Descriptions" Association="RatpHidalgoModel.FK_Ouvrages_Descriptions">
+      <End Role="Descriptions" EntitySet="Descriptions" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Lieux" Association="RatpHidalgoModel.FK_Ouvrages_Lieux">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Lieux1" Association="RatpHidalgoModel.FK_Ouvrages_Lieux1">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_Ouvrages" Association="RatpHidalgoModel.FK_Localisations_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_OuvragesSecondaires" Association="RatpHidalgoModel.FK_Localisations_OuvragesSecondaires">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_Ouvrages" Association="RatpHidalgoModel.FK_Ouvrages_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="Ouvrages1" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <EntitySet Name="GpeOuvragesComposition" EntityType="RatpHidalgoModel.GpeOuvragesComposition" />
+    <EntitySet Name="PlanificationComposition" EntityType="RatpHidalgoModel.PlanificationComposition" />
+    <EntitySet Name="PlanificationGroupeOuvrage" EntityType="RatpHidalgoModel.PlanificationGroupeOuvrage" />
+    <AssociationSet Name="FK_GpeOuvragesComposition_GroupesOuvrages" Association="RatpHidalgoModel.FK_GpeOuvragesComposition_GroupesOuvrages">
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+      <End Role="GpeOuvragesComposition" EntitySet="GpeOuvragesComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GpeOuvragesComposition_Ouvrages" Association="RatpHidalgoModel.FK_GpeOuvragesComposition_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="GpeOuvragesComposition" EntitySet="GpeOuvragesComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Lieux" Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lieux">
+      <End Role="Lieux" EntitySet="Lieux" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Lignes" Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lignes">
+      <End Role="Lignes" EntitySet="Lignes" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationComposition_Ouvrages" Association="RatpHidalgoModel.FK_PlanificationComposition_Ouvrages">
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+      <End Role="PlanificationComposition" EntitySet="PlanificationComposition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationComposition_PlanificationGroupeOuvrage" Association="RatpHidalgoModel.FK_PlanificationComposition_PlanificationGroupeOuvrage">
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+      <End Role="PlanificationComposition" EntitySet="PlanificationComposition" />
+    </AssociationSet>
+    <EntitySet Name="Planification" EntityType="RatpHidalgoModel.Planification" />
+    <EntitySet Name="PlanificationsTypes" EntityType="RatpHidalgoModel.PlanificationsTypes" />
+    <AssociationSet Name="FK_Planification_PlanificationGroupeOuvrage" Association="RatpHidalgoModel.FK_Planification_PlanificationGroupeOuvrage">
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_PlanificationsTypes" Association="RatpHidalgoModel.FK_Planification_PlanificationsTypes">
+      <End Role="PlanificationsTypes" EntitySet="PlanificationsTypes" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <EntitySet Name="ProcesVerbaux" EntityType="RatpHidalgoModel.ProcesVerbaux" />
+    <AssociationSet Name="FK_DocumentsLies_ProcesVerbal" Association="RatpHidalgoModel.FK_DocumentsLies_ProcesVerbal">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupesOuvrages_ProcesVerbaux" Association="RatpHidalgoModel.FK_GroupesOuvrages_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localisations_ProcesVerbaux" Association="RatpHidalgoModel.FK_Localisations_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="Localisations" EntitySet="Localisations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbaux_ProcesVerbaux" Association="RatpHidalgoModel.FK_ProcesVerbaux_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="ProcesVerbaux1" EntitySet="ProcesVerbaux" />
+    </AssociationSet>
+    <EntitySet Name="ReferencesTypes" EntityType="RatpHidalgoModel.ReferencesTypes" />
+    <EntitySet Name="Secteurs" EntityType="RatpHidalgoModel.Secteurs" />
+    <AssociationSet Name="FK_GroupesOuvrages_Secteurs" Association="RatpHidalgoModel.FK_GroupesOuvrages_Secteurs">
+      <End Role="Secteurs" EntitySet="Secteurs" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_Secteurs" Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Secteurs">
+      <End Role="Secteurs" EntitySet="Secteurs" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <EntitySet Name="StatutsDesordres" EntityType="RatpHidalgoModel.StatutsDesordres" />
+    <EntitySet Name="StatutsDocuments" EntityType="RatpHidalgoModel.StatutsDocuments" />
+    <AssociationSet Name="FK_Desordres_StatutsDesordres" Association="RatpHidalgoModel.FK_Desordres_StatutsDesordres">
+      <End Role="StatutsDesordres" EntitySet="StatutsDesordres" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsLies_Statuts" Association="RatpHidalgoModel.FK_DocumentsLies_Statuts">
+      <End Role="StatutsDocuments" EntitySet="StatutsDocuments" />
+      <End Role="DocumentsLies" EntitySet="DocumentsLies" />
+    </AssociationSet>
+    <EntitySet Name="DesordreNotesTypes" EntityType="RatpHidalgoModel.DesordreNotesTypes" />
+    <EntitySet Name="DesordresInfos" EntityType="RatpHidalgoModel.DesordresInfos" />
+    <EntitySet Name="LieuxTypes" EntityType="RatpHidalgoModel.LieuxTypes" />
+    <EntitySet Name="TypesInformations" EntityType="RatpHidalgoModel.TypesInformations" />
+    <EntitySet Name="TypesOuvrages" EntityType="RatpHidalgoModel.TypesOuvrages" />
+    <AssociationSet Name="FK_DesordreNotesTypes_Desordres" Association="RatpHidalgoModel.FK_DesordreNotesTypes_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordreNotesTypes" EntitySet="DesordreNotesTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresInfos_Desordres" Association="RatpHidalgoModel.FK_DesordresInfos_Desordres">
+      <End Role="Desordres" EntitySet="Desordres" />
+      <End Role="DesordresInfos" EntitySet="DesordresInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesordresInfos_FamillesTypesInformations" Association="RatpHidalgoModel.FK_DesordresInfos_FamillesTypesInformations">
+      <End Role="TypesInformations" EntitySet="TypesInformations" />
+      <End Role="DesordresInfos" EntitySet="DesordresInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lieux_LieuxTypes" Association="RatpHidalgoModel.FK_Lieux_LieuxTypes">
+      <End Role="LieuxTypes" EntitySet="LieuxTypes" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ouvrages_TypesOuvrages" Association="RatpHidalgoModel.FK_Ouvrages_TypesOuvrages">
+      <End Role="TypesOuvrages" EntitySet="TypesOuvrages" />
+      <End Role="Ouvrages" EntitySet="Ouvrages" />
+    </AssociationSet>
+    <AssociationSet Name="DesordresCauses" Association="RatpHidalgoModel.DesordresCauses">
+      <End Role="Causes" EntitySet="Causes" />
+      <End Role="Desordres" EntitySet="Desordres" />
+    </AssociationSet>
+    <EntitySet Name="TypesProcesVerbaux" EntityType="RatpHidalgoModel.TypesProcesVerbaux" />
+    <EntitySet Name="TypesSurveillances" EntityType="RatpHidalgoModel.TypesSurveillances" />
+    <AssociationSet Name="FK_DesordresDocuments_TypesSurveillances" Association="RatpHidalgoModel.FK_DesordresDocuments_TypesSurveillances">
+      <End Role="TypesSurveillances" EntitySet="TypesSurveillances" />
+      <End Role="DesordresDocuments" EntitySet="DesordresDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupesOuvrages_TypesProcesVerbaux" Association="RatpHidalgoModel.FK_GroupesOuvrages_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanificationGroupeOuvrage_TypesProcesVerbaux" Association="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="PlanificationGroupeOuvrage" EntitySet="PlanificationGroupeOuvrage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbaux_TypesProcesVerbaux" Association="RatpHidalgoModel.FK_ProcesVerbaux_TypesProcesVerbaux">
+      <End Role="TypesProcesVerbaux" EntitySet="TypesProcesVerbaux" />
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+    </AssociationSet>
+    <EntitySet Name="Utilisateurs" EntityType="RatpHidalgoModel.Utilisateurs" />
+    <AssociationSet Name="FK_Documents_Responsable" Association="RatpHidalgoModel.FK_Documents_Responsable">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Utilisateurs" Association="RatpHidalgoModel.FK_Documents_Utilisateurs">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_Surveillant" Association="RatpHidalgoModel.FK_Planification_Surveillant">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planification_Utilisateur" Association="RatpHidalgoModel.FK_Planification_Utilisateur">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <EntitySet Name="Validations" EntityType="RatpHidalgoModel.Validations" />
+    <EntitySet Name="ValidationsDocuments" EntityType="RatpHidalgoModel.ValidationsDocuments" />
+    <EntitySet Name="ValidationsProcesVerbaux" EntityType="RatpHidalgoModel.ValidationsProcesVerbaux" />
+    <AssociationSet Name="FK_ValidationsDocuments_Documents" Association="RatpHidalgoModel.FK_ValidationsDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="ValidationsDocuments" EntitySet="ValidationsDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbauxValidation_ProcesVerbaux" Association="RatpHidalgoModel.FK_ProcesVerbauxValidation_ProcesVerbaux">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="ValidationsProcesVerbaux" EntitySet="ValidationsProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesVerbauxValidation_Validation" Association="RatpHidalgoModel.FK_ProcesVerbauxValidation_Validation">
+      <End Role="Validations" EntitySet="Validations" />
+      <End Role="ValidationsProcesVerbaux" EntitySet="ValidationsProcesVerbaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ValidationsDocuments_Validations" Association="RatpHidalgoModel.FK_ValidationsDocuments_Validations">
+      <End Role="Validations" EntitySet="Validations" />
+      <End Role="ValidationsDocuments" EntitySet="ValidationsDocuments" />
+    </AssociationSet>
+    <EntitySet Name="Categorie" EntityType="RatpHidalgoModel.Categorie" />
+    <EntitySet Name="CoefficientPonderationParametresCriteresCalibrage" EntityType="RatpHidalgoModel.CoefficientPonderationParametresCriteresCalibrage" />
+    <AssociationSet Name="FK_ProgrammationDetails_Categorie" Association="RatpHidalgoModel.FK_ProgrammationDetails_Categorie">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="ProgrammationDetails" EntitySet="ProgrammationDetails" />
+    </AssociationSet>
+    <EntitySet Name="DataAnnexe" EntityType="RatpHidalgoModel.DataAnnexe" />
+    <EntitySet Name="Criteres" EntityType="RatpHidalgoModel.Criteres" />
+    <AssociationSet Name="FK_ParametresHidalgo_Criteres" Association="RatpHidalgoModel.FK_ParametresHidalgo_Criteres">
+      <End Role="Criteres" EntitySet="Criteres" />
+      <End Role="ParametresHidalgo" EntitySet="ParametresHidalgo" />
+    </AssociationSet>
+    <EntitySet Name="SeuilHidalgo" EntityType="RatpHidalgoModel.SeuilHidalgo" />
+    <AssociationSet Name="ProcesVerbauxPlanification" Association="RatpHidalgoModel.ProcesVerbauxPlanification">
+      <End Role="ProcesVerbaux" EntitySet="ProcesVerbaux" />
+      <End Role="Planification" EntitySet="Planification" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_GroupeOuvrage_Lieux" Association="RatpHidalgoModel.Fk_GroupeOuvrage_Lieux">
+      <End Role="GroupesOuvrages" EntitySet="GroupesOuvrages" />
+      <End Role="Lieux" EntitySet="Lieux" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="NatureTravaux">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Programmations" Relationship="RatpHidalgoModel.FK_Programmations_NatureTravaux" FromRole="NatureTravaux1" ToRole="Programmations" />
+  </EntityType>
+  <EntityType Name="NatureTravauxExternes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProgrammationDetails" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_NatureTravauxExternes" FromRole="NatureTravauxExternes" ToRole="ProgrammationDetails" />
+  </EntityType>
+  <EntityType Name="ParametresHidalgo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdCritere" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ParametresProgrammation" Relationship="RatpHidalgoModel.FK_ParametresProgrammation_ParametresHidalgo" FromRole="ParametresHidalgo" ToRole="ParametresProgrammation" />
+    <NavigationProperty Name="ProgrammationValeurParametresDocument" Relationship="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ParametreHidalgo" FromRole="ParametresHidalgo" ToRole="ProgrammationValeurParametresDocument" />
+    <NavigationProperty Name="Criteres" Relationship="RatpHidalgoModel.FK_ParametresHidalgo_Criteres" FromRole="ParametresHidalgo" ToRole="Criteres" />
+  </EntityType>
+  <EntityType Name="ParametresProgrammation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="IdProgrammation" Type="Int32" Nullable="false" />
+    <Property Name="IdParametre" Type="Int32" />
+    <Property Name="IdCritere" Type="Int32" />
+    <Property Name="Valeur_New" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Valeur_Old" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ParametresHidalgo" Relationship="RatpHidalgoModel.FK_ParametresProgrammation_ParametresHidalgo" FromRole="ParametresProgrammation" ToRole="ParametresHidalgo" />
+    <NavigationProperty Name="Programmations" Relationship="RatpHidalgoModel.FK_ParametresProgrammation_Programmations" FromRole="ParametresProgrammation" ToRole="Programmations" />
+  </EntityType>
+  <EntityType Name="TypeOuvrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Programmations" Relationship="RatpHidalgoModel.FK_Programmations_TypeOuvrage" FromRole="TypeOuvrage1" ToRole="Programmations" />
+  </EntityType>
+  <Association Name="FK_ParametresProgrammation_ParametresHidalgo">
+    <End Type="RatpHidalgoModel.ParametresHidalgo" Role="ParametresHidalgo" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ParametresProgrammation" Role="ParametresProgrammation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParametresHidalgo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParametresProgrammation">
+        <PropertyRef Name="IdParametre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_GetAllDocumentPgeWithNoteMax_Result">
+    <Property Type="String" Name="NumeroAffaire" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdDocumentType" Nullable="false" />
+    <Property Type="Int32" Name="Note" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Programmations">
+    <Key>
+      <PropertyRef Name="IdProgrammation" />
+    </Key>
+    <Property Name="IdProgrammation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdNatureTravaux" Type="Int32" Nullable="false" />
+    <Property Name="IdTypeOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="AnneeProgrammation" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreation" Type="Int32" Nullable="false" />
+    <Property Name="DateModification" Type="DateTime" Precision="3" />
+    <Property Name="UserModification" Type="Int32" />
+    <NavigationProperty Name="NatureTravaux" Relationship="RatpHidalgoModel.FK_Programmations_NatureTravaux" FromRole="Programmations" ToRole="NatureTravaux1" />
+    <NavigationProperty Name="ParametresProgrammation" Relationship="RatpHidalgoModel.FK_ParametresProgrammation_Programmations" FromRole="Programmations" ToRole="ParametresProgrammation" />
+    <NavigationProperty Name="TypeOuvrage" Relationship="RatpHidalgoModel.FK_Programmations_TypeOuvrage" FromRole="Programmations" ToRole="TypeOuvrage1" />
+    <NavigationProperty Name="ProgrammationDetails" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_Programmations" FromRole="Programmations" ToRole="ProgrammationDetails" />
+    <NavigationProperty Name="ProgrammationDocumentPGE" Relationship="RatpHidalgoModel.FK__Programma__IdPro__218BE82B" FromRole="Programmations" ToRole="ProgrammationDocumentPGE" />
+    <Property Name="PrixUnitaire" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="BudgetDisponible" Type="Decimal" Precision="17" Scale="2" />
+  </EntityType>
+  <Association Name="FK_Programmations_NatureTravaux">
+    <End Type="RatpHidalgoModel.NatureTravaux" Role="NatureTravaux1" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Programmations" Role="Programmations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NatureTravaux1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Programmations">
+        <PropertyRef Name="IdNatureTravaux" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParametresProgrammation_Programmations">
+    <End Type="RatpHidalgoModel.Programmations" Role="Programmations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ParametresProgrammation" Role="ParametresProgrammation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ParametresProgrammation">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Programmations_TypeOuvrage">
+    <End Type="RatpHidalgoModel.TypeOuvrage" Role="TypeOuvrage1" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Programmations" Role="Programmations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOuvrage1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Programmations">
+        <PropertyRef Name="IdTypeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProgrammationDetails">
+    <Key>
+      <PropertyRef Name="IdProgrammationDetail" />
+    </Key>
+    <Property Name="IdProgrammationDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="IdProgrammation" Type="Int32" Nullable="false" />
+    <Property Name="IdLigne" Type="Int32" />
+    <Property Name="IdLieu" Type="Int32" />
+    <Property Name="IdNatureTravauxExternes" Type="Int32" />
+    <Property Name="IdCategorie" Type="Int32" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreation" Type="Int32" Nullable="false" />
+    <Property Name="DateModification" Type="DateTime" Precision="3" />
+    <Property Name="UserModification" Type="Int32" />
+    <NavigationProperty Name="NatureTravauxExternes" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_NatureTravauxExternes" FromRole="ProgrammationDetails" ToRole="NatureTravauxExternes" />
+    <NavigationProperty Name="Programmations" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_Programmations" FromRole="ProgrammationDetails" ToRole="Programmations" />
+    <NavigationProperty Name="Categorie" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_Categorie" FromRole="ProgrammationDetails" ToRole="Categorie" />
+  </EntityType>
+  <Association Name="FK_ProgrammationDetails_NatureTravauxExternes">
+    <End Type="RatpHidalgoModel.NatureTravauxExternes" Role="NatureTravauxExternes" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ProgrammationDetails" Role="ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NatureTravauxExternes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdNatureTravauxExternes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDetails_Programmations">
+    <End Type="RatpHidalgoModel.Programmations" Role="Programmations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ProgrammationDetails" Role="ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProgrammationDocumentPGE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdProgrammation" Type="Int32" Nullable="false" />
+    <Property Name="NumeroAffaire" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="NumRang" Type="Int32" Nullable="false" />
+    <Property Name="NumMedian" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Programmations" Relationship="RatpHidalgoModel.FK__Programma__IdPro__218BE82B" FromRole="ProgrammationDocumentPGE" ToRole="Programmations" />
+    <Property Name="IsExAequo" Type="Boolean" />
+    <Property Name="IsValideEx" Type="Boolean" />
+    <Property Name="Surface" Type="Double" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DocumentPgeTravauxAnnees" Relationship="RatpHidalgoModel.FK_ProgrammationDocumentPge_TravauxAnnees" FromRole="ProgrammationDocumentPGE" ToRole="DocumentPgeTravauxAnnees" />
+    <Property Name="Annee" Type="Int32" />
+    <Property Name="Budget" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="IsTravauxPlusieursAnnee" Type="Boolean" />
+    <NavigationProperty Name="ProgrammationValeurParametresDocument" Relationship="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE" FromRole="ProgrammationDocumentPGE" ToRole="ProgrammationValeurParametresDocument" />
+    <Property Name="IdDocument" Type="Int32" />
+    <Property Name="Categorie" Type="RatpHidalgoModel.ECategoriesPge" />
+    <NavigationProperty Name="Documents" Relationship="RatpHidalgoModel.FK_ProgrammationDocumentPGE_Document" FromRole="ProgrammationDocumentPGE" ToRole="Documents" />
+  </EntityType>
+  <Association Name="FK__Programma__IdPro__218BE82B">
+    <End Type="RatpHidalgoModel.Programmations" Role="Programmations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ProgrammationDocumentPGE" Role="ProgrammationDocumentPGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Programmations">
+        <PropertyRef Name="IdProgrammation" />
+      </Principal>
+      <Dependent Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="IdProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DocumentPgeTravauxAnnees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDocumentProgrammation" Type="Int32" Nullable="false" />
+    <Property Name="Annee" Type="Int32" />
+    <Property Name="Budget" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Actif" Type="Boolean" />
+    <NavigationProperty Name="ProgrammationDocumentPGE" Relationship="RatpHidalgoModel.FK_ProgrammationDocumentPge_TravauxAnnees" FromRole="DocumentPgeTravauxAnnees" ToRole="ProgrammationDocumentPGE" />
+  </EntityType>
+  <Association Name="FK_ProgrammationDocumentPge_TravauxAnnees">
+    <End Type="RatpHidalgoModel.ProgrammationDocumentPGE" Role="ProgrammationDocumentPGE" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DocumentPgeTravauxAnnees" Role="DocumentPgeTravauxAnnees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentPgeTravauxAnnees">
+        <PropertyRef Name="IdDocumentProgrammation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProgrammationValeurParametresDocument">
+    <Key>
+      <PropertyRef Name="IDParametreHidalgo" />
+      <PropertyRef Name="IDDocumentPge" />
+    </Key>
+    <Property Name="IDParametreHidalgo" Type="Int32" Nullable="false" />
+    <Property Name="IDDocumentPge" Type="Int32" Nullable="false" />
+    <Property Name="IDCritere" Type="Int32" />
+    <Property Name="Note" Type="Double" />
+    <NavigationProperty Name="ParametresHidalgo" Relationship="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ParametreHidalgo" FromRole="ProgrammationValeurParametresDocument" ToRole="ParametresHidalgo" />
+    <NavigationProperty Name="ProgrammationDocumentPGE" Relationship="RatpHidalgoModel.FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE" FromRole="ProgrammationValeurParametresDocument" ToRole="ProgrammationDocumentPGE" />
+  </EntityType>
+  <Association Name="FK_ProgrammationValeurParametresDocument_ParametreHidalgo">
+    <End Type="RatpHidalgoModel.ParametresHidalgo" Role="ParametresHidalgo" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ProgrammationValeurParametresDocument" Role="ProgrammationValeurParametresDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParametresHidalgo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationValeurParametresDocument">
+        <PropertyRef Name="IDParametreHidalgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationValeurParametresDocument_ProgrammationDocumentPGE">
+    <End Type="RatpHidalgoModel.ProgrammationDocumentPGE" Role="ProgrammationDocumentPGE" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ProgrammationValeurParametresDocument" Role="ProgrammationValeurParametresDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationValeurParametresDocument">
+        <PropertyRef Name="IDDocumentPge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EnumType Name="ECategoriesPge" a:ExternalTypeName="Ratp.Hidalgo.Data.Contract.Enum.ECategoriesPge" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EntityType Name="Causes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.DesordresCauses" FromRole="Causes" ToRole="Desordres" />
+  </EntityType>
+  <EntityType Name="Descriptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdVisiteType" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="PkDebut" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="PkFin" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="DescriptionComp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CoordonneesEnv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CoordonneesConc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ConsignesSecurite" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Convention" Type="Boolean" />
+    <Property Name="DateConstruction" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DescModifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VisiblePavois" Type="Boolean" />
+    <Property Name="DateModification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NiveauNappe" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DonneesComplementaires" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.FK_Lieux_Descriptions" FromRole="Descriptions" ToRole="Lieux" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_Ouvrages_Descriptions" FromRole="Descriptions" ToRole="Ouvrages" />
+  </EntityType>
+  <EntityType Name="Desordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStatut" Type="Int32" Nullable="false" />
+    <Property Name="IdLocalisation" Type="Int32" />
+    <Property Name="IdFamilleDesordreType" Type="Int32" Nullable="false" />
+    <Property Name="IdAncienneFamilleType" Type="Int32" />
+    <Property Name="IdObservationTravaux" Type="Int32" />
+    <Property Name="IdDesordreCommun" Type="Int32" />
+    <Property Name="DateSaisie" Type="DateTime" Precision="3" />
+    <Property Name="NotePrecedente" Type="Int32" />
+    <Property Name="Note" Type="Int32" />
+    <Property Name="CaractCommentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EnvCommentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AncienneCaractFamille" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NouveauDesordre" Type="Boolean" Nullable="false" />
+    <Property Name="Actif" Type="Boolean" Nullable="false" />
+    <Property Name="ConstatCommentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Situation" Type="Int32" Nullable="false" />
+    <Property Name="NumeroAffichage" Type="Int32" />
+    <Property Name="IdIdCapture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DatePvsr" Type="DateTime" Precision="3" />
+    <Property Name="IdFrequenceSurveillance" Type="Int32" />
+    <NavigationProperty Name="DesordresDocuments" Relationship="RatpHidalgoModel.FK_DesordresDocuments_Desordres" FromRole="Desordres" ToRole="DesordresDocuments" />
+    <NavigationProperty Name="FamillesDesordresTypes" Relationship="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes" FromRole="Desordres" ToRole="FamillesDesordresTypes" />
+    <NavigationProperty Name="FamillesDesordresTypes1" Relationship="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes1" FromRole="Desordres" ToRole="FamillesDesordresTypes" />
+    <NavigationProperty Name="Localisations" Relationship="RatpHidalgoModel.FK_Desordres_Localisations" FromRole="Desordres" ToRole="Localisations" />
+    <NavigationProperty Name="StatutsDesordres" Relationship="RatpHidalgoModel.FK_Desordres_StatutsDesordres" FromRole="Desordres" ToRole="StatutsDesordres" />
+    <NavigationProperty Name="DesordreNotesTypes" Relationship="RatpHidalgoModel.FK_DesordreNotesTypes_Desordres" FromRole="Desordres" ToRole="DesordreNotesTypes" />
+    <NavigationProperty Name="DesordresInfos" Relationship="RatpHidalgoModel.FK_DesordresInfos_Desordres" FromRole="Desordres" ToRole="DesordresInfos" />
+    <NavigationProperty Name="Causes" Relationship="RatpHidalgoModel.DesordresCauses" FromRole="Desordres" ToRole="Causes" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDocumentType" Type="Int32" Nullable="false" />
+    <Property Name="IdDocumentParent" Type="Int32" />
+    <Property Name="IdProcesVerbal" Type="Int32" />
+    <Property Name="IdChef" Type="Int32" />
+    <Property Name="IdDemandeur" Type="Int32" />
+    <Property Name="NumeroAffaire" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DescPiecesJointes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RemarquesGenerales" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreation" Type="DateTime" Precision="3" />
+    <Property Name="AnneeProgrammation" Type="DateTime" Precision="3" />
+    <Property Name="ObservationsPrestation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CommentairePrestation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdProcesVerbalAncien" Type="Int32" />
+    <Property Name="TypeCondition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DestinataireDE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdDesitinataireDE" Type="Int32" />
+    <Property Name="DateConsultationDE" Type="DateTime" Precision="3" />
+    <Property Name="ValidationRE" Type="Int32" />
+    <NavigationProperty Name="Documents1" Relationship="RatpHidalgoModel.FK_Documents_Documents" FromRole="Documents" ToRole="Documents1" />
+    <NavigationProperty Name="Documents2" Relationship="RatpHidalgoModel.FK_Documents_Documents" FromRole="Documents1" ToRole="Documents" />
+    <NavigationProperty Name="ProgrammationDocumentPGE" Relationship="RatpHidalgoModel.FK_ProgrammationDocumentPGE_Document" FromRole="Documents" ToRole="ProgrammationDocumentPGE" />
+    <NavigationProperty Name="DesordresDocuments" Relationship="RatpHidalgoModel.FK_DesordresDocuments_Documents" FromRole="Documents" ToRole="DesordresDocuments" />
+    <NavigationProperty Name="Utilisateurs" Relationship="RatpHidalgoModel.FK_Documents_Responsable" FromRole="Documents" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Utilisateurs1" Relationship="RatpHidalgoModel.FK_Documents_Utilisateurs" FromRole="Documents" ToRole="Utilisateurs" />
+    <NavigationProperty Name="ValidationsDocuments" Relationship="RatpHidalgoModel.FK_ValidationsDocuments_Documents" FromRole="Documents" ToRole="ValidationsDocuments" />
+  </EntityType>
+  <Association Name="FK_Documents_Documents">
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Documents" Role="Documents1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents1">
+        <PropertyRef Name="IdDocumentParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProgrammationDocumentPGE_Document">
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ProgrammationDocumentPGE" Role="ProgrammationDocumentPGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDocumentPGE">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DesordresDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDesordre" Type="Int32" Nullable="false" />
+    <Property Name="IdDocument" Type="Int32" Nullable="false" />
+    <Property Name="IdNatureTravaux" Type="Int32" />
+    <Property Name="IdTypeSurveillance" Type="Int32" />
+    <Property Name="Sdm" Type="Double" />
+    <Property Name="AnneeIndicative" Type="DateTime" Precision="3" />
+    <Property Name="DelaiDemande" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContrainteExploitation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SrrExtDatePreconisation" Type="DateTime" Precision="3" />
+    <Property Name="SrrExtNaturePreconisation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SrrExtRemarque" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="NumDe" Type="Int32" />
+    <Property Name="NbDe" Type="Int32" />
+    <Property Name="NumSrr" Type="Int32" />
+    <Property Name="NbSrr" Type="Int32" />
+    <Property Name="PgeBilanAnnee" Type="Int32" />
+    <Property Name="PgeBilanEvaluation" Type="Int32" />
+    <Property Name="PgeBilanIdentification" Type="Int32" />
+    <Property Name="PgeBilanMaj" Type="DateTime" Precision="3" />
+    <Property Name="PgeIdTitreIII" Type="Int32" />
+    <Property Name="PgeTitreM" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="PgeTitreMaj" Type="DateTime" Precision="3" />
+    <Property Name="PgeRattache" Type="Int32" />
+    <Property Name="IdPvsrFrequence" Type="Int32" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_DesordresDocuments_Desordres" FromRole="DesordresDocuments" ToRole="Desordres" />
+    <NavigationProperty Name="Documents" Relationship="RatpHidalgoModel.FK_DesordresDocuments_Documents" FromRole="DesordresDocuments" ToRole="Documents" />
+    <NavigationProperty Name="NaturesTravaux" Relationship="RatpHidalgoModel.FK_DesordresDocuments_NaturesTravaux" FromRole="DesordresDocuments" ToRole="NaturesTravaux" />
+    <NavigationProperty Name="DocumentsLies" Relationship="RatpHidalgoModel.FK_DocumentsLies_DesordresDocuments" FromRole="DesordresDocuments" ToRole="DocumentsLies" />
+    <NavigationProperty Name="TypesSurveillances" Relationship="RatpHidalgoModel.FK_DesordresDocuments_TypesSurveillances" FromRole="DesordresDocuments" ToRole="TypesSurveillances" />
+  </EntityType>
+  <EntityType Name="DocumentsLies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDesordreDocument" Type="Int32" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="Int32" Nullable="false" />
+    <Property Name="IdStatutDocument" Type="Int32" Nullable="false" />
+    <Property Name="RaisonAnnulation" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+    <Property Name="DateStatut" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Relance" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DesordresDocuments" Relationship="RatpHidalgoModel.FK_DocumentsLies_DesordresDocuments" FromRole="DocumentsLies" ToRole="DesordresDocuments" />
+    <NavigationProperty Name="ProcesVerbaux" Relationship="RatpHidalgoModel.FK_DocumentsLies_ProcesVerbal" FromRole="DocumentsLies" ToRole="ProcesVerbaux" />
+    <NavigationProperty Name="StatutsDocuments" Relationship="RatpHidalgoModel.FK_DocumentsLies_Statuts" FromRole="DocumentsLies" ToRole="StatutsDocuments" />
+  </EntityType>
+  <EntityType Name="NaturesTravaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Flag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DesordresDocuments" Relationship="RatpHidalgoModel.FK_DesordresDocuments_NaturesTravaux" FromRole="NaturesTravaux" ToRole="DesordresDocuments" />
+  </EntityType>
+  <Association Name="FK_DesordresDocuments_Desordres">
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DesordresDocuments" Role="DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_Documents">
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DesordresDocuments" Role="DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresDocuments_NaturesTravaux">
+    <End Type="RatpHidalgoModel.NaturesTravaux" Role="NaturesTravaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.DesordresDocuments" Role="DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NaturesTravaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdNatureTravaux" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsLies_DesordresDocuments">
+    <End Type="RatpHidalgoModel.DesordresDocuments" Role="DesordresDocuments" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DocumentsLies" Role="DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DesordresDocuments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdDesordreDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FamillesDesordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FamillesDesordresTypes" Relationship="RatpHidalgoModel.FK_FamillesDesordresTypes_FamillesDesordres" FromRole="FamillesDesordres" ToRole="FamillesDesordresTypes" />
+  </EntityType>
+  <EntityType Name="FamillesDesordresTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdFamilleDesordre" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes" FromRole="FamillesDesordresTypes" ToRole="Desordres" />
+    <NavigationProperty Name="Desordres1" Relationship="RatpHidalgoModel.FK_Desordres_FamillesDesordresTypes1" FromRole="FamillesDesordresTypes" ToRole="Desordres" />
+    <NavigationProperty Name="FamillesDesordres" Relationship="RatpHidalgoModel.FK_FamillesDesordresTypes_FamillesDesordres" FromRole="FamillesDesordresTypes" ToRole="FamillesDesordres" />
+  </EntityType>
+  <Association Name="FK_Desordres_FamillesDesordresTypes">
+    <End Type="RatpHidalgoModel.FamillesDesordresTypes" Role="FamillesDesordresTypes" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordresTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdFamilleDesordreType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desordres_FamillesDesordresTypes1">
+    <End Type="RatpHidalgoModel.FamillesDesordresTypes" Role="FamillesDesordresTypes" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordresTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdFamilleDesordreType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FamillesDesordresTypes_FamillesDesordres">
+    <End Type="RatpHidalgoModel.FamillesDesordres" Role="FamillesDesordres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.FamillesDesordresTypes" Role="FamillesDesordresTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesDesordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FamillesDesordresTypes">
+        <PropertyRef Name="IdFamilleDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GroupesOuvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdProcesVerbal" Type="Int32" />
+    <Property Name="IdLigne" Type="Int32" />
+    <Property Name="IdSecteur" Type="Int32" />
+    <Property Name="Libelle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="IdTypeProcesVerbal" Type="Int32" />
+    <Property Name="IdLieu" Type="Int32" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="Int32" />
+    <NavigationProperty Name="GpeOuvragesComposition" Relationship="RatpHidalgoModel.FK_GpeOuvragesComposition_GroupesOuvrages" FromRole="GroupesOuvrages" ToRole="GpeOuvragesComposition" />
+    <NavigationProperty Name="ProcesVerbaux" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_ProcesVerbaux" FromRole="GroupesOuvrages" ToRole="ProcesVerbaux" />
+    <NavigationProperty Name="Secteurs" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_Secteurs" FromRole="GroupesOuvrages" ToRole="Secteurs" />
+    <NavigationProperty Name="TypesProcesVerbaux" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_TypesProcesVerbaux" FromRole="GroupesOuvrages" ToRole="TypesProcesVerbaux" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.Fk_GroupeOuvrage_Lieux" FromRole="GroupesOuvrages" ToRole="Lieux" />
+  </EntityType>
+  <EntityType Name="Lieux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdLigneProprietaire" Type="Int32" Nullable="false" />
+    <Property Name="IdLigneGestionnaire" Type="Int32" Nullable="false" />
+    <Property Name="IdLieuType" Type="Int32" Nullable="false" />
+    <Property Name="CodePatrimonial" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="SurveillanceTopo" Type="Boolean" />
+    <Property Name="RecoOA11" Type="Boolean" Nullable="false" />
+    <Property Name="RecoAcces" Type="Boolean" Nullable="false" />
+    <Property Name="RecoAutres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdDescription" Type="Int32" Nullable="false" />
+    <Property Name="Actif" Type="Boolean" />
+    <Property Name="SurfCarrelage" Type="Double" />
+    <Property Name="Ordre" Type="Int32" />
+    <NavigationProperty Name="Descriptions" Relationship="RatpHidalgoModel.FK_Lieux_Descriptions" FromRole="Lieux" ToRole="Descriptions" />
+    <NavigationProperty Name="Lignes" Relationship="RatpHidalgoModel.FK_Lieux_Lignes1" FromRole="Lieux" ToRole="Lignes" />
+    <NavigationProperty Name="Lignes1" Relationship="RatpHidalgoModel.FK_Lieux_Lignes2" FromRole="Lieux" ToRole="Lignes" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_Ouvrages_Lieux" FromRole="Lieux" ToRole="Ouvrages" />
+    <NavigationProperty Name="Ouvrages1" Relationship="RatpHidalgoModel.FK_Ouvrages_Lieux1" FromRole="Lieux" ToRole="Ouvrages" />
+    <NavigationProperty Name="PlanificationGroupeOuvrage" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lieux" FromRole="Lieux" ToRole="PlanificationGroupeOuvrage" />
+    <NavigationProperty Name="LieuxTypes" Relationship="RatpHidalgoModel.FK_Lieux_LieuxTypes" FromRole="Lieux" ToRole="LieuxTypes" />
+  </EntityType>
+  <Association Name="FK_Lieux_Descriptions">
+    <End Type="RatpHidalgoModel.Descriptions" Role="Descriptions" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descriptions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdDescription" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FamillesLignes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Lignes" Relationship="RatpHidalgoModel.FK_Lignes_FamillesLignes" FromRole="FamillesLignes" ToRole="Lignes" />
+  </EntityType>
+  <EntityType Name="Lignes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdFamilleLigne" Type="Int32" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StationDepart" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="StationArrivee" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="CheminIcone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Actif" Type="Boolean" Nullable="false" />
+    <Property Name="OrdreAffichage" Type="Int32" />
+    <NavigationProperty Name="FamillesLignes" Relationship="RatpHidalgoModel.FK_Lignes_FamillesLignes" FromRole="Lignes" ToRole="FamillesLignes" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.FK_Lieux_Lignes1" FromRole="Lignes" ToRole="Lieux" />
+    <NavigationProperty Name="Lieux1" Relationship="RatpHidalgoModel.FK_Lieux_Lignes2" FromRole="Lignes" ToRole="Lieux" />
+    <NavigationProperty Name="PlanificationGroupeOuvrage" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lignes" FromRole="Lignes" ToRole="PlanificationGroupeOuvrage" />
+  </EntityType>
+  <Association Name="FK_Lignes_FamillesLignes">
+    <End Type="RatpHidalgoModel.FamillesLignes" Role="FamillesLignes" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Lignes" Role="Lignes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamillesLignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lignes">
+        <PropertyRef Name="IdFamilleLigne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_Lignes1">
+    <End Type="RatpHidalgoModel.Lignes" Role="Lignes" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLigneProprietaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_Lignes2">
+    <End Type="RatpHidalgoModel.Lignes" Role="Lignes" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLigneGestionnaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Localisations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdProcesVerbal" Type="Int32" />
+    <Property Name="IdOuvragePrincipal" Type="Int32" />
+    <Property Name="IdZoneOP" Type="Int32" />
+    <Property Name="IdOuvrageSecondaire" Type="Int32" />
+    <Property Name="IdZoneOS" Type="Int32" />
+    <Property Name="IdElementConstitutif" Type="Int32" />
+    <Property Name="IdInfosFixes" Type="Int32" />
+    <Property Name="DateSaisie" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateModification" Type="DateTime" Precision="3" />
+    <Property Name="Atlas" Type="Boolean" />
+    <Property Name="IdLocalisationApresMigration" Type="Int32" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_Desordres_Localisations" FromRole="Localisations" ToRole="Desordres" />
+    <NavigationProperty Name="Localisations1" Relationship="RatpHidalgoModel.FK_Localisations_Localisations" FromRole="Localisations" ToRole="Localisations1" />
+    <NavigationProperty Name="Localisations2" Relationship="RatpHidalgoModel.FK_Localisations_Localisations" FromRole="Localisations1" ToRole="Localisations" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_Localisations_Ouvrages" FromRole="Localisations" ToRole="Ouvrages" />
+    <NavigationProperty Name="Ouvrages1" Relationship="RatpHidalgoModel.FK_Localisations_OuvragesSecondaires" FromRole="Localisations" ToRole="Ouvrages" />
+    <NavigationProperty Name="ProcesVerbaux" Relationship="RatpHidalgoModel.FK_Localisations_ProcesVerbaux" FromRole="Localisations" ToRole="ProcesVerbaux" />
+  </EntityType>
+  <Association Name="FK_Desordres_Localisations">
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdLocalisation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_Localisations">
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localisations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations1">
+        <PropertyRef Name="IdLocalisationApresMigration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Ouvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTypeOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="IdDescription" Type="Int32" Nullable="false" />
+    <Property Name="IdOpParent" Type="Int32" />
+    <Property Name="IdLieuProprietaire" Type="Int32" Nullable="false" />
+    <Property Name="IdLieuGestionnaire" Type="Int32" />
+    <Property Name="CodeMire" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreation" Type="DateTime" Precision="3" />
+    <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Longueur" Type="Single" />
+    <Property Name="CycleInspection" Type="Int32" />
+    <Property Name="SoumisSrr" Type="Boolean" Nullable="false" />
+    <Property Name="SoumisNq" Type="Boolean" Nullable="false" />
+    <Property Name="DateHistorique" Type="DateTime" Precision="3" />
+    <Property Name="IdTypeModification" Type="Int32" />
+    <Property Name="Actif" Type="Boolean" />
+    <NavigationProperty Name="Descriptions" Relationship="RatpHidalgoModel.FK_Ouvrages_Descriptions" FromRole="Ouvrages" ToRole="Descriptions" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.FK_Ouvrages_Lieux" FromRole="Ouvrages" ToRole="Lieux" />
+    <NavigationProperty Name="Lieux1" Relationship="RatpHidalgoModel.FK_Ouvrages_Lieux1" FromRole="Ouvrages" ToRole="Lieux" />
+    <NavigationProperty Name="Localisations" Relationship="RatpHidalgoModel.FK_Localisations_Ouvrages" FromRole="Ouvrages" ToRole="Localisations" />
+    <NavigationProperty Name="Localisations1" Relationship="RatpHidalgoModel.FK_Localisations_OuvragesSecondaires" FromRole="Ouvrages" ToRole="Localisations" />
+    <NavigationProperty Name="Ouvrages1" Relationship="RatpHidalgoModel.FK_Ouvrages_Ouvrages" FromRole="Ouvrages" ToRole="Ouvrages1" />
+    <NavigationProperty Name="GpeOuvragesComposition" Relationship="RatpHidalgoModel.FK_GpeOuvragesComposition_Ouvrages" FromRole="Ouvrages" ToRole="GpeOuvragesComposition" />
+    <NavigationProperty Name="PlanificationComposition" Relationship="RatpHidalgoModel.FK_PlanificationComposition_Ouvrages" FromRole="Ouvrages" ToRole="PlanificationComposition" />
+    <NavigationProperty Name="TypesOuvrages" Relationship="RatpHidalgoModel.FK_Ouvrages_TypesOuvrages" FromRole="Ouvrages" ToRole="TypesOuvrages" />
+  </EntityType>
+  <Association Name="FK_Ouvrages_Descriptions">
+    <End Type="RatpHidalgoModel.Descriptions" Role="Descriptions" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descriptions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdDescription" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Lieux">
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdLieuProprietaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Lieux1">
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdLieuGestionnaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_Ouvrages">
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdOuvragePrincipal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_OuvragesSecondaires">
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdOuvrageSecondaire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_Ouvrages">
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages1">
+        <PropertyRef Name="IdOpParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GpeOuvragesComposition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdGroupeOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="IdOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="Inspection" Type="Boolean" />
+    <Property Name="CauseNonInspection" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CommentaireOp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Controle" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GroupesOuvrages" Relationship="RatpHidalgoModel.FK_GpeOuvragesComposition_GroupesOuvrages" FromRole="GpeOuvragesComposition" ToRole="GroupesOuvrages" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_GpeOuvragesComposition_Ouvrages" FromRole="GpeOuvragesComposition" ToRole="Ouvrages" />
+  </EntityType>
+  <EntityType Name="PlanificationComposition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="IdOuvrage" Type="Int32" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_PlanificationComposition_Ouvrages" FromRole="PlanificationComposition" ToRole="Ouvrages" />
+    <NavigationProperty Name="PlanificationGroupeOuvrage" Relationship="RatpHidalgoModel.FK_PlanificationComposition_PlanificationGroupeOuvrage" FromRole="PlanificationComposition" ToRole="PlanificationGroupeOuvrage" />
+  </EntityType>
+  <EntityType Name="PlanificationGroupeOuvrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSecteur" Type="Int32" />
+    <Property Name="IdLigne" Type="Int32" />
+    <Property Name="IdLieu" Type="Int32" />
+    <Property Name="IdGroupe" Type="Int32" Nullable="false" />
+    <Property Name="IdTypeProcesVerbal" Type="Int32" />
+    <Property Name="IdDocumentType" Type="Int32" />
+    <Property Name="Titre" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="CycleInspection" Type="Int32" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lieux" FromRole="PlanificationGroupeOuvrage" ToRole="Lieux" />
+    <NavigationProperty Name="Lignes" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Lignes" FromRole="PlanificationGroupeOuvrage" ToRole="Lignes" />
+    <NavigationProperty Name="PlanificationComposition" Relationship="RatpHidalgoModel.FK_PlanificationComposition_PlanificationGroupeOuvrage" FromRole="PlanificationGroupeOuvrage" ToRole="PlanificationComposition" />
+    <NavigationProperty Name="Planification" Relationship="RatpHidalgoModel.FK_Planification_PlanificationGroupeOuvrage" FromRole="PlanificationGroupeOuvrage" ToRole="Planification" />
+    <NavigationProperty Name="Secteurs" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Secteurs" FromRole="PlanificationGroupeOuvrage" ToRole="Secteurs" />
+    <NavigationProperty Name="TypesProcesVerbaux" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_TypesProcesVerbaux" FromRole="PlanificationGroupeOuvrage" ToRole="TypesProcesVerbaux" />
+  </EntityType>
+  <Association Name="FK_GpeOuvragesComposition_GroupesOuvrages">
+    <End Type="RatpHidalgoModel.GroupesOuvrages" Role="GroupesOuvrages" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.GpeOuvragesComposition" Role="GpeOuvragesComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupesOuvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GpeOuvragesComposition">
+        <PropertyRef Name="IdGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GpeOuvragesComposition_Ouvrages">
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.GpeOuvragesComposition" Role="GpeOuvragesComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GpeOuvragesComposition">
+        <PropertyRef Name="IdOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Lieux">
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Lignes">
+    <End Type="RatpHidalgoModel.Lignes" Role="Lignes" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lignes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdLigne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationComposition_Ouvrages">
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.PlanificationComposition" Role="PlanificationComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ouvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationComposition">
+        <PropertyRef Name="IdOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationComposition_PlanificationGroupeOuvrage">
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.PlanificationComposition" Role="PlanificationComposition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationComposition">
+        <PropertyRef Name="IdPlanificationGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Planification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPlanificationGroupeOuvrage" Type="Int32" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="Int32" />
+    <Property Name="IdTypeDocument" Type="Int32" Nullable="false" />
+    <Property Name="IdUtilisateur" Type="Int32" />
+    <Property Name="IdPlanificationType" Type="Int32" />
+    <Property Name="Commentaires" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Raison" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Contraintes" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="IdSurveillant" Type="Int32" />
+    <Property Name="NbJours" Type="Int32" />
+    <Property Name="NbNuits" Type="Int32" />
+    <Property Name="NbSurv" Type="Int32" />
+    <Property Name="AnneeInspVis" Type="DateTime" Precision="3" />
+    <Property Name="AnneeNivSurv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Actif" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GroupeOuvrage" Relationship="RatpHidalgoModel.FK_Planification_PlanificationGroupeOuvrage" FromRole="Planification" ToRole="PlanificationGroupeOuvrage" />
+    <NavigationProperty Name="PlanificationsTypes" Relationship="RatpHidalgoModel.FK_Planification_PlanificationsTypes" FromRole="Planification" ToRole="PlanificationsTypes" />
+    <NavigationProperty Name="Utilisateurs" Relationship="RatpHidalgoModel.FK_Planification_Surveillant" FromRole="Planification" ToRole="Utilisateurs" />
+  </EntityType>
+  <EntityType Name="PlanificationsTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Abreviation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Planification" Relationship="RatpHidalgoModel.FK_Planification_PlanificationsTypes" FromRole="PlanificationsTypes" ToRole="Planification" />
+  </EntityType>
+  <Association Name="FK_Planification_PlanificationGroupeOuvrage">
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Planification" Role="Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdPlanificationGroupeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_PlanificationsTypes">
+    <End Type="RatpHidalgoModel.PlanificationsTypes" Role="PlanificationsTypes" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Planification" Role="Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanificationsTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdPlanificationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDocumentType" Type="Int32" Nullable="false" />
+    <Property Name="IdTypeProvesVerbal" Type="Int32" />
+    <Property Name="NumeroAffaire" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="Int32" />
+    <Property Name="Commentaire" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DatePlanification" Type="DateTime" Precision="3" />
+    <Property Name="DateOuverture" Type="DateTime" Precision="3" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DatePremiereImpression" Type="DateTime" Precision="3" />
+    <Property Name="IdPvAnterieur" Type="Int32" />
+    <Property Name="Archive" Type="Boolean" Nullable="false" />
+    <Property Name="EtatSaisie" Type="Int32" />
+    <Property Name="CommentaireAccueil" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConformiteVitrail" Type="Boolean" />
+    <Property Name="CommentaireVitrail" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="IdFrequenceSurveillance" Type="Int32" />
+    <Property Name="DatePvsr" Type="DateTime" Precision="3" />
+    <Property Name="IdRedacteurPVSR" Type="Int32" />
+    <Property Name="DateProchaineCreationPvsr" Type="DateTime" Precision="3" />
+    <Property Name="FlagCreationService" Type="Int32" />
+    <Property Name="AncienneNotePV" Type="Int32" />
+    <NavigationProperty Name="DocumentsLies" Relationship="RatpHidalgoModel.FK_DocumentsLies_ProcesVerbal" FromRole="ProcesVerbaux" ToRole="DocumentsLies" />
+    <NavigationProperty Name="GroupeOuvrage" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_ProcesVerbaux" FromRole="ProcesVerbaux" ToRole="GroupesOuvrages" />
+    <NavigationProperty Name="Localisations" Relationship="RatpHidalgoModel.FK_Localisations_ProcesVerbaux" FromRole="ProcesVerbaux" ToRole="Localisations" />
+    <NavigationProperty Name="ProcesVerbaux1" Relationship="RatpHidalgoModel.FK_ProcesVerbaux_ProcesVerbaux" FromRole="ProcesVerbaux" ToRole="ProcesVerbaux1" />
+    <NavigationProperty Name="ProcesVerbaux2" Relationship="RatpHidalgoModel.FK_ProcesVerbaux_ProcesVerbaux" FromRole="ProcesVerbaux1" ToRole="ProcesVerbaux" />
+    <NavigationProperty Name="TypesProcesVerbaux" Relationship="RatpHidalgoModel.FK_ProcesVerbaux_TypesProcesVerbaux" FromRole="ProcesVerbaux" ToRole="TypesProcesVerbaux" />
+    <NavigationProperty Name="ValidationsProcesVerbaux" Relationship="RatpHidalgoModel.FK_ProcesVerbauxValidation_ProcesVerbaux" FromRole="ProcesVerbaux" ToRole="ValidationsProcesVerbaux" />
+    <NavigationProperty Name="Planification" Relationship="RatpHidalgoModel.ProcesVerbauxPlanification" FromRole="ProcesVerbaux" ToRole="Planification" />
+  </EntityType>
+  <Association Name="FK_DocumentsLies_ProcesVerbal">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DocumentsLies" Role="DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupesOuvrages_ProcesVerbaux">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.GroupesOuvrages" Role="GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localisations_ProcesVerbaux">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Localisations" Role="Localisations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Localisations">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbaux_ProcesVerbaux">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProcesVerbaux1">
+        <PropertyRef Name="IdPvAnterieur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ReferencesTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Secteurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdVisiteType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GroupesOuvrages" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_Secteurs" FromRole="Secteurs" ToRole="GroupesOuvrages" />
+    <NavigationProperty Name="PlanificationGroupeOuvrage" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_Secteurs" FromRole="Secteurs" ToRole="PlanificationGroupeOuvrage" />
+  </EntityType>
+  <Association Name="FK_GroupesOuvrages_Secteurs">
+    <End Type="RatpHidalgoModel.Secteurs" Role="Secteurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.GroupesOuvrages" Role="GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secteurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdSecteur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_Secteurs">
+    <End Type="RatpHidalgoModel.Secteurs" Role="Secteurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Secteurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdSecteur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StatutsDesordres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_Desordres_StatutsDesordres" FromRole="StatutsDesordres" ToRole="Desordres" />
+  </EntityType>
+  <EntityType Name="StatutsDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DocumentsLies" Relationship="RatpHidalgoModel.FK_DocumentsLies_Statuts" FromRole="StatutsDocuments" ToRole="DocumentsLies" />
+  </EntityType>
+  <Association Name="FK_Desordres_StatutsDesordres">
+    <End Type="RatpHidalgoModel.StatutsDesordres" Role="StatutsDesordres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatutsDesordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desordres">
+        <PropertyRef Name="IdStatut" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsLies_Statuts">
+    <End Type="RatpHidalgoModel.StatutsDocuments" Role="StatutsDocuments" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DocumentsLies" Role="DocumentsLies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatutsDocuments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentsLies">
+        <PropertyRef Name="IdStatutDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DesordreNotesTypes">
+    <Key>
+      <PropertyRef Name="IdDesordre" />
+      <PropertyRef Name="IdNoteType" />
+    </Key>
+    <Property Name="IdDesordre" Type="Int32" Nullable="false" />
+    <Property Name="IdNoteType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_DesordreNotesTypes_Desordres" FromRole="DesordreNotesTypes" ToRole="Desordres" />
+  </EntityType>
+  <EntityType Name="DesordresInfos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdDesordre" Type="Int32" Nullable="false" />
+    <Property Name="IdTypeInformation" Type="Int32" Nullable="false" />
+    <Property Name="Valeur" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="estAncienneValeur" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Desordres" Relationship="RatpHidalgoModel.FK_DesordresInfos_Desordres" FromRole="DesordresInfos" ToRole="Desordres" />
+    <NavigationProperty Name="TypesInformations" Relationship="RatpHidalgoModel.FK_DesordresInfos_FamillesTypesInformations" FromRole="DesordresInfos" ToRole="TypesInformations" />
+  </EntityType>
+  <EntityType Name="LieuxTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="TypeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TypeTypeCodeMire" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TypePa" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="TypeCodeSsfa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TypeOrdreAffichage" Type="Decimal" Precision="3" Scale="0" />
+    <NavigationProperty Name="Lieux" Relationship="RatpHidalgoModel.FK_Lieux_LieuxTypes" FromRole="LieuxTypes" ToRole="Lieux" />
+  </EntityType>
+  <EntityType Name="TypesInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CategorieInfo" Type="Byte" />
+    <Property Name="Unite" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DesordresInfos" Relationship="RatpHidalgoModel.FK_DesordresInfos_FamillesTypesInformations" FromRole="TypesInformations" ToRole="DesordresInfos" />
+  </EntityType>
+  <EntityType Name="TypesOuvrages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="TypeType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TypeTypeCodeMire" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TypePa" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="TypeCodeSsfa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TypeOrdreAffichage" Type="Decimal" Precision="3" Scale="0" />
+    <NavigationProperty Name="Ouvrages" Relationship="RatpHidalgoModel.FK_Ouvrages_TypesOuvrages" FromRole="TypesOuvrages" ToRole="Ouvrages" />
+  </EntityType>
+  <Association Name="FK_DesordreNotesTypes_Desordres">
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DesordreNotesTypes" Role="DesordreNotesTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordreNotesTypes">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresInfos_Desordres">
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DesordresInfos" Role="DesordresInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desordres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresInfos">
+        <PropertyRef Name="IdDesordre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesordresInfos_FamillesTypesInformations">
+    <End Type="RatpHidalgoModel.TypesInformations" Role="TypesInformations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.DesordresInfos" Role="DesordresInfos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesInformations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresInfos">
+        <PropertyRef Name="IdTypeInformation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lieux_LieuxTypes">
+    <End Type="RatpHidalgoModel.LieuxTypes" Role="LieuxTypes" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LieuxTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lieux">
+        <PropertyRef Name="IdLieuType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ouvrages_TypesOuvrages">
+    <End Type="RatpHidalgoModel.TypesOuvrages" Role="TypesOuvrages" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.Ouvrages" Role="Ouvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesOuvrages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ouvrages">
+        <PropertyRef Name="IdTypeOuvrage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DesordresCauses">
+    <End Type="RatpHidalgoModel.Causes" Role="Causes" Multiplicity="*" />
+    <End Type="RatpHidalgoModel.Desordres" Role="Desordres" Multiplicity="*" />
+  </Association>
+  <EntityType Name="TypesProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Abreviation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Categorie" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GroupesOuvrages" Relationship="RatpHidalgoModel.FK_GroupesOuvrages_TypesProcesVerbaux" FromRole="TypesProcesVerbaux" ToRole="GroupesOuvrages" />
+    <NavigationProperty Name="PlanificationGroupeOuvrage" Relationship="RatpHidalgoModel.FK_PlanificationGroupeOuvrage_TypesProcesVerbaux" FromRole="TypesProcesVerbaux" ToRole="PlanificationGroupeOuvrage" />
+    <NavigationProperty Name="ProcesVerbaux" Relationship="RatpHidalgoModel.FK_ProcesVerbaux_TypesProcesVerbaux" FromRole="TypesProcesVerbaux" ToRole="ProcesVerbaux" />
+  </EntityType>
+  <EntityType Name="TypesSurveillances">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DesordresDocuments" Relationship="RatpHidalgoModel.FK_DesordresDocuments_TypesSurveillances" FromRole="TypesSurveillances" ToRole="DesordresDocuments" />
+  </EntityType>
+  <Association Name="FK_DesordresDocuments_TypesSurveillances">
+    <End Type="RatpHidalgoModel.TypesSurveillances" Role="TypesSurveillances" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.DesordresDocuments" Role="DesordresDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesSurveillances">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DesordresDocuments">
+        <PropertyRef Name="IdTypeSurveillance" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupesOuvrages_TypesProcesVerbaux">
+    <End Type="RatpHidalgoModel.TypesProcesVerbaux" Role="TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.GroupesOuvrages" Role="GroupesOuvrages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdTypeProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanificationGroupeOuvrage_TypesProcesVerbaux">
+    <End Type="RatpHidalgoModel.TypesProcesVerbaux" Role="TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.PlanificationGroupeOuvrage" Role="PlanificationGroupeOuvrage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlanificationGroupeOuvrage">
+        <PropertyRef Name="IdTypeProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbaux_TypesProcesVerbaux">
+    <End Type="RatpHidalgoModel.TypesProcesVerbaux" Role="TypesProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProcesVerbaux">
+        <PropertyRef Name="IdTypeProvesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="Prenom" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="Matricule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Initiales" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="Portable" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdFonction" Type="Int32" />
+    <Property Name="Actif" Type="Boolean" Nullable="false" />
+    <Property Name="CorrespondantTechnique" Type="Int32" />
+    <Property Name="SpecialisationCorrespondant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Documents" Relationship="RatpHidalgoModel.FK_Documents_Responsable" FromRole="Utilisateurs" ToRole="Documents" />
+    <NavigationProperty Name="Planification" Relationship="RatpHidalgoModel.FK_Planification_Surveillant" FromRole="Utilisateurs" ToRole="Planification" />
+  </EntityType>
+  <Association Name="FK_Documents_Responsable">
+    <End Type="RatpHidalgoModel.Utilisateurs" Role="Utilisateurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="IdChef" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Utilisateurs">
+    <End Type="RatpHidalgoModel.Utilisateurs" Role="Utilisateurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="IdDemandeur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_Surveillant">
+    <End Type="RatpHidalgoModel.Utilisateurs" Role="Utilisateurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Planification" Role="Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdSurveillant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planification_Utilisateur">
+    <End Type="RatpHidalgoModel.Utilisateurs" Role="Utilisateurs" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Planification" Role="Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdUtilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Validations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ValidationsProcesVerbaux" Relationship="RatpHidalgoModel.FK_ProcesVerbauxValidation_Validation" FromRole="Validations" ToRole="ValidationsProcesVerbaux" />
+    <NavigationProperty Name="ValidationsDocuments" Relationship="RatpHidalgoModel.FK_ValidationsDocuments_Validations" FromRole="Validations" ToRole="ValidationsDocuments" />
+  </EntityType>
+  <EntityType Name="ValidationsDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdValidation" Type="Int32" Nullable="false" />
+    <Property Name="IdDocument" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="IdUtilisateur" Type="Int32" Nullable="false" />
+    <Property Name="Suivi" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Documents" Relationship="RatpHidalgoModel.FK_ValidationsDocuments_Documents" FromRole="ValidationsDocuments" ToRole="Documents" />
+    <NavigationProperty Name="Validations" Relationship="RatpHidalgoModel.FK_ValidationsDocuments_Validations" FromRole="ValidationsDocuments" ToRole="Validations" />
+  </EntityType>
+  <EntityType Name="ValidationsProcesVerbaux">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdValidation" Type="Int32" Nullable="false" />
+    <Property Name="IdProcesVerbal" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="IdUtilisateur" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProcesVerbaux" Relationship="RatpHidalgoModel.FK_ProcesVerbauxValidation_ProcesVerbaux" FromRole="ValidationsProcesVerbaux" ToRole="ProcesVerbaux" />
+    <NavigationProperty Name="Validations" Relationship="RatpHidalgoModel.FK_ProcesVerbauxValidation_Validation" FromRole="ValidationsProcesVerbaux" ToRole="Validations" />
+  </EntityType>
+  <Association Name="FK_ValidationsDocuments_Documents">
+    <End Type="RatpHidalgoModel.Documents" Role="Documents" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ValidationsDocuments" Role="ValidationsDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsDocuments">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbauxValidation_ProcesVerbaux">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ValidationsProcesVerbaux" Role="ValidationsProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsProcesVerbaux">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesVerbauxValidation_Validation">
+    <End Type="RatpHidalgoModel.Validations" Role="Validations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ValidationsProcesVerbaux" Role="ValidationsProcesVerbaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Validations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsProcesVerbaux">
+        <PropertyRef Name="IdValidation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ValidationsDocuments_Validations">
+    <End Type="RatpHidalgoModel.Validations" Role="Validations" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ValidationsDocuments" Role="ValidationsDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Validations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ValidationsDocuments">
+        <PropertyRef Name="IdValidation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProgrammationDetails" Relationship="RatpHidalgoModel.FK_ProgrammationDetails_Categorie" FromRole="Categorie" ToRole="ProgrammationDetails" />
+  </EntityType>
+  <EntityType Name="CoefficientPonderationParametresCriteresCalibrage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValeurMaconnerie" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValeurEnduit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActif" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_ProgrammationDetails_Categorie">
+    <End Type="RatpHidalgoModel.Categorie" Role="Categorie" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.ProgrammationDetails" Role="ProgrammationDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProgrammationDetails">
+        <PropertyRef Name="IdCategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DataAnnexe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdLigne" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LibelleLignes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdLieux" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LibelleLieux" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tunnels" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TypeStructIndiqueMaconnerie" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdOuvrage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TABLEAU_DES_VISITEURS_DE_NUIT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Pk_OA_Debut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pk_OA__fin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Long_OP_a_controler" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surface_developpe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Long_OA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code_Pat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nature_lieu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateConstruction_Annee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateConstruction_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HistoriqueConfortementMac_Annee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HistoriqueConfortementMac_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HistoriqueRefectionEnduit_Anne" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HistoriqueRefectionEnduit_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LargeurOuvrage_NombreVoies" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LargeurOuvrage_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_ZoneInfluenceSeine" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_TeneursSulfate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AgressiviteChimiqueTerrainEncaissant_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SolubiliteTerrain_Natureterrain" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SolubiliteTerrain_PresenceEauNappePhreatique" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SolubiliteTerrain_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PourrissementBoisBlindage_Cas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PourrissementBoisBlindage_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Frequentation_Cas" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Frequentation_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Correspondance_Cas" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Correspondance_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PerimetreL2L6_Cas" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PerimetreL2L6_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageRATP_Cas" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImageRATP_Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Criteres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParametresHidalgo" Relationship="RatpHidalgoModel.FK_ParametresHidalgo_Criteres" FromRole="Criteres" ToRole="ParametresHidalgo" />
+  </EntityType>
+  <Association Name="FK_ParametresHidalgo_Criteres">
+    <End Type="RatpHidalgoModel.Criteres" Role="Criteres" Multiplicity="1" />
+    <End Type="RatpHidalgoModel.ParametresHidalgo" Role="ParametresHidalgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Criteres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ParametresHidalgo">
+        <PropertyRef Name="IdCritere" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SeuilHidalgo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="ProcesVerbauxPlanification">
+    <End Type="RatpHidalgoModel.ProcesVerbaux" Role="ProcesVerbaux" Multiplicity="0..1" />
+    <End Type="RatpHidalgoModel.Planification" Role="Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesVerbaux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planification">
+        <PropertyRef Name="IdProcesVerbal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_GroupeOuvrage_Lieux">
+    <End Type="RatpHidalgoModel.GroupesOuvrages" Role="GroupesOuvrages" Multiplicity="*" />
+    <End Type="RatpHidalgoModel.Lieux" Role="Lieux" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Lieux">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GroupesOuvrages">
+        <PropertyRef Name="IdLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

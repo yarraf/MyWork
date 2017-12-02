@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Ratp.Hidalgo.Web.ViewModel.CriteresVm>
+
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="glyphicon glyphicon-info-sign"></span> Valeurs Min et Max des critères</div>
+    <div class="panel-body">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <span><strong>@item.LibelleCritere</strong></span>
+                    </td>
+                    <td>
+                        <span class="badge badge-warning">@item.ValeurMinCritere</span>
+                    </td>
+                    <td>
+                        <span class="badge badge-success">@item.ValeurMaxCritere</span>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

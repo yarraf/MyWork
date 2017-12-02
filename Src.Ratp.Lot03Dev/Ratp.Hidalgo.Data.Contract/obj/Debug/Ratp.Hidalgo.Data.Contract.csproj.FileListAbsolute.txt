@@ -1,0 +1,12 @@
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\Ratp.Hidalgo.Data.Contract.dll.config
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\Ratp.Hidalgo.Data.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\Ratp.Hidalgo.Data.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\EntityFramework.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\EntityFramework.SqlServer.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\log4net.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\EntityFramework.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\EntityFramework.SqlServer.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\bin\Debug\log4net.xml
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\obj\Debug\Ratp.Hidalgo.Data.Contract.dll
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\obj\Debug\Ratp.Hidalgo.Data.Contract.pdb
+C:\DOC YAF\Src\Ratp.Hidalgo\Ratp.HidalgoLot03-Dév\Ratp.Hidalgo.Data.Contract\obj\Debug\Ratp.Hidalgo.Data.Contract.csprojResolveAssemblyReference.cache

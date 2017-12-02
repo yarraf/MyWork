@@ -1,0 +1,89 @@
+﻿@model Ratp.Hidalgo.Web.ViewModel.ProgrammationVm
+@{ 
+   
+}
+<br />
+<div class="row">
+    <div class="panel panel-success">
+        <div class="panel-heading">Nouvelle Programmation: CONSULTATION ET SUIVI DU PROGRAMME : <strong><span data-bind="text : NatureTravaux"></span></strong></div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="row text-center">
+                                <button type="button" class="btn btn-lg btn-info" data-bind="click: Historique">HISTORIQUE DES TRAVAUX</button>
+                                <button type="button" class="btn btn-lg btn-info" data-bind="click: Categories">CATEGORIES DE PROPRIETE</button>
+                               @* @Html.ActionLink("CATEGORIES DE PROPRIETE", "GetCategorie", new { idprogrammation = @ViewBag.idProgrammation }, new { @class = "btn btn-lg btn-info", target = "_blank" })*@
+                                <button type="button" class="btn btn-lg btn-info" data-bind="click: Extraction">EXTRACTION EXCEL</button>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <table id="TableauProposee2" class="table table-bordered table-hover table-fixed" data-bind="visible: listePGE().length > 0">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-1">Num. d'ordre</th>
+                                            <th class="col-md-1">Ligne</th>
+                                            <th class="col-md-1">Lieu</th>
+                                            <th class="col-md-2">Num. d'affaire</th>
+                                            <th class="col-md-1">m²</th>
+                                            <th class="col-md-2">Montant prévisionnel (€)</th>
+                                            <th class="col-md-2">Coûts Cumulés (€)</th>
+                                            <th class="col-md-1">Etat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabPGEProposee2" class="text-center" data-bind="foreach: listePGE">
+                                        <!-- ko if: Annee == $root.anneeSaisie() -->
+                                        <tr data-bind="attr: {'numpge': NumeroAffaire}">
+                                            <td class="col-md-1" data-bind="text: Rang"></td>
+                                            <td class="col-md-1"><div data-bind="with: Ligne"><img data-bind="attr:{src: '/Content/img/'+ Chemin, alt: Name}" width="16" /></div></td>
+                                            <td class="col-md-1"><div data-bind="with: Lieu"><span data-bind="text: Name"></span></div></td>
+                                            <td class="col-md-2"><a data-bind="attr: {href: '@ViewBag.UrlPGE'+IdDocument ,TARGET: '_blank'}"><span data-bind="text: NumeroAffaire"></span></a></td>
+                                            <td class="col-md-1 surface" data-bind="text: Surface"></td>
+                                            <td class="col-md-2 montant" data-bind="text: Budget"></td>
+                                            <td class="col-md-2 cumul"></td>
+                                            <td class="col-md-1" data-bind="text: Rang"></td>
+                                        </tr>
+                                        <!-- /ko -->
+                                    </tbody>
+                                </table>
+                                <p class="alert-warning text-center col-md-8 col-md-offset-2" data-bind="visible: listePGE().length < 1">Pas de PGE recupérée</p>
+                            </div>
+                        </div>
+                        <div class="lazyloading" id="loading"><img src="~/Content/img/Preloader_2.gif" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    #TableauProposee2 th {
+        text-align: center;
+        height: 50px;
+    }
+
+    #TableauProposee2 thead tr {
+        height: 50px;
+        overflow-x: auto;
+    }
+
+    #TableauProposee2 tbody {
+        height: 1000px;
+        overflow-y: auto;
+        overflow-x: auto;
+        max-height: 1000px;
+    }
+
+        #TableauProposee2 tbody tr {
+            height: 50px;
+            overflow-y: hidden;
+        }
+
+    #TableauProposee2 td {
+        height: 50px;
+        overflow-y: hidden;
+    }
+</style>

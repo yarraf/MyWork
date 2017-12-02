@@ -1,0 +1,4303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateLibelleDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateLibelleDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateLibelleDateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNomVue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="carteId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNomVueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNomVueResult" type="tns:Carte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Carte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:DescriptionCarte" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomVue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DescriptionCarte">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeDessinsV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nomVue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeDessinsV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeDessinsV2Result" type="tns:ArrayOfDessin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDessin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Dessin" nillable="true" type="tns:Dessin" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Dessin">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fonction" type="tns:FonctionDessin" />
+          <s:element minOccurs="0" maxOccurs="1" name="Groupe" type="tns:Groupe" />
+          <s:element minOccurs="1" maxOccurs="1" name="CarteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LabelCarteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumCalque" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Coordonnees" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Couleur" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fill" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenStyle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenWidth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Texte" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontWeight" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontItalic" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontUnderline" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontStrike" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontRotate" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FontName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontSize" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FonctionDessin">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Groupe">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LieuID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="LigneID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDessin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dessin" type="tns:Dessin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDessinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDessinResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDessin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dessin" type="tns:Dessin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDessinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDessinResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDessin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dessinId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDessinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDessinResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFonctionIDFromCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codeFonction" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFonctionIDFromCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFonctionIDFromCodeResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeGroupes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lieuId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeGroupesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeGroupesResult" type="tns:ArrayOfGroupe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGroupe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Groupe" nillable="true" type="tns:Groupe" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeCartes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeCartesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeCartesResult" type="tns:ArrayOfDescriptionCarte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDescriptionCarte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DescriptionCarte" nillable="true" type="tns:DescriptionCarte" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeDessins">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeDessinsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeDessinsResult" type="tns:ArrayOfDessin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeLabels">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeLabelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeLabelsResult" type="tns:ArrayOfLabelCarte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLabelCarte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LabelCarte" nillable="true" type="tns:LabelCarte" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LabelCarte">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeLignes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeLignesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeLignesResult" type="tns:ArrayOfLigne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLigne">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ligne" nillable="true" type="tns:Ligne" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ligne">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeLieux">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ligneGestionnaireId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="typesId" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeLieuxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeLieuxResult" type="tns:ArrayOfLieu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLieu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Lieu" nillable="true" type="tns:Lieu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Lieu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ordre" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="LigneGestionnaire" type="tns:Ligne" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeCampagnes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeCampagnesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeCampagnesResult" type="tns:ArrayOfEnTeteCampagne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEnTeteCampagne">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EnTeteCampagne" nillable="true" type="tns:EnTeteCampagne" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnTeteCampagne">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lieu" type="tns:Lieu" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCampagneById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampagneByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCampagneByIdResult" type="tns:ArrayOfCampagne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCampagne">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Campagne" nillable="true" type="tns:Campagne" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Campagne">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnTete" type="tns:EnTeteCampagne" />
+          <s:element minOccurs="1" maxOccurs="1" name="PKDebut" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PKFin" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PKFinModif" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTraitement" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commentaire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListePVsFromCampagne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListePVsFromCampagneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListePVsFromCampagneResult" type="tns:ArrayOfPV" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPV">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PV" nillable="true" type="tns:PV" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PV">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnTete" type="tns:EnTetePV" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cycle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Statut" type="tns:StatutPV" />
+          <s:element minOccurs="1" maxOccurs="1" name="Annee" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnTetePV">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumAffaire" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatutPV">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Statut" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListePVsFromLieu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lieuId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListePVsFromLieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListePVsFromLieuResult" type="tns:ArrayOfPV" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLienCampagnePV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLienCampagnePVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddLienCampagnePVResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLienCampagnePV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLienCampagnePVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLienCampagnePVResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calque" type="tns:DescriptionCalque" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DescriptionCalque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnTete" type="tns:EnTeteCalque" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actif" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfficheVi" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfficheIR" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PV" type="tns:EnTetePV" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValide" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnTeteCalque">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCalqueResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteCalqueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calque" type="tns:DescriptionCalque" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCalqueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalqueByCalqueIds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calquesId" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalqueByCalqueIdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalqueByCalqueIdsResult" type="tns:ArrayOfCalque" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCalque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Calque" nillable="true" type="tns:Calque" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Calque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:DescriptionCalque" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjetsCalque" type="tns:ArrayOfObjetCalque" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjetCalque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjetCalque" nillable="true" type="tns:ObjetCalque" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjetCalque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:DescriptionObjetCalque" />
+          <s:element minOccurs="0" maxOccurs="1" name="Developpes" type="tns:ArrayOfDeveloppe" />
+          <s:element minOccurs="0" maxOccurs="1" name="PointsKilometriques" type="tns:ArrayOfPointKilometrique" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DescriptionObjetCalque">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Style" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Color" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Texte" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenStyle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenWidth" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontWeight" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontItalic" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontUnderline" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontStrike" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FontRotate" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FontName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RectSelectT" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RectSelectB" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RectSelectL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RectSelectR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Auto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDeveloppe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Developpe" nillable="true" type="tns:Developpe" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Developpe">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPointKilometrique">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PointKilometrique" nillable="true" type="tns:PointKilometrique" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PointKilometrique">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCalqueByCampagneID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalqueByCampagneIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalqueByCampagneIDResult" type="tns:ArrayOfCalque" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeCalquesImportable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="calquesExclus" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeCalquesImportableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeCalquesImportableResult" type="tns:ArrayOfDescriptionCalque" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDescriptionCalque">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DescriptionCalque" nillable="true" type="tns:DescriptionCalque" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddObjetCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objetCalque" type="tns:DescriptionObjetCalque" />
+            <s:element minOccurs="1" maxOccurs="1" name="calqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddObjetCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddObjetCalqueResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObjetCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objetCalque" type="tns:DescriptionObjetCalque" />
+            <s:element minOccurs="1" maxOccurs="1" name="calqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObjetCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateObjetCalqueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteObjetCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteObjetCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteObjetCalqueResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsObjetCalqueInFiltrage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="famille" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="notenum" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="noteCar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="noteCarNone" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsObjetCalqueInFiltrageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsObjetCalqueInFiltrageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsListeObjetsCalquesInFiltrage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calque" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="famille" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="notenum" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="noteCar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="noteCarNone" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsListeObjetsCalquesInFiltrageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsListeObjetsCalquesInFiltrageResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContourObjetCalque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContourObjetCalqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContourObjetCalqueResult" type="tns:DescriptionContour" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DescriptionContour">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Color" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenWidth" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PenStyle" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDeveloppe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dev" type="tns:Developpe" />
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDeveloppeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDeveloppeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeveloppe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dev" type="tns:Developpe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeveloppeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeveloppeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pk" type="tns:PointKilometrique" />
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPKResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pk" type="tns:PointKilometrique" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePKResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAnnotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAnnotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAnnotationResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAnnotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAnnotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAnnotationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLienAnnotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="annotationId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLienAnnotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddLienAnnotationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLienAnnotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="annotationId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLienAnnotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLienAnnotationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeLiensAnnotations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objetCalqueId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeLiensAnnotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeLiensAnnotationsResult" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeAnnotFromPV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pvId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeAnnotFromPVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeAnnotFromPVResult" type="tns:ArrayOfAnnotation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnnotation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Annotation" nillable="true" type="tns:Annotation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Annotation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnTete" type="tns:EnTeteAnnotation" />
+          <s:element minOccurs="0" maxOccurs="1" name="Op" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Famille" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnTeteAnnotation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PVID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PKDebut" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PKFin" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListeAnnotFromCampagne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeAnnotFromCampagneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeAnnotFromCampagneResult" type="tns:ArrayOfEnTeteAnnotation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEnTeteAnnotation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EnTeteAnnotation" nillable="true" type="tns:EnTeteAnnotation" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTypesDesordres">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTypesDesordresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTypesDesordresResult" type="tns:ArrayOfTypeDesordre" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTypeDesordre">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TypeDesordre" nillable="true" type="tns:TypeDesordre" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TypeDesordre">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FamilleID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Famille" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUtilisateur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="utilisateur" type="tns:Utilisateur" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Utilisateur">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUtilisateurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUtilisateurResult" type="tns:Utilisateur" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCouleurPersonalisees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCouleurPersonaliseesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCouleurPersonaliseesResult" type="tns:ArrayOfCouleurPerso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCouleurPerso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CouleurPerso" nillable="true" type="tns:CouleurPerso" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CouleurPerso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contour" type="tns:DescriptionContour" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeAtlasDesordreID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResetCouleurPersonalisees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetCouleurPersonaliseesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResetCouleurPersonaliseesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCouleurPersonalisees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="color" type="tns:CouleurPerso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCouleurPersonaliseesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCouleurPersonaliseesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCouleurPersonalisees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="color" type="tns:CouleurPerso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCouleurPersonaliseesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCouleurPersonaliseesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeJalons">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeJalonsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeJalonsResult" type="tns:ArrayOfJalon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJalon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Jalon" nillable="true" type="tns:Jalon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Jalon">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroLigneIR" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroLigneVI" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewPK" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteJalon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="jalonId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteJalonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteJalonResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateJalon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jalon" type="tns:Jalon" />
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateJalonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateJalonResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddJalon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jalon" type="tns:Jalon" />
+            <s:element minOccurs="1" maxOccurs="1" name="campagneId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddJalonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddJalonResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListePositionsFenetres">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListePositionsFenetresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListePositionsFenetresResult" type="tns:ArrayOfPosDlg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPosDlg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PosDlg" nillable="true" type="tns:PosDlg" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PosDlg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PosX" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PosY" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Open" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePositionsFenetres">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dialogPositionList" type="tns:ArrayOfPosDlg" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePositionsFenetresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePositionsFenetresResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePositionsFenetres">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePositionsFenetresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePositionsFenetresResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCampagne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="campagne" type="tns:Campagne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCampagneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCampagneResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCampagneHistorique">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="avancementCampagneId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="histoCampagneDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ligneId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="lieuId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="campagneDateDebut" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCampagneHistoriqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertCampagneHistoriqueResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListeTypeLieu">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListeTypeLieuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListeTypeLieuResult" type="tns:ArrayOfTypeLieu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTypeLieu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TypeLieu" nillable="true" type="tns:TypeLieu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TypeLieu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IsUserAuthorized">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserAuthorizedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsUserAuthorizedResult" type="tns:Utilisateur" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="Carte" nillable="true" type="tns:Carte" />
+      <s:element name="ArrayOfDessin" nillable="true" type="tns:ArrayOfDessin" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="long" type="s:long" />
+      <s:element name="ArrayOfGroupe" nillable="true" type="tns:ArrayOfGroupe" />
+      <s:element name="ArrayOfDescriptionCarte" nillable="true" type="tns:ArrayOfDescriptionCarte" />
+      <s:element name="ArrayOfLabelCarte" nillable="true" type="tns:ArrayOfLabelCarte" />
+      <s:element name="ArrayOfLigne" nillable="true" type="tns:ArrayOfLigne" />
+      <s:element name="ArrayOfEnTeteCampagne" nillable="true" type="tns:ArrayOfEnTeteCampagne" />
+      <s:element name="ArrayOfCampagne" nillable="true" type="tns:ArrayOfCampagne" />
+      <s:element name="ArrayOfPV" nillable="true" type="tns:ArrayOfPV" />
+      <s:element name="ArrayOfCalque" nillable="true" type="tns:ArrayOfCalque" />
+      <s:element name="DescriptionContour" nillable="true" type="tns:DescriptionContour" />
+      <s:element name="ArrayOfLong" nillable="true" type="tns:ArrayOfLong" />
+      <s:element name="ArrayOfAnnotation" nillable="true" type="tns:ArrayOfAnnotation" />
+      <s:element name="ArrayOfEnTeteAnnotation" nillable="true" type="tns:ArrayOfEnTeteAnnotation" />
+      <s:element name="ArrayOfTypeDesordre" nillable="true" type="tns:ArrayOfTypeDesordre" />
+      <s:element name="ArrayOfCouleurPerso" nillable="true" type="tns:ArrayOfCouleurPerso" />
+      <s:element name="ArrayOfJalon" nillable="true" type="tns:ArrayOfJalon" />
+      <s:element name="ArrayOfPosDlg" nillable="true" type="tns:ArrayOfPosDlg" />
+      <s:element name="ArrayOfTypeLieu" nillable="true" type="tns:ArrayOfTypeLieu" />
+      <s:element name="Utilisateur" nillable="true" type="tns:Utilisateur" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateLibelleDateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLibelleDate" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLibelleDateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLibelleDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNomVue" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNomVueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeDessinsV2" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeDessinsV2Response" />
+  </wsdl:message>
+  <wsdl:message name="AddDessinSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDessin" />
+  </wsdl:message>
+  <wsdl:message name="AddDessinSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDessinResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDessinSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDessin" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDessinSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDessinResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDessin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDessinResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFonctionIDFromCode" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFonctionIDFromCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeGroupes" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeGroupesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCartesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeCartes" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCartesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeCartesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeDessins" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeDessinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLabelsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeLabels" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLabelsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLignesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeLignes" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLignesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeLignesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLieuxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeLieux" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLieuxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeLieuxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCampagnesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeCampagnes" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCampagnesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeCampagnesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCampagneById" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCampagneByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListePVsFromCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListePVsFromCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListePVsFromLieu" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListePVsFromLieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLienCampagnePV" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLienCampagnePVResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLienCampagnePV" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLienCampagnePVResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCalque" />
+  </wsdl:message>
+  <wsdl:message name="AddCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCalque" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCalque" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCalqueIdsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalqueByCalqueIds" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCalqueIdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalqueByCalqueIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalqueByCampagneID" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalqueByCampagneIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCalquesImportableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeCalquesImportable" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCalquesImportableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeCalquesImportableResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddObjetCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:AddObjetCalque" />
+  </wsdl:message>
+  <wsdl:message name="AddObjetCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:AddObjetCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateObjetCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateObjetCalque" />
+  </wsdl:message>
+  <wsdl:message name="UpdateObjetCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateObjetCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteObjetCalque" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteObjetCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsObjetCalqueInFiltrageSoapIn">
+    <wsdl:part name="parameters" element="tns:IsObjetCalqueInFiltrage" />
+  </wsdl:message>
+  <wsdl:message name="IsObjetCalqueInFiltrageSoapOut">
+    <wsdl:part name="parameters" element="tns:IsObjetCalqueInFiltrageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsListeObjetsCalquesInFiltrageSoapIn">
+    <wsdl:part name="parameters" element="tns:IsListeObjetsCalquesInFiltrage" />
+  </wsdl:message>
+  <wsdl:message name="IsListeObjetsCalquesInFiltrageSoapOut">
+    <wsdl:part name="parameters" element="tns:IsListeObjetsCalquesInFiltrageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContourObjetCalque" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContourObjetCalqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDeveloppeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDeveloppe" />
+  </wsdl:message>
+  <wsdl:message name="AddDeveloppeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDeveloppeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeveloppeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeveloppe" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeveloppeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeveloppeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPKSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPK" />
+  </wsdl:message>
+  <wsdl:message name="AddPKSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePKSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePK" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePKSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePKResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLienAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLienAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLienAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLienAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeLiensAnnotations" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeLiensAnnotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeAnnotFromPV" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeAnnotFromPVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeAnnotFromCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeAnnotFromCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTypesDesordresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTypesDesordres" />
+  </wsdl:message>
+  <wsdl:message name="GetTypesDesordresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTypesDesordresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUtilisateurSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="GetUtilisateurSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCouleurPersonalisees" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCouleurPersonaliseesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetCouleurPersonalisees" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetCouleurPersonaliseesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCouleurPersonaliseesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCouleurPersonalisees" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCouleurPersonaliseesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCouleurPersonaliseesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCouleurPersonaliseesSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCouleurPersonalisees" />
+  </wsdl:message>
+  <wsdl:message name="AddCouleurPersonaliseesSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCouleurPersonaliseesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeJalons" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeJalonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteJalon" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteJalonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateJalonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateJalon" />
+  </wsdl:message>
+  <wsdl:message name="UpdateJalonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateJalonResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddJalonSoapIn">
+    <wsdl:part name="parameters" element="tns:AddJalon" />
+  </wsdl:message>
+  <wsdl:message name="AddJalonSoapOut">
+    <wsdl:part name="parameters" element="tns:AddJalonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListePositionsFenetres" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListePositionsFenetresResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePositionsFenetresSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePositionsFenetres" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePositionsFenetresSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePositionsFenetresResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePositionsFenetres" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePositionsFenetresResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCampagneSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCampagne" />
+  </wsdl:message>
+  <wsdl:message name="AddCampagneSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCampagneHistorique" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCampagneHistoriqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListeTypeLieuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListeTypeLieu" />
+  </wsdl:message>
+  <wsdl:message name="GetListeTypeLieuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListeTypeLieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserAuthorized" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserAuthorizedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLibelleDateHttpGetIn" />
+  <wsdl:message name="UpdateLibelleDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueHttpGetIn">
+    <wsdl:part name="carteId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueHttpGetOut">
+    <wsdl:part name="Body" element="tns:Carte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2HttpGetIn">
+    <wsdl:part name="nomVue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDessin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinHttpGetIn">
+    <wsdl:part name="dessinId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeHttpGetIn">
+    <wsdl:part name="codeFonction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesHttpGetIn">
+    <wsdl:part name="lieuId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGroupe" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCartesHttpGetIn" />
+  <wsdl:message name="GetListeCartesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDescriptionCarte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsHttpGetIn" />
+  <wsdl:message name="GetListeDessinsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDessin" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLabelsHttpGetIn" />
+  <wsdl:message name="GetListeLabelsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLabelCarte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLignesHttpGetIn" />
+  <wsdl:message name="GetListeLignesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLigne" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCampagnesHttpGetIn" />
+  <wsdl:message name="GetListeCampagnesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEnTeteCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPV" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuHttpGetIn">
+    <wsdl:part name="lieuId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPV" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueHttpGetIn">
+    <wsdl:part name="calqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCalque" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueHttpGetOut">
+    <wsdl:part name="Body" element="tns:DescriptionContour" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationHttpGetIn">
+    <wsdl:part name="pvId" type="s:string" />
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="annotationId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+    <wsdl:part name="annotationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsHttpGetIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVHttpGetIn">
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEnTeteAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="GetTypesDesordresHttpGetIn" />
+  <wsdl:message name="GetTypesDesordresHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfTypeDesordre" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCouleurPerso" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsHttpGetIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfJalon" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonHttpGetIn">
+    <wsdl:part name="jalonId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPosDlg" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueHttpGetIn">
+    <wsdl:part name="avancementCampagneId" type="s:string" />
+    <wsdl:part name="histoCampagneDate" type="s:string" />
+    <wsdl:part name="ligneId" type="s:string" />
+    <wsdl:part name="lieuId" type="s:string" />
+    <wsdl:part name="campagneDateDebut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetListeTypeLieuHttpGetIn" />
+  <wsdl:message name="GetListeTypeLieuHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfTypeLieu" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedHttpGetOut">
+    <wsdl:part name="Body" element="tns:Utilisateur" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLibelleDateHttpPostIn" />
+  <wsdl:message name="UpdateLibelleDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueHttpPostIn">
+    <wsdl:part name="carteId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNomVueHttpPostOut">
+    <wsdl:part name="Body" element="tns:Carte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2HttpPostIn">
+    <wsdl:part name="nomVue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsV2HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDessin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinHttpPostIn">
+    <wsdl:part name="dessinId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDessinHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeHttpPostIn">
+    <wsdl:part name="codeFonction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFonctionIDFromCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesHttpPostIn">
+    <wsdl:part name="lieuId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeGroupesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGroupe" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCartesHttpPostIn" />
+  <wsdl:message name="GetListeCartesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDescriptionCarte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeDessinsHttpPostIn" />
+  <wsdl:message name="GetListeDessinsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDessin" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLabelsHttpPostIn" />
+  <wsdl:message name="GetListeLabelsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLabelCarte" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLignesHttpPostIn" />
+  <wsdl:message name="GetListeLignesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLigne" />
+  </wsdl:message>
+  <wsdl:message name="GetListeCampagnesHttpPostIn" />
+  <wsdl:message name="GetListeCampagnesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEnTeteCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneByIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromCampagneHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPV" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuHttpPostIn">
+    <wsdl:part name="lieuId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePVsFromLieuHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPV" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLienCampagnePVHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienCampagnePVHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueHttpPostIn">
+    <wsdl:part name="calqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalqueHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalqueByCampagneIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCalque" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteObjetCalqueHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContourObjetCalqueHttpPostOut">
+    <wsdl:part name="Body" element="tns:DescriptionContour" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationHttpPostIn">
+    <wsdl:part name="pvId" type="s:string" />
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAnnotationHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAnnotationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="annotationId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLienAnnotationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+    <wsdl:part name="pvId" type="s:string" />
+    <wsdl:part name="annotationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLienAnnotationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsHttpPostIn">
+    <wsdl:part name="objetCalqueId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeLiensAnnotationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVHttpPostIn">
+    <wsdl:part name="pvId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromPVHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeAnnotFromCampagneHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEnTeteAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="GetTypesDesordresHttpPostIn" />
+  <wsdl:message name="GetTypesDesordresHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfTypeDesordre" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCouleurPersonaliseesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCouleurPerso" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResetCouleurPersonaliseesHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsHttpPostIn">
+    <wsdl:part name="campagneId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListeJalonsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfJalon" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonHttpPostIn">
+    <wsdl:part name="jalonId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteJalonHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListePositionsFenetresHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPosDlg" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePositionsFenetresHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueHttpPostIn">
+    <wsdl:part name="avancementCampagneId" type="s:string" />
+    <wsdl:part name="histoCampagneDate" type="s:string" />
+    <wsdl:part name="ligneId" type="s:string" />
+    <wsdl:part name="lieuId" type="s:string" />
+    <wsdl:part name="campagneDateDebut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCampagneHistoriqueHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetListeTypeLieuHttpPostIn" />
+  <wsdl:message name="GetListeTypeLieuHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfTypeLieu" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsUserAuthorizedHttpPostOut">
+    <wsdl:part name="Body" element="tns:Utilisateur" />
+  </wsdl:message>
+  <wsdl:portType name="MarionServicesSoap">
+    <wsdl:operation name="UpdateLibelleDate">
+      <wsdl:input message="tns:UpdateLibelleDateSoapIn" />
+      <wsdl:output message="tns:UpdateLibelleDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <wsdl:input message="tns:GetNomVueSoapIn" />
+      <wsdl:output message="tns:GetNomVueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <wsdl:input message="tns:GetListeDessinsV2SoapIn" />
+      <wsdl:output message="tns:GetListeDessinsV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDessin">
+      <wsdl:input message="tns:AddDessinSoapIn" />
+      <wsdl:output message="tns:AddDessinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDessin">
+      <wsdl:input message="tns:UpdateDessinSoapIn" />
+      <wsdl:output message="tns:UpdateDessinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <wsdl:input message="tns:DeleteDessinSoapIn" />
+      <wsdl:output message="tns:DeleteDessinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <wsdl:input message="tns:GetFonctionIDFromCodeSoapIn" />
+      <wsdl:output message="tns:GetFonctionIDFromCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <wsdl:input message="tns:GetListeGroupesSoapIn" />
+      <wsdl:output message="tns:GetListeGroupesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <wsdl:input message="tns:GetListeCartesSoapIn" />
+      <wsdl:output message="tns:GetListeCartesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <wsdl:input message="tns:GetListeDessinsSoapIn" />
+      <wsdl:output message="tns:GetListeDessinsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <wsdl:input message="tns:GetListeLabelsSoapIn" />
+      <wsdl:output message="tns:GetListeLabelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <wsdl:input message="tns:GetListeLignesSoapIn" />
+      <wsdl:output message="tns:GetListeLignesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLieux">
+      <wsdl:input message="tns:GetListeLieuxSoapIn" />
+      <wsdl:output message="tns:GetListeLieuxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <wsdl:input message="tns:GetListeCampagnesSoapIn" />
+      <wsdl:output message="tns:GetListeCampagnesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <wsdl:input message="tns:GetCampagneByIdSoapIn" />
+      <wsdl:output message="tns:GetCampagneByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <wsdl:input message="tns:GetListePVsFromCampagneSoapIn" />
+      <wsdl:output message="tns:GetListePVsFromCampagneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <wsdl:input message="tns:GetListePVsFromLieuSoapIn" />
+      <wsdl:output message="tns:GetListePVsFromLieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <wsdl:input message="tns:AddLienCampagnePVSoapIn" />
+      <wsdl:output message="tns:AddLienCampagnePVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <wsdl:input message="tns:DeleteLienCampagnePVSoapIn" />
+      <wsdl:output message="tns:DeleteLienCampagnePVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCalque">
+      <wsdl:input message="tns:AddCalqueSoapIn" />
+      <wsdl:output message="tns:AddCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <wsdl:input message="tns:DeleteCalqueSoapIn" />
+      <wsdl:output message="tns:DeleteCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCalque">
+      <wsdl:input message="tns:UpdateCalqueSoapIn" />
+      <wsdl:output message="tns:UpdateCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCalqueIds">
+      <wsdl:input message="tns:GetCalqueByCalqueIdsSoapIn" />
+      <wsdl:output message="tns:GetCalqueByCalqueIdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <wsdl:input message="tns:GetCalqueByCampagneIDSoapIn" />
+      <wsdl:output message="tns:GetCalqueByCampagneIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCalquesImportable">
+      <wsdl:input message="tns:GetListeCalquesImportableSoapIn" />
+      <wsdl:output message="tns:GetListeCalquesImportableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddObjetCalque">
+      <wsdl:input message="tns:AddObjetCalqueSoapIn" />
+      <wsdl:output message="tns:AddObjetCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjetCalque">
+      <wsdl:input message="tns:UpdateObjetCalqueSoapIn" />
+      <wsdl:output message="tns:UpdateObjetCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <wsdl:input message="tns:DeleteObjetCalqueSoapIn" />
+      <wsdl:output message="tns:DeleteObjetCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsObjetCalqueInFiltrage">
+      <wsdl:input message="tns:IsObjetCalqueInFiltrageSoapIn" />
+      <wsdl:output message="tns:IsObjetCalqueInFiltrageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsListeObjetsCalquesInFiltrage">
+      <wsdl:input message="tns:IsListeObjetsCalquesInFiltrageSoapIn" />
+      <wsdl:output message="tns:IsListeObjetsCalquesInFiltrageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <wsdl:input message="tns:GetContourObjetCalqueSoapIn" />
+      <wsdl:output message="tns:GetContourObjetCalqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeveloppe">
+      <wsdl:input message="tns:AddDeveloppeSoapIn" />
+      <wsdl:output message="tns:AddDeveloppeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeveloppe">
+      <wsdl:input message="tns:UpdateDeveloppeSoapIn" />
+      <wsdl:output message="tns:UpdateDeveloppeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPK">
+      <wsdl:input message="tns:AddPKSoapIn" />
+      <wsdl:output message="tns:AddPKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePK">
+      <wsdl:input message="tns:UpdatePKSoapIn" />
+      <wsdl:output message="tns:UpdatePKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <wsdl:input message="tns:AddAnnotationSoapIn" />
+      <wsdl:output message="tns:AddAnnotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <wsdl:input message="tns:UpdateAnnotationSoapIn" />
+      <wsdl:output message="tns:UpdateAnnotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <wsdl:input message="tns:AddLienAnnotationSoapIn" />
+      <wsdl:output message="tns:AddLienAnnotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <wsdl:input message="tns:DeleteLienAnnotationSoapIn" />
+      <wsdl:output message="tns:DeleteLienAnnotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <wsdl:input message="tns:GetListeLiensAnnotationsSoapIn" />
+      <wsdl:output message="tns:GetListeLiensAnnotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <wsdl:input message="tns:GetListeAnnotFromPVSoapIn" />
+      <wsdl:output message="tns:GetListeAnnotFromPVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <wsdl:input message="tns:GetListeAnnotFromCampagneSoapIn" />
+      <wsdl:output message="tns:GetListeAnnotFromCampagneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <wsdl:input message="tns:GetTypesDesordresSoapIn" />
+      <wsdl:output message="tns:GetTypesDesordresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUtilisateur">
+      <wsdl:input message="tns:GetUtilisateurSoapIn" />
+      <wsdl:output message="tns:GetUtilisateurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <wsdl:input message="tns:GetCouleurPersonaliseesSoapIn" />
+      <wsdl:output message="tns:GetCouleurPersonaliseesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <wsdl:input message="tns:ResetCouleurPersonaliseesSoapIn" />
+      <wsdl:output message="tns:ResetCouleurPersonaliseesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCouleurPersonalisees">
+      <wsdl:input message="tns:UpdateCouleurPersonaliseesSoapIn" />
+      <wsdl:output message="tns:UpdateCouleurPersonaliseesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCouleurPersonalisees">
+      <wsdl:input message="tns:AddCouleurPersonaliseesSoapIn" />
+      <wsdl:output message="tns:AddCouleurPersonaliseesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <wsdl:input message="tns:GetListeJalonsSoapIn" />
+      <wsdl:output message="tns:GetListeJalonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <wsdl:input message="tns:DeleteJalonSoapIn" />
+      <wsdl:output message="tns:DeleteJalonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJalon">
+      <wsdl:input message="tns:UpdateJalonSoapIn" />
+      <wsdl:output message="tns:UpdateJalonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJalon">
+      <wsdl:input message="tns:AddJalonSoapIn" />
+      <wsdl:output message="tns:AddJalonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <wsdl:input message="tns:GetListePositionsFenetresSoapIn" />
+      <wsdl:output message="tns:GetListePositionsFenetresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePositionsFenetres">
+      <wsdl:input message="tns:UpdatePositionsFenetresSoapIn" />
+      <wsdl:output message="tns:UpdatePositionsFenetresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <wsdl:input message="tns:DeletePositionsFenetresSoapIn" />
+      <wsdl:output message="tns:DeletePositionsFenetresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCampagne">
+      <wsdl:input message="tns:AddCampagneSoapIn" />
+      <wsdl:output message="tns:AddCampagneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <wsdl:input message="tns:InsertCampagneHistoriqueSoapIn" />
+      <wsdl:output message="tns:InsertCampagneHistoriqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <wsdl:input message="tns:GetListeTypeLieuSoapIn" />
+      <wsdl:output message="tns:GetListeTypeLieuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <wsdl:input message="tns:IsUserAuthorizedSoapIn" />
+      <wsdl:output message="tns:IsUserAuthorizedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MarionServicesHttpGet">
+    <wsdl:operation name="UpdateLibelleDate">
+      <wsdl:input message="tns:UpdateLibelleDateHttpGetIn" />
+      <wsdl:output message="tns:UpdateLibelleDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <wsdl:input message="tns:GetNomVueHttpGetIn" />
+      <wsdl:output message="tns:GetNomVueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <wsdl:input message="tns:GetListeDessinsV2HttpGetIn" />
+      <wsdl:output message="tns:GetListeDessinsV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <wsdl:input message="tns:DeleteDessinHttpGetIn" />
+      <wsdl:output message="tns:DeleteDessinHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <wsdl:input message="tns:GetFonctionIDFromCodeHttpGetIn" />
+      <wsdl:output message="tns:GetFonctionIDFromCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <wsdl:input message="tns:GetListeGroupesHttpGetIn" />
+      <wsdl:output message="tns:GetListeGroupesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <wsdl:input message="tns:GetListeCartesHttpGetIn" />
+      <wsdl:output message="tns:GetListeCartesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <wsdl:input message="tns:GetListeDessinsHttpGetIn" />
+      <wsdl:output message="tns:GetListeDessinsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <wsdl:input message="tns:GetListeLabelsHttpGetIn" />
+      <wsdl:output message="tns:GetListeLabelsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <wsdl:input message="tns:GetListeLignesHttpGetIn" />
+      <wsdl:output message="tns:GetListeLignesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <wsdl:input message="tns:GetListeCampagnesHttpGetIn" />
+      <wsdl:output message="tns:GetListeCampagnesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <wsdl:input message="tns:GetCampagneByIdHttpGetIn" />
+      <wsdl:output message="tns:GetCampagneByIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <wsdl:input message="tns:GetListePVsFromCampagneHttpGetIn" />
+      <wsdl:output message="tns:GetListePVsFromCampagneHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <wsdl:input message="tns:GetListePVsFromLieuHttpGetIn" />
+      <wsdl:output message="tns:GetListePVsFromLieuHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <wsdl:input message="tns:AddLienCampagnePVHttpGetIn" />
+      <wsdl:output message="tns:AddLienCampagnePVHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <wsdl:input message="tns:DeleteLienCampagnePVHttpGetIn" />
+      <wsdl:output message="tns:DeleteLienCampagnePVHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <wsdl:input message="tns:DeleteCalqueHttpGetIn" />
+      <wsdl:output message="tns:DeleteCalqueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <wsdl:input message="tns:GetCalqueByCampagneIDHttpGetIn" />
+      <wsdl:output message="tns:GetCalqueByCampagneIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <wsdl:input message="tns:DeleteObjetCalqueHttpGetIn" />
+      <wsdl:output message="tns:DeleteObjetCalqueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <wsdl:input message="tns:GetContourObjetCalqueHttpGetIn" />
+      <wsdl:output message="tns:GetContourObjetCalqueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <wsdl:input message="tns:AddAnnotationHttpGetIn" />
+      <wsdl:output message="tns:AddAnnotationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <wsdl:input message="tns:UpdateAnnotationHttpGetIn" />
+      <wsdl:output message="tns:UpdateAnnotationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <wsdl:input message="tns:AddLienAnnotationHttpGetIn" />
+      <wsdl:output message="tns:AddLienAnnotationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <wsdl:input message="tns:DeleteLienAnnotationHttpGetIn" />
+      <wsdl:output message="tns:DeleteLienAnnotationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <wsdl:input message="tns:GetListeLiensAnnotationsHttpGetIn" />
+      <wsdl:output message="tns:GetListeLiensAnnotationsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <wsdl:input message="tns:GetListeAnnotFromPVHttpGetIn" />
+      <wsdl:output message="tns:GetListeAnnotFromPVHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <wsdl:input message="tns:GetListeAnnotFromCampagneHttpGetIn" />
+      <wsdl:output message="tns:GetListeAnnotFromCampagneHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <wsdl:input message="tns:GetTypesDesordresHttpGetIn" />
+      <wsdl:output message="tns:GetTypesDesordresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <wsdl:input message="tns:GetCouleurPersonaliseesHttpGetIn" />
+      <wsdl:output message="tns:GetCouleurPersonaliseesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <wsdl:input message="tns:ResetCouleurPersonaliseesHttpGetIn" />
+      <wsdl:output message="tns:ResetCouleurPersonaliseesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <wsdl:input message="tns:GetListeJalonsHttpGetIn" />
+      <wsdl:output message="tns:GetListeJalonsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <wsdl:input message="tns:DeleteJalonHttpGetIn" />
+      <wsdl:output message="tns:DeleteJalonHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <wsdl:input message="tns:GetListePositionsFenetresHttpGetIn" />
+      <wsdl:output message="tns:GetListePositionsFenetresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <wsdl:input message="tns:DeletePositionsFenetresHttpGetIn" />
+      <wsdl:output message="tns:DeletePositionsFenetresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <wsdl:input message="tns:InsertCampagneHistoriqueHttpGetIn" />
+      <wsdl:output message="tns:InsertCampagneHistoriqueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <wsdl:input message="tns:GetListeTypeLieuHttpGetIn" />
+      <wsdl:output message="tns:GetListeTypeLieuHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <wsdl:input message="tns:IsUserAuthorizedHttpGetIn" />
+      <wsdl:output message="tns:IsUserAuthorizedHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MarionServicesHttpPost">
+    <wsdl:operation name="UpdateLibelleDate">
+      <wsdl:input message="tns:UpdateLibelleDateHttpPostIn" />
+      <wsdl:output message="tns:UpdateLibelleDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <wsdl:input message="tns:GetNomVueHttpPostIn" />
+      <wsdl:output message="tns:GetNomVueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <wsdl:input message="tns:GetListeDessinsV2HttpPostIn" />
+      <wsdl:output message="tns:GetListeDessinsV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <wsdl:input message="tns:DeleteDessinHttpPostIn" />
+      <wsdl:output message="tns:DeleteDessinHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <wsdl:input message="tns:GetFonctionIDFromCodeHttpPostIn" />
+      <wsdl:output message="tns:GetFonctionIDFromCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <wsdl:input message="tns:GetListeGroupesHttpPostIn" />
+      <wsdl:output message="tns:GetListeGroupesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <wsdl:input message="tns:GetListeCartesHttpPostIn" />
+      <wsdl:output message="tns:GetListeCartesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <wsdl:input message="tns:GetListeDessinsHttpPostIn" />
+      <wsdl:output message="tns:GetListeDessinsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <wsdl:input message="tns:GetListeLabelsHttpPostIn" />
+      <wsdl:output message="tns:GetListeLabelsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <wsdl:input message="tns:GetListeLignesHttpPostIn" />
+      <wsdl:output message="tns:GetListeLignesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <wsdl:input message="tns:GetListeCampagnesHttpPostIn" />
+      <wsdl:output message="tns:GetListeCampagnesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <wsdl:input message="tns:GetCampagneByIdHttpPostIn" />
+      <wsdl:output message="tns:GetCampagneByIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <wsdl:input message="tns:GetListePVsFromCampagneHttpPostIn" />
+      <wsdl:output message="tns:GetListePVsFromCampagneHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <wsdl:input message="tns:GetListePVsFromLieuHttpPostIn" />
+      <wsdl:output message="tns:GetListePVsFromLieuHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <wsdl:input message="tns:AddLienCampagnePVHttpPostIn" />
+      <wsdl:output message="tns:AddLienCampagnePVHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <wsdl:input message="tns:DeleteLienCampagnePVHttpPostIn" />
+      <wsdl:output message="tns:DeleteLienCampagnePVHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <wsdl:input message="tns:DeleteCalqueHttpPostIn" />
+      <wsdl:output message="tns:DeleteCalqueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <wsdl:input message="tns:GetCalqueByCampagneIDHttpPostIn" />
+      <wsdl:output message="tns:GetCalqueByCampagneIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <wsdl:input message="tns:DeleteObjetCalqueHttpPostIn" />
+      <wsdl:output message="tns:DeleteObjetCalqueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <wsdl:input message="tns:GetContourObjetCalqueHttpPostIn" />
+      <wsdl:output message="tns:GetContourObjetCalqueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <wsdl:input message="tns:AddAnnotationHttpPostIn" />
+      <wsdl:output message="tns:AddAnnotationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <wsdl:input message="tns:UpdateAnnotationHttpPostIn" />
+      <wsdl:output message="tns:UpdateAnnotationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <wsdl:input message="tns:AddLienAnnotationHttpPostIn" />
+      <wsdl:output message="tns:AddLienAnnotationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <wsdl:input message="tns:DeleteLienAnnotationHttpPostIn" />
+      <wsdl:output message="tns:DeleteLienAnnotationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <wsdl:input message="tns:GetListeLiensAnnotationsHttpPostIn" />
+      <wsdl:output message="tns:GetListeLiensAnnotationsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <wsdl:input message="tns:GetListeAnnotFromPVHttpPostIn" />
+      <wsdl:output message="tns:GetListeAnnotFromPVHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <wsdl:input message="tns:GetListeAnnotFromCampagneHttpPostIn" />
+      <wsdl:output message="tns:GetListeAnnotFromCampagneHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <wsdl:input message="tns:GetTypesDesordresHttpPostIn" />
+      <wsdl:output message="tns:GetTypesDesordresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <wsdl:input message="tns:GetCouleurPersonaliseesHttpPostIn" />
+      <wsdl:output message="tns:GetCouleurPersonaliseesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <wsdl:input message="tns:ResetCouleurPersonaliseesHttpPostIn" />
+      <wsdl:output message="tns:ResetCouleurPersonaliseesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <wsdl:input message="tns:GetListeJalonsHttpPostIn" />
+      <wsdl:output message="tns:GetListeJalonsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <wsdl:input message="tns:DeleteJalonHttpPostIn" />
+      <wsdl:output message="tns:DeleteJalonHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <wsdl:input message="tns:GetListePositionsFenetresHttpPostIn" />
+      <wsdl:output message="tns:GetListePositionsFenetresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <wsdl:input message="tns:DeletePositionsFenetresHttpPostIn" />
+      <wsdl:output message="tns:DeletePositionsFenetresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <wsdl:input message="tns:InsertCampagneHistoriqueHttpPostIn" />
+      <wsdl:output message="tns:InsertCampagneHistoriqueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <wsdl:input message="tns:GetListeTypeLieuHttpPostIn" />
+      <wsdl:output message="tns:GetListeTypeLieuHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <wsdl:input message="tns:IsUserAuthorizedHttpPostIn" />
+      <wsdl:output message="tns:IsUserAuthorizedHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MarionServicesSoap" type="tns:MarionServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateLibelleDate">
+      <soap:operation soapAction="http://tempuri.org/UpdateLibelleDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <soap:operation soapAction="http://tempuri.org/GetNomVue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <soap:operation soapAction="http://tempuri.org/GetListeDessinsV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDessin">
+      <soap:operation soapAction="http://tempuri.org/AddDessin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDessin">
+      <soap:operation soapAction="http://tempuri.org/UpdateDessin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <soap:operation soapAction="http://tempuri.org/DeleteDessin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <soap:operation soapAction="http://tempuri.org/GetFonctionIDFromCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <soap:operation soapAction="http://tempuri.org/GetListeGroupes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <soap:operation soapAction="http://tempuri.org/GetListeCartes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <soap:operation soapAction="http://tempuri.org/GetListeDessins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <soap:operation soapAction="http://tempuri.org/GetListeLabels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <soap:operation soapAction="http://tempuri.org/GetListeLignes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLieux">
+      <soap:operation soapAction="http://tempuri.org/GetListeLieux" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <soap:operation soapAction="http://tempuri.org/GetListeCampagnes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <soap:operation soapAction="http://tempuri.org/GetCampagneById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <soap:operation soapAction="http://tempuri.org/GetListePVsFromCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <soap:operation soapAction="http://tempuri.org/GetListePVsFromLieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <soap:operation soapAction="http://tempuri.org/AddLienCampagnePV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <soap:operation soapAction="http://tempuri.org/DeleteLienCampagnePV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCalque">
+      <soap:operation soapAction="http://tempuri.org/AddCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <soap:operation soapAction="http://tempuri.org/DeleteCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCalque">
+      <soap:operation soapAction="http://tempuri.org/UpdateCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCalqueIds">
+      <soap:operation soapAction="http://tempuri.org/GetCalqueByCalqueIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <soap:operation soapAction="http://tempuri.org/GetCalqueByCampagneID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCalquesImportable">
+      <soap:operation soapAction="http://tempuri.org/GetListeCalquesImportable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddObjetCalque">
+      <soap:operation soapAction="http://tempuri.org/AddObjetCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjetCalque">
+      <soap:operation soapAction="http://tempuri.org/UpdateObjetCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <soap:operation soapAction="http://tempuri.org/DeleteObjetCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsObjetCalqueInFiltrage">
+      <soap:operation soapAction="http://tempuri.org/IsObjetCalqueInFiltrage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsListeObjetsCalquesInFiltrage">
+      <soap:operation soapAction="http://tempuri.org/IsListeObjetsCalquesInFiltrage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <soap:operation soapAction="http://tempuri.org/GetContourObjetCalque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeveloppe">
+      <soap:operation soapAction="http://tempuri.org/AddDeveloppe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeveloppe">
+      <soap:operation soapAction="http://tempuri.org/UpdateDeveloppe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPK">
+      <soap:operation soapAction="http://tempuri.org/AddPK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePK">
+      <soap:operation soapAction="http://tempuri.org/UpdatePK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <soap:operation soapAction="http://tempuri.org/AddAnnotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <soap:operation soapAction="http://tempuri.org/UpdateAnnotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <soap:operation soapAction="http://tempuri.org/AddLienAnnotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <soap:operation soapAction="http://tempuri.org/DeleteLienAnnotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <soap:operation soapAction="http://tempuri.org/GetListeLiensAnnotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <soap:operation soapAction="http://tempuri.org/GetListeAnnotFromPV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <soap:operation soapAction="http://tempuri.org/GetListeAnnotFromCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <soap:operation soapAction="http://tempuri.org/GetTypesDesordres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/GetUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <soap:operation soapAction="http://tempuri.org/GetCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <soap:operation soapAction="http://tempuri.org/ResetCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCouleurPersonalisees">
+      <soap:operation soapAction="http://tempuri.org/UpdateCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCouleurPersonalisees">
+      <soap:operation soapAction="http://tempuri.org/AddCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <soap:operation soapAction="http://tempuri.org/GetListeJalons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <soap:operation soapAction="http://tempuri.org/DeleteJalon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJalon">
+      <soap:operation soapAction="http://tempuri.org/UpdateJalon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJalon">
+      <soap:operation soapAction="http://tempuri.org/AddJalon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <soap:operation soapAction="http://tempuri.org/GetListePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePositionsFenetres">
+      <soap:operation soapAction="http://tempuri.org/UpdatePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <soap:operation soapAction="http://tempuri.org/DeletePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCampagne">
+      <soap:operation soapAction="http://tempuri.org/AddCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <soap:operation soapAction="http://tempuri.org/InsertCampagneHistorique" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <soap:operation soapAction="http://tempuri.org/GetListeTypeLieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <soap:operation soapAction="http://tempuri.org/IsUserAuthorized" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MarionServicesSoap12" type="tns:MarionServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateLibelleDate">
+      <soap12:operation soapAction="http://tempuri.org/UpdateLibelleDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <soap12:operation soapAction="http://tempuri.org/GetNomVue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <soap12:operation soapAction="http://tempuri.org/GetListeDessinsV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDessin">
+      <soap12:operation soapAction="http://tempuri.org/AddDessin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDessin">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDessin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDessin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <soap12:operation soapAction="http://tempuri.org/GetFonctionIDFromCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <soap12:operation soapAction="http://tempuri.org/GetListeGroupes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <soap12:operation soapAction="http://tempuri.org/GetListeCartes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <soap12:operation soapAction="http://tempuri.org/GetListeDessins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <soap12:operation soapAction="http://tempuri.org/GetListeLabels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <soap12:operation soapAction="http://tempuri.org/GetListeLignes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLieux">
+      <soap12:operation soapAction="http://tempuri.org/GetListeLieux" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <soap12:operation soapAction="http://tempuri.org/GetListeCampagnes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <soap12:operation soapAction="http://tempuri.org/GetCampagneById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <soap12:operation soapAction="http://tempuri.org/GetListePVsFromCampagne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <soap12:operation soapAction="http://tempuri.org/GetListePVsFromLieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <soap12:operation soapAction="http://tempuri.org/AddLienCampagnePV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLienCampagnePV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCalque">
+      <soap12:operation soapAction="http://tempuri.org/AddCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <soap12:operation soapAction="http://tempuri.org/DeleteCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCalque">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCalqueIds">
+      <soap12:operation soapAction="http://tempuri.org/GetCalqueByCalqueIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <soap12:operation soapAction="http://tempuri.org/GetCalqueByCampagneID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCalquesImportable">
+      <soap12:operation soapAction="http://tempuri.org/GetListeCalquesImportable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddObjetCalque">
+      <soap12:operation soapAction="http://tempuri.org/AddObjetCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjetCalque">
+      <soap12:operation soapAction="http://tempuri.org/UpdateObjetCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <soap12:operation soapAction="http://tempuri.org/DeleteObjetCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsObjetCalqueInFiltrage">
+      <soap12:operation soapAction="http://tempuri.org/IsObjetCalqueInFiltrage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsListeObjetsCalquesInFiltrage">
+      <soap12:operation soapAction="http://tempuri.org/IsListeObjetsCalquesInFiltrage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <soap12:operation soapAction="http://tempuri.org/GetContourObjetCalque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeveloppe">
+      <soap12:operation soapAction="http://tempuri.org/AddDeveloppe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeveloppe">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDeveloppe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPK">
+      <soap12:operation soapAction="http://tempuri.org/AddPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePK">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/AddAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/AddLienAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLienAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <soap12:operation soapAction="http://tempuri.org/GetListeLiensAnnotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <soap12:operation soapAction="http://tempuri.org/GetListeAnnotFromPV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <soap12:operation soapAction="http://tempuri.org/GetListeAnnotFromCampagne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <soap12:operation soapAction="http://tempuri.org/GetTypesDesordres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUtilisateur">
+      <soap12:operation soapAction="http://tempuri.org/GetUtilisateur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <soap12:operation soapAction="http://tempuri.org/GetCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <soap12:operation soapAction="http://tempuri.org/ResetCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCouleurPersonalisees">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCouleurPersonalisees">
+      <soap12:operation soapAction="http://tempuri.org/AddCouleurPersonalisees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <soap12:operation soapAction="http://tempuri.org/GetListeJalons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <soap12:operation soapAction="http://tempuri.org/DeleteJalon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJalon">
+      <soap12:operation soapAction="http://tempuri.org/UpdateJalon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJalon">
+      <soap12:operation soapAction="http://tempuri.org/AddJalon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <soap12:operation soapAction="http://tempuri.org/GetListePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePositionsFenetres">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <soap12:operation soapAction="http://tempuri.org/DeletePositionsFenetres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCampagne">
+      <soap12:operation soapAction="http://tempuri.org/AddCampagne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <soap12:operation soapAction="http://tempuri.org/InsertCampagneHistorique" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <soap12:operation soapAction="http://tempuri.org/GetListeTypeLieu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <soap12:operation soapAction="http://tempuri.org/IsUserAuthorized" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MarionServicesHttpGet" type="tns:MarionServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="UpdateLibelleDate">
+      <http:operation location="/UpdateLibelleDate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <http:operation location="/GetNomVue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <http:operation location="/GetListeDessinsV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <http:operation location="/DeleteDessin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <http:operation location="/GetFonctionIDFromCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <http:operation location="/GetListeGroupes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <http:operation location="/GetListeCartes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <http:operation location="/GetListeDessins" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <http:operation location="/GetListeLabels" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <http:operation location="/GetListeLignes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <http:operation location="/GetListeCampagnes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <http:operation location="/GetCampagneById" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <http:operation location="/GetListePVsFromCampagne" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <http:operation location="/GetListePVsFromLieu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <http:operation location="/AddLienCampagnePV" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <http:operation location="/DeleteLienCampagnePV" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <http:operation location="/DeleteCalque" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <http:operation location="/GetCalqueByCampagneID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <http:operation location="/DeleteObjetCalque" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <http:operation location="/GetContourObjetCalque" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <http:operation location="/AddAnnotation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <http:operation location="/UpdateAnnotation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <http:operation location="/AddLienAnnotation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <http:operation location="/DeleteLienAnnotation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <http:operation location="/GetListeLiensAnnotations" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <http:operation location="/GetListeAnnotFromPV" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <http:operation location="/GetListeAnnotFromCampagne" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <http:operation location="/GetTypesDesordres" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <http:operation location="/GetCouleurPersonalisees" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <http:operation location="/ResetCouleurPersonalisees" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <http:operation location="/GetListeJalons" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <http:operation location="/DeleteJalon" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <http:operation location="/GetListePositionsFenetres" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <http:operation location="/DeletePositionsFenetres" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <http:operation location="/InsertCampagneHistorique" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <http:operation location="/GetListeTypeLieu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <http:operation location="/IsUserAuthorized" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MarionServicesHttpPost" type="tns:MarionServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="UpdateLibelleDate">
+      <http:operation location="/UpdateLibelleDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomVue">
+      <http:operation location="/GetNomVue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessinsV2">
+      <http:operation location="/GetListeDessinsV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDessin">
+      <http:operation location="/DeleteDessin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFonctionIDFromCode">
+      <http:operation location="/GetFonctionIDFromCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeGroupes">
+      <http:operation location="/GetListeGroupes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCartes">
+      <http:operation location="/GetListeCartes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDessins">
+      <http:operation location="/GetListeDessins" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLabels">
+      <http:operation location="/GetListeLabels" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLignes">
+      <http:operation location="/GetListeLignes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeCampagnes">
+      <http:operation location="/GetListeCampagnes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneById">
+      <http:operation location="/GetCampagneById" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromCampagne">
+      <http:operation location="/GetListePVsFromCampagne" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePVsFromLieu">
+      <http:operation location="/GetListePVsFromLieu" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienCampagnePV">
+      <http:operation location="/AddLienCampagnePV" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienCampagnePV">
+      <http:operation location="/DeleteLienCampagnePV" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalque">
+      <http:operation location="/DeleteCalque" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalqueByCampagneID">
+      <http:operation location="/GetCalqueByCampagneID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObjetCalque">
+      <http:operation location="/DeleteObjetCalque" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContourObjetCalque">
+      <http:operation location="/GetContourObjetCalque" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAnnotation">
+      <http:operation location="/AddAnnotation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAnnotation">
+      <http:operation location="/UpdateAnnotation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLienAnnotation">
+      <http:operation location="/AddLienAnnotation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLienAnnotation">
+      <http:operation location="/DeleteLienAnnotation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeLiensAnnotations">
+      <http:operation location="/GetListeLiensAnnotations" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromPV">
+      <http:operation location="/GetListeAnnotFromPV" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeAnnotFromCampagne">
+      <http:operation location="/GetListeAnnotFromCampagne" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypesDesordres">
+      <http:operation location="/GetTypesDesordres" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouleurPersonalisees">
+      <http:operation location="/GetCouleurPersonalisees" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetCouleurPersonalisees">
+      <http:operation location="/ResetCouleurPersonalisees" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeJalons">
+      <http:operation location="/GetListeJalons" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJalon">
+      <http:operation location="/DeleteJalon" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListePositionsFenetres">
+      <http:operation location="/GetListePositionsFenetres" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePositionsFenetres">
+      <http:operation location="/DeletePositionsFenetres" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCampagneHistorique">
+      <http:operation location="/InsertCampagneHistorique" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeTypeLieu">
+      <http:operation location="/GetListeTypeLieu" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAuthorized">
+      <http:operation location="/IsUserAuthorized" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarionServices">
+    <wsdl:port name="MarionServicesSoap" binding="tns:MarionServicesSoap">
+      <soap:address location="http://localhost:4242/webservices/MarionServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MarionServicesSoap12" binding="tns:MarionServicesSoap12">
+      <soap12:address location="http://localhost:4242/webservices/MarionServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MarionServicesHttpGet" binding="tns:MarionServicesHttpGet">
+      <http:address location="http://localhost:4242/webservices/MarionServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MarionServicesHttpPost" binding="tns:MarionServicesHttpPost">
+      <http:address location="http://localhost:4242/webservices/MarionServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
